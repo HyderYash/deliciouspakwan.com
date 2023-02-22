@@ -1,0 +1,111 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  min-height: 100vh !important;
+}
+.slick-prev {
+  left: 3% !important;
+  z-index: 999;
+}
+.slick-next {
+  right: 3% !important;
+}
+.slick-prev:before {
+  font-size: 30px !important;
+}
+
+.slick-next:before {
+  font-size: 30px !important;
+}
+video {
+  object-fit: scale-down !important;
+  width: 100% !important;
+  height: 40rem !important;
+}
+
+.nav-tabs .nav-item.show .nav-link,
+.nav-tabs .nav-link.active {
+  color: white !important;
+  background-color: #228b22 !important;
+  border-color: #dee2e6 #dee2e6 #fff !important;
+}
+.nav-tabs .nav-link {
+  background-color: #ddd !important;
+  color: black !important;
+  border-radius: 10px 10px 0px 0px !important;
+  font-weight: bold !important;
+}
+.nav-tabs {
+  border-bottom: 5px solid #228b22 !important;
+}
+.nav-tabs .nav-link {
+  border: none !important;
+}
+
+.footer {
+  background-color: #212121;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 500;
+}
+.badgeCss {
+  padding: 10px 15px 10px 15px !important;
+  background-color: #228b22 !important;
+  font-weight: bold !important;
+}
+
+.image-gallery-content .image-gallery-slide {
+  object-fit: scale-down !important;
+  max-width: 100% !important;
+  height: 800px !important;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+}
+
+.image-gallery-thumbnail-image {
+  height: 90px !important;
+  object-fit: cover !important;
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .image-gallery-content .image-gallery-slide {
+    height: 495px !important;
+  }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+/* @media only screen and (min-width: 600px) {
+} */
+
+/* Medium devices (landscape tablets, 768px and up) */
+/* @media only screen and (min-width: 768px) {} */
+
+/* Large devices (laptops/desktops, 992px and up) */
+/* @media only screen and (min-width: 992px) {} */
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+/* @media only screen and (min-width: 1200px) {} */
+
+audio {
+  width: 100%;
+  height: 30px;
+}
+audio::-webkit-media-controls-panel {
+  background-color: azure;
+}
+
+.image-gallery-left-nav .image-gallery-svg,
+.image-gallery-right-nav .image-gallery-svg {
+  height: 50px !important;
+  width: 50px !important;
+}
+.image-gallery-fullscreen-button .image-gallery-svg,
+.image-gallery-play-button .image-gallery-svg {
+  height: 20px !important;
+  width: 20px !important;
+}

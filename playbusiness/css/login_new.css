@@ -1,0 +1,223 @@
+	.busi_home_button {
+		display: inline-block;
+		border-radius: 50px;
+		background-color: #f4511e;
+		border: none;
+		color: #ffffff;
+		text-align: center;
+		font-size: 28px;
+		padding: 20px;
+		width: 50px;
+		transition: all 0.5s;
+		cursor: pointer;
+		margin: 5px;
+	}
+
+	.busi_home_button span {
+		width: 90px;
+		cursor: pointer;
+		display: inline-block;
+		position: relative;
+		transition: 0.5s;
+	}
+
+	.busi_home_button span:after {
+		content: '\00bb';
+		position: absolute;
+		opacity: 0;
+		top: 0;
+		right: -20px;
+		transition: 0.5s;
+	}
+
+	.busi_home_button:hover span {
+		padding-right: 25px;
+	}
+
+	.busi_home_button:hover span:after {
+		opacity: 1;
+		right: 0;
+	}
+
+	.busi_home_box {
+		position: relative;
+	}
+
+	.busi_home_box select {
+		background-color: #0563af;
+		color: white;
+		padding: 12px;
+		width: 250px;
+		border: none;
+		font-size: 20px;
+		box-shadow: 0 5px 25px rgba(0, 0, 0, 0.2);
+		-webkit-appearance: button;
+		appearance: button;
+		outline: none;
+		border-radius: 20px;
+	}
+
+	.busi_home_box::before {
+		content: "\f13a";
+		font-family: fontawesome;
+		position: absolute;
+		top: 0;
+		right: 0;
+		width: 20%;
+		height: 100%;
+		text-align: center;
+		font-size: 28px;
+		line-height: 45px;
+		color: rgba(255, 255, 255, 0.5);
+		background-color: rgba(255, 255, 255, 0.1);
+		pointer-events: none;
+	}
+
+	.busi_home_box:hover::before {
+		color: rgba(255, 255, 255, 0.6);
+		background-color: rgba(255, 255, 255, 0.2);
+	}
+
+	.busi_home_box select option {
+		padding: 30px;
+	}
+
+	.busi_home_search-box, .busi_home_close-icon {
+	float:left;
+	position: relative;
+	padding: 10px;
+}
+
+	.busi_home_search-box {
+		width: 75%;
+		border: 1px solid #ccc;
+	  outline: 0;
+	  border-radius: 15px;
+	  margin-left:35px;
+	}
+	.busi_home_search-box:focus {
+		box-shadow: 0 0 15px 5px #b0e0ee;
+		border: 2px solid #bebede;
+	}
+	.busi_home_close-icon {
+		border:1px solid transparent;
+		background-color: transparent;
+		display: inline-block;
+		vertical-align: middle;
+	  outline: 0;
+	  cursor: pointer;
+	}
+	.busi_home_close-icon:after {
+		content: "x";
+		display: block;
+		width: 15px;
+		height: 15px;
+		position: absolute;
+		background-color: #fa9595;
+		z-index:1;
+		right: 35px;
+		top: 0;
+		bottom: 0;
+		margin: auto;
+		padding: 2px;
+		border-radius: 50%;
+		text-align: center;
+		color: white;
+		font-weight: normal;
+		font-size: 12px;
+		box-shadow: 0 0 2px #e50f0f;
+		cursor: pointer;
+	}
+	.busi_home_search-box:not(:valid) ~ .busi_home_close-icon {
+		display: none;
+	}
+	
+	
+	/* homepage css start */
+	.busi_home_main-body-css {
+		font-family:arial;color:#000000;font-size:12px;padding:0px;margin:0px;
+	}
+	.busi_home_outer-div-css{
+		float:left;font-size:16px;width:100%;background-image: url("/images/business.png");background-color:pink;
+	}
+	.busi_home_main-div-container {
+		overflow: hidden;display:block;width:700px;margin:15px auto;border:2px solid red;box-shadow:5px 1px 5px 5px;padding:20px;border-radius:30px;background-color: #edcdeb;
+	}
+	.busi_home_header-container {
+		float:left;font-size:16px;width:100%;border:2px solid green;border-radius:15px;background-color:#8ef0e7;
+	}
+	.busi_home_header-text {
+		font-weight:700;font-size:20px;width:100%;text-align:center;;
+	}
+	.busi_home_login_container {
+		padding: 16px;
+	}
+	#busi_home_login-container input[type=text], input[type=password], input[type=email] {
+		width: 100%;
+		padding: 12px 20px;
+		margin: 8px 0;
+		display: inline-block;
+		border: 1px solid #ccc;
+		box-sizing: border-box;
+		border-radius:30px;
+	}	
+	.busi_home_new-game-container{
+		float:left;font-size:16px;width:100%;border:2px solid green;margin-top:15px;border-radius: 15px;background-color:#8ef0e7;
+	}
+	.busi_home_select-player-container{
+		
+		padding:20px;border:0px solid green;font-size:16px;	
+		
+	}
+	.busi_home_select-player-box{
+		font-size:16px;width:150px;vertical-align:middle;
+	}
+	.busi_home_start-new-game-button{
+		padding:20px;border:0px solid green;font-size:16px;text-align:center;
+	}
+	.busi_home_or-container-css{
+		float:left;font-size:16px;width:100%;border:0px solid green;
+	}
+	.busi_home_or-css{
+		padding:20px;border:0px solid green;font-size:26px;text-align:center;
+	}
+	.busi_home_create-start-button{
+		width: 400px;background-color:#fc4828;padding-top:10px;padding-bottom:10px;background-color:#4caf50;margin-left:20px;"
+	}
+	.busi_home_float-left-16{
+		float:left;font-size:16px;width:100%;
+	}
+	.busi_home_border-css{
+		border:2px solid green;border-radius: 15px;background-color:#8EF0E7;
+	}
+	.busi_home_select-game{
+		padding:20px;border:0px solid green;font-size:16px;
+	}
+	.busi_home_or-subdiv-css{
+		padding:4px;border:0px solid green;font-size:32px;text-align:center;
+	}
+	.busi_home_or-span{
+		margin:10px;color:red;
+	}
+	.busi_home_select-game2-css{
+		width:120px;
+	}
+	.busi_home_start-game-head{
+		padding:15px;border:0px solid green;font-size:16px;text-align:center;
+	}
+	.busi_home_start-game-head2{
+		width:240px;background-color:#fc4828;padding-top:10px;padding-bottom:10px;background-color:#4CAF50;margin-left:20px;border:1px solid green;
+	}
+	.busi_home_new-game2{
+		float:left;width:50%;
+	}
+	.busi_home_error_msg {
+		padding:20px;border:1px solid red;font-size:20px;color:red;
+	}
+	.busi_home_footer_container{
+		float:left;width:100%;padding:0px;margin:0px;
+	}
+	.busi_home_footer{
+		width:400px;font-size:12px;font-weight:700;padding:0px;margin:10px auto;margin-bottom:0px;
+	}
+	/* homepage css end */

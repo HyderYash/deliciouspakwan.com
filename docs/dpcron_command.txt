@@ -1,0 +1,12 @@
+/usr/local/bin/php-cli /home/buodw97cz4zw/public_html/index.php dpcron myDpCron
+/usr/local/bin/php /home/buodw97cz4zw/public_html/path/to/cron/script
+
+
+
+/usr/local/bin/php /home/buodw97cz4zw/public_html/index.php dpcron myDpCron
+
+
+
+Finally after the 3rd day and 3 separate GoDaddy support techs they were able to fix the issue after I insisted they install the missing ea_php_cli.pm module....I did not have to change my path.
+
+/usr/local/bin/php -q /home/[user name]/[path to the file]

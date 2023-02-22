@@ -1,0 +1,10 @@
+.table td,
+.table th {
+  padding: 0.15rem !important;
+}
+.albumstatusactive {
+  background-color: lightgreen;
+}
+.albumstatusinactive {
+  background-color: lightcoral;
+}

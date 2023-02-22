@@ -1,0 +1,4 @@
+/usr/local/bin/php-cli /home/buodw97cz4zw/public_html/cron_test.php 
+
+
+mjhanman nadim

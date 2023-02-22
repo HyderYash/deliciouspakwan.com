@@ -1,0 +1,18 @@
+To Do:
+1. Add House count on tickets and rent should be deducted according to House count.
+2. Players current Balance should not go Negative.
+3.	DONE======>When user passes Go ticket they should get 2500/-
+4.Add popup for tickets.
+5.Decorations should be done.
+6.DONE======>New game creation.
+7.DONE======>Existing game Reset Function.
+8.Communty Chest/Chance popup to be done.
+9.PHP code optimization.
+10.HTML code Optimization.
+11.Style need to be converted into CSS classes.
+12. DONE======>Log out function.
+13. Same ticket house should get extra rent.
+14. DONE======>Reset function to done.
+15. DONE======>Add new user to game.
+16. Player can throw the dice in sequence only.
+17. Add Validations

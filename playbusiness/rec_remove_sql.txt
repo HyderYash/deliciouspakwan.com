@@ -1,0 +1,3 @@
+delete from ec_items where ID IN (68,71,72,69,70);
+delete from ec_expenditure where EXP_ITEM_ID IN (68,71,72,69,70);
+delete from ec_deposit where DEPO_ITEM_ID IN (68,71,72,69,70);

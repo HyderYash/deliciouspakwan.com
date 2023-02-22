@@ -1,0 +1,4 @@
+sitemap: http://www.deliciouspakwan.com/sitemap.xml
+User-agent: *
+Disallow: /terms-of-use.html
+Disallow: /privacy.html

@@ -1,0 +1,7 @@
+node_modules
+acp/
+albums/
+dailyreport/
+tech/
+error_log
+*.mp4

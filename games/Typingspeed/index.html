@@ -1,0 +1,114 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Typing Speed</title>
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <style>
+        .custom_width{
+            width: 90% !important;
+        }
+
+        /*textarea{
+            background-color: #444;
+            box-shadow: 0 0 1px rgba(0,0,0,0.2);
+            border-radius: 10px 10px 0 0;
+            border: 20px solid #34495e;
+            color: white;
+            font-size: 1.3rem;
+        }*/
+        body {
+            background: #8360c3;
+            background: -webkit-linear-gradient(to right, #2ebf91, #8360c3);
+            background: linear-gradient(to right, #2ebf91, #8360c3);
+
+        }
+
+    </style>
+</head>
+<body class="container-fluid justify-content-center">
+        <div class="row text-center">
+            <div class="card mr-auto ml-auto custom_width mt-5">
+                <div class="card-body">
+                    <h1 class="card-title">Let's test your TYPING Speed..</h1>
+
+                    <h2 id="msg" class="text-success"></h2>
+                    <form>
+                        <div class="form-group">
+                            <textarea class="form-control" id="mywords" rows="6" placeholder="Show your potential"></textarea>
+                        </div>
+                    </form>
+
+                    <button id="btn" class="btn btn-primary btn-lg">Start</button>
+                </div>
+            </div>
+        </div>
+<script>
+    const setofWords = [
+        "My name is Yash Sharma and i am a Student.",
+        "I live in India",
+        "I know how to solve a cube",
+        "Have you ever played Squash?",
+        "I want to go to Google",
+        "This is a challenge for you"
+    ];
+    const msg = document.getElementById('msg');
+    const mywords = document.getElementById('mywords');
+    const btn = document.getElementById('btn');
+    let starttime, endtime;
+
+    const playGame = () => {
+        let randomNumber = Math.floor(Math.random()* setofWords.length);
+        msg.innerText = setofWords[randomNumber];
+        let date = new Date();
+        starttime = date.getTime();
+        btn.innerText = "Done"; 
+    }
+    const endplay = () =>  {
+        let date = new Date();
+        endtime = date.getTime();
+        let Totaltime = ((endtime - starttime) / 1000);
+
+        let totalStr = mywords.value;
+        let wordCount = wordCounter(totalStr);
+
+        let speed = Math.round((wordCount / Totaltime) * 60);
+
+        let finalmsg = "Your total typing speed is " +speed+ "words per minutes. ";
+
+        finalmsg += compareWords(msg.innerText, totalStr);
+        msg.innerText = finalmsg; 
+    }
+
+    const compareWords = (str1, str2) => {
+        let words1 = str1.split(" ");
+        let words2 = str2.split(" ");
+        let cnt = 0;
+
+        words1.forEach(function(item, index){
+            if (item == words2[index]){
+                cnt++;
+            }
+        })
+
+        let errorWords = (words1.length - cnt);
+        return (ctn = "Correct out of " +words1.length+ " words and the total numbers of errors are" + errorWords + "");
+    }
+
+    const wordCounter = (str) => {
+        let response = str.split(" ").length;
+        return response;
+    } 
+    btn.addEventListener('click', function(){
+        if(this.innerText == 'Start'){
+            mywords.disabled = false;
+            playGame();
+        }else if (this.innerText == "Done"){
+            mywords.disabled = true;
+            btn.innerText = "Start";
+            endplay();
+        }
+    })
+</script>
+</body>
+</html>

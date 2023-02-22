@@ -1,0 +1,29 @@
+DirectoryIndex index.php index.html
+
+# Rewrites
+<IfModule mod_rewrite.c>
+	RewriteEngine on
+	RewriteBase /
+	
+	# Redirect non dash name to dash
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond $1 !^(index\.php|js|css|image|common|uploadedfiles|favicon.ico)
+    RewriteRule ^(.*)$ index.php/$1 [L]
+
+    #All non-www domain should redirect to www version
+    RewriteCond %{HTTP_HOST} ^(deliciouspakwan\.com)$ [NC]
+    RewriteCond %{SERVER_PORT} 80
+    RewriteRule ^(.*)$ http://www.deliciouspakwan.com/$1 [R,L]
+
+
+</IfModule>
+
+# One year for image files
+<filesMatch ".(jpg|jpeg|png|gif|ico)$">
+Header set Cache-Control "max-age=31536000, public"
+</filesMatch>
+# One month for css and js
+<filesMatch ".(css|js)$">
+Header set Cache-Control "max-age=2628000, public"
+</filesMatch>

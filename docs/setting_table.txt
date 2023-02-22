@@ -1,0 +1,43 @@
+-- phpMyAdmin SQL Dump
+-- version 3.3.9
+-- http://www.phpmyadmin.net
+--
+-- Host: localhost
+-- Generation Time: Sep 24, 2020 at 10:56 PM
+-- Server version: 5.5.8
+-- PHP Version: 5.3.5
+
+SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
+
+--
+-- Database: `home_dp`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `dp_yt_display_settings`
+--
+
+DROP TABLE IF EXISTS `dp_yt_display_settings`;
+CREATE TABLE IF NOT EXISTS `dp_yt_display_settings` (
+  `ID` int(11) NOT NULL AUTO_INCREMENT,
+  `DISPLAY_NAME` varchar(255) NOT NULL,
+  `MOBILE` varchar(255) NOT NULL,
+  `DESKTOP` varchar(255) NOT NULL,
+  PRIMARY KEY (`ID`),
+  KEY `DISPLAY_NAME` (`DISPLAY_NAME`),
+  KEY `MOBILE` (`MOBILE`),
+  KEY `DESKTOP` (`DESKTOP`)
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+
+--
+-- Dumping data for table `dp_yt_display_settings`
+--
+
+INSERT INTO `dp_yt_display_settings` (`ID`, `DISPLAY_NAME`, `MOBILE`, `DESKTOP`) VALUES
+(1, 'RECENT_VIDEOS_COUNT_HOMEPAGE ', '6', '6'),
+(2, 'RECENT_VIDEOS_COUNT_VIDEOPLAY ', '3', '5'),
+(3, 'MOSTVIEWED_VIDEOS_COUNT_VIDEOPLAY', '3', '14'),
+(4, 'MOSTVIEWED_VIDEOS_COUNT_HOMEPAGE', '3', '6'),
+(5, 'MIDAGED_VIDEOS_COUNT', '3', '5');

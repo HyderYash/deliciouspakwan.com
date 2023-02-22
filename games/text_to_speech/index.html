@@ -1,0 +1,71 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <title>Text to Speech</title>
+    <style>
+        body {
+            background: #8360c3;
+            background: -webkit-linear-gradient(to right, #2ebf91, #8360c3);
+            background: linear-gradient(to right, #2ebf91, #8360c3);
+
+        }
+    </style>
+</head>
+<body>
+    <div class="container mx-auto">
+        <div class="card mx-auto mt-3 mb-3" style="width: 18rem;">
+            <div class="card-body">
+            <h5 class="card-title">Enter the Text you want to Listen:</h5>
+            <p class="card-text">Select Voice: <select id="voiceList"></select></p>
+            <input type="text" class="form-control mb-3" id="txtInput" autocomplete="off" required>
+            <button class="btn btn-primary" id="btnSpeak">Speak</button>
+            </div>
+        </div>
+    </div>
+    <script>
+        var voiceList = document.querySelector('#voiceList');
+        var txtInput = document.querySelector('#txtInput');
+        var btnSpeak = document.querySelector('#btnSpeak');
+
+
+        var tts = window.speechSynthesis;
+        var voices = [];
+
+        getVoices();
+
+        if(speechSynthesis !== undefined){
+            speechSynthesis.onvoiceschanged = getVoices;
+        }
+
+        btnSpeak.addEventListener('click', () =>{
+            var toSpeak =  new SpeechSynthesisUtterance (txtInput.value);
+            var selectedVoicename = voiceList.selectedOptions[0].getAttribute('data-name');
+            voices.forEach((voice)=>{
+                if(voice.name === selectedVoicename){
+                    toSpeak.voice = voice;
+                }
+            });
+            tts.speak(toSpeak);
+        });
+
+        function getVoices () {
+            voices = tts.getVoices();
+            voiceList.innerHTML = ' ';
+            voices.forEach((voice) => {
+                var listItem = document.createElement('option');
+                listItem.textContent = voices.name;
+                listItem.setAttribute('data-lang', voice.lang);
+                listItem.setAttribute('data-name', voice.name);
+                voiceList.appendChild(listItem);
+            });
+
+            voiceList.selectedIndex = 0;
+        }
+    </script>
+</body>
+</html>

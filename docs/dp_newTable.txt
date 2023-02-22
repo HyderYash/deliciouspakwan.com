@@ -1,0 +1,238 @@
+-- phpMyAdmin SQL Dump
+-- version 3.3.9
+-- http://www.phpmyadmin.net
+--
+-- Host: localhost
+-- Generation Time: Mar 23, 2021 at 04:14 PM
+-- Server version: 5.5.8
+-- PHP Version: 5.3.5
+
+SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
+
+--
+-- Database: `home_dp`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `dp_albums`
+--
+
+DROP TABLE IF EXISTS `dp_albums`;
+CREATE TABLE IF NOT EXISTS `dp_albums` (
+  `ID` int(11) NOT NULL AUTO_INCREMENT,
+  `IMAGE_THUMB_URL` varchar(255) NOT NULL,
+  `ALBUM_FOLDER_TITLE` varchar(255) NOT NULL,
+  `ALBUM_DISPLAY_TITLE` varchar(255) NOT NULL,
+  `ALBUM_DESC` text NOT NULL,
+  `UPLOADED_DATE` datetime NOT NULL,
+  `STATUS` enum('Y','N') NOT NULL,
+  PRIMARY KEY (`ID`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=2 ;
+
+--
+-- Dumping data for table `dp_albums`
+--
+
+INSERT INTO `dp_albums` (`ID`, `IMAGE_THUMB_URL`, `ALBUM_FOLDER_TITLE`, `ALBUM_DISPLAY_TITLE`, `ALBUM_DESC`, `UPLOADED_DATE`, `STATUS`) VALUES
+(1, 'mountains-3840x2160.jpg', '1616495673259', 'Yash', 'boiuwbgipg', '2021-03-23 10:34:43', 'Y');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `dp_albums_photos`
+--
+
+DROP TABLE IF EXISTS `dp_albums_photos`;
+CREATE TABLE IF NOT EXISTS `dp_albums_photos` (
+  `ID` int(11) NOT NULL AUTO_INCREMENT,
+  `ALBUM_ID` int(11) NOT NULL,
+  `IMAGE_THUMB_URL` varchar(255) NOT NULL,
+  `UPLOADED_DATE` datetime NOT NULL,
+  PRIMARY KEY (`ID`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+
+--
+-- Dumping data for table `dp_albums_photos`
+--
+
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `dp_nutrition_facts`
+--
+
+DROP TABLE IF EXISTS `dp_nutrition_facts`;
+CREATE TABLE IF NOT EXISTS `dp_nutrition_facts` (
+  `ID` int(11) NOT NULL AUTO_INCREMENT,
+  `FOOD_ID` int(11) NOT NULL,
+  `NUTRIENT_NAME` varchar(255) NOT NULL,
+  `NUTRIENT_VALUE` varchar(255) NOT NULL,
+  `NUTRIENT_UNIT` varchar(10) NOT NULL,
+  `NUTRIENT_DESC` varchar(255) NOT NULL,
+  PRIMARY KEY (`ID`)
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=97 ;
+
+--
+-- Dumping data for table `dp_nutrition_facts`
+--
+
+INSERT INTO `dp_nutrition_facts` (`ID`, `FOOD_ID`, `NUTRIENT_NAME`, `NUTRIENT_VALUE`, `NUTRIENT_UNIT`, `NUTRIENT_DESC`) VALUES
+(1, 1, 'Carbohydrate, by difference', '0', 'G', 'Calculated from a daily value percentage per serving size measure'),
+(2, 1, 'Calcium, Ca', '45', 'MG', 'Calculated from a daily value percentage per serving size measure'),
+(3, 1, 'Iron, Fe', '1.64', 'MG', 'Calculated from a daily value percentage per serving size measure'),
+(4, 1, 'Vitamin A, IU', '455', 'IU', 'Calculated from a daily value percentage per serving size measure'),
+(5, 1, 'Vitamin C, total ascorbic acid', '0', 'MG', 'Calculated from a daily value percentage per serving size measure'),
+(6, 1, 'Protein', '13.6', 'G', 'Calculated from value per serving size measure'),
+(7, 1, 'Total lipid (fat)', '9.09', 'G', 'Calculated from value per serving size measure'),
+(8, 1, 'Energy', '136', 'KCAL', 'Calculated from value per serving size measure'),
+(9, 1, 'Sodium, Na', '136', 'MG', 'Calculated from value per serving size measure'),
+(10, 1, 'Cholesterol', '375', 'MG', 'Calculated from value per serving size measure'),
+(11, 1, 'Fatty acids, total trans', '0', 'G', 'Calculated from value per serving size measure'),
+(12, 1, 'Fatty acids, total saturated', '3.41', 'G', 'Calculated from value per serving size measure'),
+(13, 2, 'Calcium, Ca', '24', 'MG', 'Calculated from a daily value percentage per serving size measure'),
+(14, 2, 'Iron, Fe', '0.44', 'MG', 'Calculated from a daily value percentage per serving size measure'),
+(15, 2, 'Vitamin A, IU', '605', 'IU', 'Calculated from a daily value percentage per serving size measure'),
+(16, 2, 'Vitamin C, total ascorbic acid', '21.8', 'MG', 'Calculated from a daily value percentage per serving size measure'),
+(17, 2, 'Protein', '7.66', 'G', 'Calculated from value per serving size measure'),
+(18, 2, 'Total lipid (fat)', '1.61', 'G', 'Calculated from value per serving size measure'),
+(19, 2, 'Carbohydrate, by difference', '16.9', 'G', 'Calculated from value per serving size measure'),
+(20, 2, 'Energy', '113', 'KCAL', 'Calculated from value per serving size measure'),
+(21, 2, 'Sugars, total including NLEA', '8.87', 'G', 'Calculated from value per serving size measure'),
+(22, 2, 'Fiber, total dietary', '1.2', 'G', 'Calculated from value per serving size measure'),
+(23, 2, 'Sodium, Na', '315', 'MG', 'Calculated from value per serving size measure'),
+(24, 2, 'Cholesterol', '18', 'MG', 'Calculated from value per serving size measure'),
+(25, 2, 'Fatty acids, total trans', '0', 'G', 'Calculated from value per serving size measure'),
+(26, 2, 'Fatty acids, total saturated', '0.2', 'G', 'Calculated from value per serving size measure'),
+(27, 3, 'Fiber, total dietary', '0', 'G', 'Calculated from a daily value percentage per serving size measure'),
+(28, 3, 'Calcium, Ca', '18', 'MG', 'Calculated from a daily value percentage per serving size measure'),
+(29, 3, 'Iron, Fe', '0.65', 'MG', 'Calculated from a daily value percentage per serving size measure'),
+(30, 3, 'Vitamin A, IU', '91', 'IU', 'Calculated from a daily value percentage per serving size measure'),
+(31, 3, 'Vitamin C, total ascorbic acid', '4.4', 'MG', 'Calculated from a daily value percentage per serving size measure'),
+(32, 3, 'Protein', '21.8', 'G', 'Calculated from value per serving size measure'),
+(33, 3, 'Total lipid (fat)', '11.8', 'G', 'Calculated from value per serving size measure'),
+(34, 3, 'Carbohydrate, by difference', '1.82', 'G', 'Calculated from value per serving size measure'),
+(35, 3, 'Energy', '209', 'KCAL', 'Calculated from value per serving size measure'),
+(36, 3, 'Sugars, total including NLEA', '0', 'G', 'Calculated from value per serving size measure'),
+(37, 3, 'Sodium, Na', '400', 'MG', 'Calculated from value per serving size measure'),
+(38, 3, 'Cholesterol', '59', 'MG', 'Calculated from value per serving size measure'),
+(39, 3, 'Fatty acids, total trans', '0', 'G', 'Calculated from value per serving size measure'),
+(40, 3, 'Fatty acids, total saturated', '2.27', 'G', 'Calculated from value per serving size measure'),
+(41, 4, 'Total lipid (fat)', '0', 'G', 'Calculated from a daily value percentage per serving size measure'),
+(42, 4, 'Calcium, Ca', '0', 'MG', 'Calculated from a daily value percentage per serving size measure'),
+(43, 4, 'Iron, Fe', '0.73', 'MG', 'Calculated from a daily value percentage per serving size measure'),
+(44, 4, 'Sodium, Na', '0', 'MG', 'Calculated from a daily value percentage per serving size measure'),
+(45, 4, 'Vitamin A, IU', '0', 'IU', 'Calculated from a daily value percentage per serving size measure'),
+(46, 4, 'Vitamin C, total ascorbic acid', '2.4', 'MG', 'Calculated from a daily value percentage per serving size measure'),
+(47, 4, 'Cholesterol', '0', 'MG', 'Calculated from a daily value percentage per serving size measure'),
+(48, 4, 'Fatty acids, total saturated', '0', 'G', 'Calculated from a daily value percentage per serving size measure'),
+(49, 4, 'Protein', '2.7', 'G', 'Calculated from value per serving size measure'),
+(50, 4, 'Carbohydrate, by difference', '16.9', 'G', 'Calculated from value per serving size measure'),
+(51, 4, 'Energy', '74', 'KCAL', 'Calculated from value per serving size measure'),
+(52, 4, 'Sugars, total including NLEA', '0.68', 'G', 'Calculated from value per serving size measure'),
+(53, 4, 'Fiber, total dietary', '2', 'G', 'Calculated from value per serving size measure'),
+(54, 4, 'Potassium, K', '439', 'MG', 'Calculated from value per serving size measure'),
+(55, 4, 'Fatty acids, total trans', '0', 'G', 'Calculated from value per serving size measure'),
+(56, 5, 'Calcium, Ca', '28', 'MG', 'Calculated from a daily value percentage per serving size measure'),
+(57, 5, 'Iron, Fe', '1.88', 'MG', 'Calculated from a daily value percentage per serving size measure'),
+(58, 5, 'Vitamin A, IU', '69', 'IU', 'Calculated from a daily value percentage per serving size measure'),
+(59, 5, 'Vitamin C, total ascorbic acid', '2.5', 'MG', 'Calculated from a daily value percentage per serving size measure'),
+(60, 5, 'Cholesterol', '0', 'MG', 'Calculated from a daily value percentage per serving size measure'),
+(61, 5, 'Fatty acids, total saturated', '0', 'G', 'Calculated from a daily value percentage per serving size measure'),
+(62, 5, 'Protein', '3.47', 'G', 'Calculated from value per serving size measure'),
+(63, 5, 'Total lipid (fat)', '2.43', 'G', 'Calculated from value per serving size measure'),
+(64, 5, 'Carbohydrate, by difference', '26.4', 'G', 'Calculated from value per serving size measure'),
+(65, 5, 'Energy', '139', 'KCAL', 'Calculated from value per serving size measure'),
+(66, 5, 'Sugars, total including NLEA', '1.39', 'G', 'Calculated from value per serving size measure'),
+(67, 5, 'Fiber, total dietary', '1.4', 'G', 'Calculated from value per serving size measure'),
+(68, 5, 'Sodium, Na', '465', 'MG', 'Calculated from value per serving size measure'),
+(69, 5, 'Fatty acids, total trans', '0', 'G', 'Calculated from value per serving size measure'),
+(70, 6, 'Calcium, Ca', '48', 'MG', 'Calculated from a daily value percentage per serving size measure'),
+(71, 6, 'Iron, Fe', '3.43', 'MG', 'Calculated from a daily value percentage per serving size measure'),
+(72, 6, 'Vitamin A, IU', '0', 'IU', 'Calculated from a daily value percentage per serving size measure'),
+(73, 6, 'Vitamin C, total ascorbic acid', '0', 'MG', 'Calculated from a daily value percentage per serving size measure'),
+(74, 6, 'Cholesterol', '0', 'MG', 'Calculated from a daily value percentage per serving size measure'),
+(75, 6, 'Fatty acids, total saturated', '0', 'G', 'Calculated from a daily value percentage per serving size measure'),
+(76, 6, 'Protein', '9.52', 'G', 'Calculated from value per serving size measure'),
+(77, 6, 'Total lipid (fat)', '2.38', 'G', 'Calculated from value per serving size measure'),
+(78, 6, 'Carbohydrate, by difference', '52.4', 'G', 'Calculated from value per serving size measure'),
+(79, 6, 'Energy', '262', 'KCAL', 'Calculated from value per serving size measure'),
+(80, 6, 'Sugars, total including NLEA', '2.38', 'G', 'Calculated from value per serving size measure'),
+(81, 6, 'Fiber, total dietary', '2.4', 'G', 'Calculated from value per serving size measure'),
+(82, 6, 'Sodium, Na', '524', 'MG', 'Calculated from value per serving size measure'),
+(83, 6, 'Fatty acids, total trans', '0', 'G', 'Calculated from value per serving size measure'),
+(84, 7, 'Calcium, Ca', '36', 'MG', 'Calculated from a daily value percentage per serving size measure'),
+(85, 7, 'Iron, Fe', '1.29', 'MG', 'Calculated from a daily value percentage per serving size measure'),
+(86, 7, 'Vitamin A, IU', '0', 'IU', 'Calculated from a daily value percentage per serving size measure'),
+(87, 7, 'Vitamin C, total ascorbic acid', '0', 'MG', 'Calculated from a daily value percentage per serving size measure'),
+(88, 7, 'Fatty acids, total saturated', '0', 'G', 'Calculated from a daily value percentage per serving size measure'),
+(89, 7, 'Protein', '12.5', 'G', 'Calculated from value per serving size measure'),
+(90, 7, 'Total lipid (fat)', '2.68', 'G', 'Calculated from value per serving size measure'),
+(91, 7, 'Carbohydrate, by difference', '69.6', 'G', 'Calculated from value per serving size measure'),
+(92, 7, 'Energy', '357', 'KCAL', 'Calculated from value per serving size measure'),
+(93, 7, 'Sugars, total including NLEA', '0', 'G', 'Calculated from value per serving size measure'),
+(94, 7, 'Sodium, Na', '18', 'MG', 'Calculated from value per serving size measure'),
+(95, 7, 'Cholesterol', '71', 'MG', 'Calculated from value per serving size measure'),
+(96, 7, 'Fatty acids, total trans', '0', 'G', 'Calculated from value per serving size measure');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `dp_nutrition_foods`
+--
+
+DROP TABLE IF EXISTS `dp_nutrition_foods`;
+CREATE TABLE IF NOT EXISTS `dp_nutrition_foods` (
+  `ID` int(11) NOT NULL AUTO_INCREMENT,
+  `FOOD_NAME` varchar(255) NOT NULL,
+  `FDC_ID` varchar(255) NOT NULL,
+  PRIMARY KEY (`ID`)
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=9 ;
+
+--
+-- Dumping data for table `dp_nutrition_foods`
+--
+
+INSERT INTO `dp_nutrition_foods` (`ID`, `FOOD_NAME`, `FDC_ID`) VALUES
+(1, 'Egg', '577532'),
+(2, 'Chicken', '545742'),
+(3, 'Salmon Fish', '466018'),
+(4, 'Potato', '576920'),
+(5, 'Rice', '356554'),
+(6, 'Bread', '551245'),
+(7, 'Pasta', '457126');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `react_menu`
+--
+
+DROP TABLE IF EXISTS `react_menu`;
+CREATE TABLE IF NOT EXISTS `react_menu` (
+  `ID` int(11) NOT NULL AUTO_INCREMENT,
+  `LIST_ITEM_NAME` varchar(255) NOT NULL,
+  `LIST_ITEM_LINK` varchar(255) NOT NULL,
+  `LIST_ITEM_LAST_UPDATED` datetime NOT NULL,
+  `LIST_ITEM_CLICKED_TYPE` varchar(255) NOT NULL,
+  `LIST_SEQ` int(11) NOT NULL,
+  PRIMARY KEY (`ID`),
+  KEY `LIST_ITEM_NAME` (`LIST_ITEM_NAME`,`LIST_ITEM_LINK`,`LIST_ITEM_LAST_UPDATED`),
+  KEY `LIST_ITEM_CLICKED_ITEM` (`LIST_ITEM_CLICKED_TYPE`)
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=10 ;
+
+--
+-- Dumping data for table `react_menu`
+--
+
+INSERT INTO `react_menu` (`ID`, `LIST_ITEM_NAME`, `LIST_ITEM_LINK`, `LIST_ITEM_LAST_UPDATED`, `LIST_ITEM_CLICKED_TYPE`, `LIST_SEQ`) VALUES
+(1, 'Display Settings', '/displaysettings', '2020-10-20 14:34:31', 'Nav', 1),
+(2, 'Update Video', '/updatevideo', '2020-10-20 14:35:10', 'Nav', 2),
+(3, 'Update Sitemap', '/sitemap', '2020-10-20 14:36:10', 'Nav', 3),
+(4, 'YT Video List', '/videolist', '2020-10-20 14:36:49', 'Nav', 4),
+(5, 'YT Monetization', '/ytmonetization', '2020-11-03 19:49:46', 'Nav', 5),
+(6, 'Logout', '/logout', '2020-11-04 12:30:30', 'Nav', 9),
+(8, 'Album List', '/albumlist', '2021-03-21 15:47:33', 'Nav', 6),
+(9, 'Add Nutrition', '/addnutrition', '2021-03-21 15:49:42', 'Nav', 8);

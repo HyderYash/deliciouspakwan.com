@@ -1,0 +1,58 @@
+Customer Number: 297795096
+
+Customer number
+297795096
+
+Username
+rinkuskitchen4@gmail.com
+
+
+Support PIN
+You need this PIN when you contact Support.
+
+Current PIN
+0080 
+
+
+cpanel login: buodw97cz4zw
+Password: =q>APGpf*D@1^
+
+
+
+Hostname: ftp://deliciouspakwan.com
+FTP User: buodw97cz4zw
+
+Password: =q>APGpf*D@1^
+
+
+MYSQL:
+Database: ythomedp
+Username: pinki_user
+Password: 53U3b7,nStu0
+
+
+
+https://www.bmon.co.uk/2017/01/how-to-link-your-youtube-channel-to-your-website/
+
+
+
+CRON Settings:
+/usr/bin/php-cli /home/buodw97cz4zw/public_html/index.php dpcron myDpCron
+/usr/bin/php-cli /home/buodw97cz4zw/public_html/index.php dpcron ytApiRun
+
+
+
+
+
+
+EMAILS:
+devwork@deliciouspakwan.com
+Mydevwork@1234
+info@deliciouspakwan.com
+MyDpInfo@1234
+
+
+
+SitemapSubmission:
+https://yoast.com/help/submit-sitemap-search-engines/
+

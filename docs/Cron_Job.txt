@@ -1,0 +1,2 @@
+0	*/3	*	*	*	/usr/local/bin/php-cli /home/buodw97cz4zw/public_html/index.php dpcron ytApiRun	    
+0	7	*	*	*	/usr/local/bin/php-cli /home/buodw97cz4zw/public_html/index.php sitemap index

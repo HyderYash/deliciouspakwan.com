@@ -1,0 +1,8 @@
+make subdomain acp.deliciouspakwan.com
+set docroot path
+
+upload database tables
+upload build folder with .htaccess
+
+upload /api folder
+

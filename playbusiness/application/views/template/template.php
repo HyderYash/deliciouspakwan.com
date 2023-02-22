@@ -1,0 +1,4 @@
+<?=$header?>
+<?=$content?>
+<?php print $debug_info; ?>
+<?=$footer?>

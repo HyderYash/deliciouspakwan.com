@@ -1,0 +1,17 @@
+input[type="file"] {
+  margin-left: 10px;
+  width: 360px;
+  vertical-align: middle;
+  margin-bottom: 10px;
+  text-align: right;
+  float: left;
+}
+
+input[type="file"]::-webkit-file-upload-button {
+  background: #485dc5;
+  color: #ffffff;
+  line-height: 38px;
+  padding: 0px 20px;
+  border: none;
+  float: left;
+}

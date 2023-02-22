@@ -1,0 +1,8 @@
+App 3785145 output: /opt/passenger-5.3.7-13.el6.cloudlinux/src/helper-scripts/wsgi-loader.py:26: DeprecationWarning: the imp module is deprecated in favour of importlib; see the module's documentation for alternative uses
+App 3785145 output:   import sys, os, io, re, imp, threading, signal, traceback, socket, select, struct, logging, errno
+App 3882055 output: /opt/passenger-5.3.7-13.el6.cloudlinux/src/helper-scripts/wsgi-loader.py:26: DeprecationWarning: the imp module is deprecated in favour of importlib; see the module's documentation for alternative uses
+App 3882055 output:   import sys, os, io, re, imp, threading, signal, traceback, socket, select, struct, logging, errno
+App 3885474 output: /opt/passenger-5.3.7-13.el6.cloudlinux/src/helper-scripts/wsgi-loader.py:26: DeprecationWarning: the imp module is deprecated in favour of importlib; see the module's documentation for alternative uses
+App 3885474 output:   import sys, os, io, re, imp, threading, signal, traceback, socket, select, struct, logging, errno
+App 3991326 output: /opt/passenger-5.3.7-13.el6.cloudlinux/src/helper-scripts/wsgi-loader.py:26: DeprecationWarning: the imp module is deprecated in favour of importlib; see the module's documentation for alternative uses
+App 3991326 output:   import sys, os, io, re, imp, threading, signal, traceback, socket, select, struct, logging, errno
