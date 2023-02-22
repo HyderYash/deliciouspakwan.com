@@ -1,11 +1,13 @@
+import Image from "next/image";
 import React from "react";
 
 const index = () => {
   return (
     <div className="relative h-screen overflow-hidden bg-indigo-900">
-      <img
+      <Image
         src="https://www.tailwind-kit.com/images/landscape/8.svg"
         className="absolute object-cover w-full h-full"
+        alt="404"
       />
       <div className="absolute inset-0 bg-black opacity-25"></div>
       <div className="container relative z-10 flex items-center px-6 py-32 mx-auto md:px-12 xl:py-40">

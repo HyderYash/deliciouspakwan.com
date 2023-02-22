@@ -5,3 +5,5 @@ dailyreport/
 tech/
 error_log
 *.mp4
+.next
+out

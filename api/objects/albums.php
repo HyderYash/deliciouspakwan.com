@@ -192,12 +192,6 @@ class Albums{
 			$ptr = 	$this->db->get_sql_exec($qry);
 		}
 	}
-	public function addDbRecordsOfAudiosForAlbum($fileName){
-		$currDate = date('Y-m-d h:i:s');
-		$qry = "INSERT INTO dp_album_songs (`ID`, `SONG_TITLE`, `SONG_STATUS`,`SONG_UPLOADED_ON`)  VALUES 
-		(NULL, '" . $fileName . "','Y','" . $currDate . "')";
-		$ptr = 	$this->db->get_sql_exec($qry);
-	}	
 	public function getAlbumsPhotosList($postData){
 		$result = array();
 		// select query
@@ -215,7 +209,7 @@ class Albums{
 			if($postData->DISPLAY == 'FE'){
 				$sql .= " AND PHOTO_STATUS = 'Y'";
 			}
-			$sql .= " ORDER BY RAND()";
+			$sql .= " ORDER BY ID DESC";
 			$result[] = $this->db->get_multiple_tables_records($sql);
 			// return values from database
 		}
@@ -317,26 +311,6 @@ class Albums{
 
 		return $retArr;
 	}
-	public function uploadAlbumSongs(){
-		// ini_set('max_execution_time', '300');
-		ini_set('max_execution_time', 0);
-		$this->cors();
-		$audioFolderPath = HTDOCS_PATH . '/audio/albumsongs/';
-		if(chmod($audioFolderPath, 0777)) {
-			$tmpMsg = '';
-			$newFileName = date('Ymdhms') . $_FILES["myFiles"]['name'];
-			if(move_uploaded_file($_FILES["myFiles"]["tmp_name"], $audioFolderPath . "/" . $newFileName)){
-				$this->addDbRecordsOfAudiosForAlbum($newFileName);
-				$tmpMsg = array($newFileName . ' Success');
-			}else{
-				$tmpMsg = array($newFileName . ' Failed');
-			}
-		} else {
-			$tmpMsg = array('Chmod on this folder could not be applied');
-		}
-		$retArr = array(true,$tmpMsg);
-		return $retArr;
-	}	
 	public function downloadDPAlbumThumbnail() {
 		ini_set('max_execution_time', '300');
 		$str = "SELECT
