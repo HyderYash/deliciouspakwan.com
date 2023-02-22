@@ -1,0 +1,96 @@
+<div class="modal fade" id="AddNewModel" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+<div class="modal-dialog modal-lg" role="document">
+<div class="modal-content" id="model-confirmation-content">
+  <div class="modal-header">
+   <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+   <span aria-hidden="true">&times;</span></button>
+   <h4 class="modal-title">Add New Product</h4>
+   </div>
+    <div class="modal-body">
+     <div class="form-horizontal">
+      <div class="form-group">
+      <label for="concept" class="col-sm-3 control-label">Category</label>
+      <div class="col-sm-9">
+      <select class="form-control" id="category" data-bind="options:CategoryList,       
+optionsText:'CategotyName',optionsValue:'CategoryId', value:CategotyId ,
+optionsCaption: 'Choose...', event:{ change:ChangeCategory}">
+          </select>
+           </div>
+          </div>
+          <div class="form-group">
+         <label for="description" class="col-sm-3 control-label">Product Name</label>
+          <div class="col-sm-9">
+          <select class="form-control" data-bind="options: ProductList,optionsText: 'ProductName',
+optionsValue: 'ProductId',value:ProductId,optionsCaption: 'Choose...',event:{ change:
+ProductCategory}">
+           </select>
+          </div>
+          </div>
+           <div class="form-group">
+             <label for="amount" class="col-sm-3 control-label">Price</label>
+              <div class="col-sm-9">
+ <input type="text"  class="form-control"  data-bind="value:Price"  readonly id="price" name="Price">   </div>
+   </div>
+    <div class="form-group">
+    <label for="status" class="col-sm-3 control-label">Quntity</label>
+    <div class="col-sm-9">
+     <input type="number" id="Qty" class="form-control" data-bind="value:
+                                 Quantity" id="Quntity" name="Quntity" required">
+                            </div>
+                        </div>
+                        <div class="form-group">
+ <label for="date" class="col-sm-3 control-label">Amount</label>
+                            <div class="col-sm-9">
+                                <input type="text" class="form-control" data-bind="value:  
+TotalAmount" readonly id="amount" name="amount">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-sm-12 text-right">
+                                <button type="button" class="btn btn-default
+preview-add-button"  data-bind="click:$root.Insert">
+                                    <span class="glyphicon glyphicon-plus"></span>Add
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+					
+                  <div class="table-responsive">
+                            <table class="table table-hover">
+                                <thead>
+                                    <tr>
+                                        <th>ProductId</th>
+                                        <th>Product Name</th>
+                                        <th>Category</th>
+                                        <th>Price</th>
+                                        <th>Quantity</th>
+                                        <th>Amount</th>
+                                    </tr>
+                                </thead>
+                                <tbody data-bind="foreach: Products">
+                                    <tr>
+                                        <td data-bind="text: ProductId"></td>
+                                        <td data-bind="text: ProductName"></td>
+                                        <td data-bind="text: CategotyName"></td>
+                                        <td data-bind="text: Price"></td>
+                                        <td data-bind="text: Quantity"></td>
+                                        <td data-bind="text: TotalAmount"></td>
+                                        <td>   <button data-bind="click: $root.delete"  
+class="btn btn-danger">Delete</button>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                                <!-- preview content goes here-->
+                            </table>
+                        </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary " data-bind="event:{ 
+                     click:Save}">Save</button>&nbsp;&nbsp;
+                    <button type="button" class="btn btn-danger " data-bind="event:{ 
+                       click:Cancel }">Cancel</button>
+					   <button type="button" class="btn btn-default" data-toggle="tooltip" data-placement="right" title="Tooltip on right">Tooltip on right</button>
+                </div>
+            </div>
+        </div>
+    </div>

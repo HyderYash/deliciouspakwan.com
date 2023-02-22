@@ -1,0 +1,26 @@
+﻿<div>
+    <table class="table table-striped" cellspacing="0">
+        <thead>
+            <tr data-bind="foreach: columns">
+                <th data-bind="text: headerText"></th>
+            </tr>
+        </thead>
+        <tbody class="table table-hover" data-bind="foreach: itemsOnCurrentPage">
+            <tr data-bind="foreach: $parent.columns">
+				<!--ko if: typeof rowText == 'object' && typeof rowText.action == 'function'-->
+                    <td><button data-bind="click: rowText.action($parent.ID)"><span class="fa fa-trash-o"></span></button></td>
+                <!-- /ko -->               
+			    <!--ko ifnot: typeof rowText == 'object' && typeof rowText.action == 'function'-->
+                    <td data-bind="text: typeof rowText == 'function' ? rowText($parent) : $parent[rowText] "></td>
+                <!--/ko-->
+			</tr>
+        </tbody>
+    </table>
+    <ul class="pagination">
+        <!-- ko foreach: ko.utils.range(0, maxPageIndex) -->
+        <li>
+            <a href="#" data-bind="text: $data + 1, click: function () { $root.currentPageIndex($data); }"></a>
+        </li>
+        <!-- /ko -->
+    </ul>
+</div>

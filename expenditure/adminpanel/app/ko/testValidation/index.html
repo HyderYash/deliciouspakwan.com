@@ -1,0 +1,9 @@
+<div data-bind="foreach: HrAdmins">
+    <input type="text" placeholder="First Name" data-bind="value: FirstName" />
+    <input type="text" placeholder="Last Name" data-bind="value: LastName" />
+    <input type="text" placeholder="Email Address" data-bind="value: Email" />
+</div>
+<p data-bind="validationMessage: HrAdmins" class="validationMessage"></p>
+<a href="#" data-bind="click: $root.AddHrAdmin">Add Manager</a>
+
+<a href="#" data-bind="click: $root.GoToStep3">Go to Step 3</a>

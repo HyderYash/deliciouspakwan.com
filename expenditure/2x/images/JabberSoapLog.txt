@@ -1,0 +1,3932 @@
+soap_instantiate_SOAP_ENV__Header(-1, , )
+Instantiated location=20B60F30
+Reinitializing context
+Free namespace stack
+Free any remaining temp blocks
+Free attribute storage
+Free pointer hashtable
+Free ID hashtable
+soap_serializeheader
+soap_begin_count
+Free namespace stack
+Begin count phase (socket=2180 mode=0x2000818 count=0)
+soap_envelope_begin_outElement begin tag='SOAP-ENV:Envelope' level='0' id='0' type=''
+Attribute 'xmlns:SOAP-ENV'='http://www.w3.org/2003/05/soap-envelope'
+Attribute 'xmlns:SOAP-ENC'='http://www.w3.org/2003/05/soap-encoding'
+Attribute 'xmlns:xsi'='http://www.w3.org/2001/XMLSchema-instance'
+Attribute 'xmlns:xsd'='http://www.w3.org/2001/XMLSchema'
+Attribute 'xmlns:ns1'='urn:cisco:epas:soap'
+soap_putheader
+Element begin tag='SOAP-ENV:Header' level='1' id='0' type=''
+Element begin tag='ns1:session-key' level='2' id='0' type=''
+Attribute 'SOAP-ENV:mustUnderstand'='true'
+Element ending tag='ns1:session-key'
+Element ending tag='SOAP-ENV:Header'
+soap_body_begin_out
+Element begin tag='SOAP-ENV:Body' level='1' id='0' type=''
+Element begin tag='ns1:get-onetime-password' level='2' id='0' type=''
+Element ending tag='ns1:get-onetime-password'
+soap_body_end_out
+Element ending tag='SOAP-ENV:Body'
+soap_envelope_end_out
+Element ending tag='SOAP-ENV:Envelope'
+End of count phase
+soap_connect_command
+soap_try_connect_command
+tcp_select, sk:2180, flags:7, timeout:0, time:Sun Mar 24 16:34:13 2019
+
+tcp_select ret:3, time:Sun Mar 24 16:34:13 2019
+
+Polling: other end down on socket=2180 select=3
+soap_closesock
+Shutdown socket=2180 how=2
+Close socket=2180
+Connect/reconnect to 'https://10.250.64.7:8443/EPASSoap/service/v105' host='10.250.64.7' path='/EPASSoap/service/v105' port=8443
+tcp_connect
+Opening socket=2180 to host='10.250.64.7' port=8443
+tcp_select, sk:2180, flags:2, timeout:10, time:Sun Mar 24 16:34:13 2019
+
+tcp_select ret:2, time:Sun Mar 24 16:34:13 2019
+
+tcp_select, sk:2180, flags:5, timeout:-104288, time:Sun Mar 24 16:34:13 2019
+
+tcp_select ret:1, time:Sun Mar 24 16:34:13 2019
+
+tcp_select, sk:2180, flags:5, timeout:-104288, time:Sun Mar 24 16:34:13 2019
+
+tcp_select ret:1, time:Sun Mar 24 16:34:13 2019
+
+Calculating the message size with attachments, current count=546
+New count=546
+Initializing for output to socket=2180/fd=1
+Free namespace stack
+Begin send phase (socket=2180 mode=0x2000811 count=546)
+HTTP POST to https://10.250.64.7:8443/EPASSoap/service/v105
+Sending cookies for domain='10.250.64.7' path='/EPASSoap/service/v105'
+soap_envelope_begin_outElement begin tag='SOAP-ENV:Envelope' level='0' id='0' type=''
+Attribute 'xmlns:SOAP-ENV'='http://www.w3.org/2003/05/soap-envelope'
+Attribute 'xmlns:SOAP-ENC'='http://www.w3.org/2003/05/soap-encoding'
+Attribute 'xmlns:xsi'='http://www.w3.org/2001/XMLSchema-instance'
+Attribute 'xmlns:xsd'='http://www.w3.org/2001/XMLSchema'
+Attribute 'xmlns:ns1'='urn:cisco:epas:soap'
+soap_putheader
+Element begin tag='SOAP-ENV:Header' level='1' id='0' type=''
+Element begin tag='ns1:session-key' level='2' id='0' type=''
+Attribute 'SOAP-ENV:mustUnderstand'='true'
+Element ending tag='ns1:session-key'
+Element ending tag='SOAP-ENV:Header'
+soap_body_begin_out
+Element begin tag='SOAP-ENV:Body' level='1' id='0' type=''
+Element begin tag='ns1:get-onetime-password' level='2' id='0' type=''
+Element ending tag='ns1:get-onetime-password'
+soap_body_end_out
+Element ending tag='SOAP-ENV:Body'
+soap_envelope_end_out
+Element ending tag='SOAP-ENV:Envelope'
+soap_end_send
+End send mode=0x2000811
+Send 886 bytes to socket=2180/fd=1
+tcp_select, sk:2180, flags:7, timeout:11, time:Sun Mar 24 16:34:13 2019
+
+tcp_select ret:2, time:Sun Mar 24 16:34:13 2019
+
+End of send phase
+Initializing for input from socket=2180/fd=0
+Free namespace stack
+Free any remaining temp blocks
+Free attribute storage
+Free pointer hashtable
+Free ID hashtable
+Free ID hashtable
+tcp_select, sk:2180, flags:5, timeout:12, time:Sun Mar 24 16:34:13 2019
+
+tcp_select ret:1, time:Sun Mar 24 16:34:13 2019
+
+Read 641 bytes from socket=2180/fd=0
+Read count=641 (+641)
+Waiting for HTTP request/response...
+HTTP status: HTTP/1.1 200 OK
+HTTP header: X-Frame-Options: SAMEORIGIN
+HTTP header: Content-Type: application/soap+xml;charset=UTF-8
+HTTP header: Content-Length: 474
+HTTP header: Date: Sun, 24 Mar 2019 11:03:55 GMT
+HTTP header: Server:  
+Finished HTTP header parsing, status = 200
+Keep alive connection = 1
+soap_envelope_begin_in
+XML PI <?xml version='1.0' ?>
+Enlarging look-aside buffer to append data, size=0
+New look-aside buffer size=256
+Push namespace binding (level=0) 'env' 'http://www.w3.org/2003/05/soap-envelope'
+Push OK ('env' matches 'SOAP-ENV' in namespace table)
+Push namespace binding (level=0) 'xsd' 'http://www.w3.org/2001/XMLSchema'
+Push OK ('xsd' matches 'xsd' in namespace table)
+Push namespace binding (level=0) 'xml' 'http://www.w3.org/XML/1998/namespace'
+Push NOT OK: no match found for 'http://www.w3.org/XML/1998/namespace' in namespace mapping table (added to stack anyway)
+Push namespace binding (level=0) 'xsi' 'http://www.w3.org/2001/XMLSchema-instance'
+Push OK ('xsi' matches 'xsi' in namespace table)
+Tags and (default) namespaces match: 'env:Envelope' 'SOAP-ENV:Envelope'
+Begin element found (level=1) 'env:Envelope'='SOAP-ENV:Envelope'
+soap_recv_header
+soap_body_begin_in
+Tags and (default) namespaces match: 'env:Body' 'SOAP-ENV:Body'
+Begin element found (level=2) 'env:Body'='SOAP-ENV:Body'
+Push namespace binding (level=2) 'epas' 'urn:cisco:epas:soap'
+Push OK ('epas' matches 'ns1' in namespace table)
+Tags and (default) namespaces match: 'epas:get-onetime-password-resp' 'ns1:get-onetime-password-resp'
+Begin element found (level=3) 'epas:get-onetime-password-resp'='ns1:get-onetime-password-resp'
+Enter id='' type=47 loc=08E7F3A8 size=16 level=0
+Tags and (default) namespaces match: 'epas:success' 'ns1:success'
+Begin element found (level=4) 'epas:success'='ns1:success'
+Reverting to last element 'epas:success' (level=3)
+soap_instantiate__ns1__GetOneTimePasswordStatusType_success(-1, , )
+Instantiated location=11F478B0
+Tags and (default) namespaces match: 'epas:success' 'ns1:success'
+Begin element found (level=4) 'epas:success'='ns1:success'
+Enter id='' type=161 loc=11F478B0 size=8 level=0
+Tags and (default) namespaces match: 'epas:password' 'ns1:password'
+Begin element found (level=5) 'epas:password'='ns1:password'
+Reading string content, flag=1
+Enter id='' type=98 loc=07915658 size=4 level=0
+End element found (level=5) 'epas:password'='ns1:password'
+End element found (level=4) 'epas:success'='ns1:success'
+End element found (level=3) 'epas:get-onetime-password-resp'='ns1:get-onetime-password-resp'
+soap_body_end_in
+End element found (level=2) 'env:Body'='SOAP-ENV:Body'
+soap_envelope_end_in
+End element found (level=1) 'env:Envelope'='SOAP-ENV:Envelope'
+soap_end_recv
+End of receive message ok
+Resolving forwarded data
+Resolution phase
+Resolution done
+Free namespace stack
+soap_closesock
+soap_instantiate_SOAP_ENV__Header(-1, , )
+Instantiated location=20B60FA0
+Reinitializing context
+Free namespace stack
+Free any remaining temp blocks
+Free attribute storage
+Free pointer hashtable
+Free ID hashtable
+soap_serializeheader
+soap_begin_count
+Free namespace stack
+Begin count phase (socket=2180 mode=0x2000818 count=0)
+soap_envelope_begin_outElement begin tag='SOAP-ENV:Envelope' level='0' id='0' type=''
+Attribute 'xmlns:SOAP-ENV'='http://www.w3.org/2003/05/soap-envelope'
+Attribute 'xmlns:SOAP-ENC'='http://www.w3.org/2003/05/soap-encoding'
+Attribute 'xmlns:xsi'='http://www.w3.org/2001/XMLSchema-instance'
+Attribute 'xmlns:xsd'='http://www.w3.org/2001/XMLSchema'
+Attribute 'xmlns:ns1'='urn:cisco:epas:soap'
+soap_putheader
+Element begin tag='SOAP-ENV:Header' level='1' id='0' type=''
+Element begin tag='ns1:session-key' level='2' id='0' type=''
+Attribute 'SOAP-ENV:mustUnderstand'='true'
+Element ending tag='ns1:session-key'
+Element ending tag='SOAP-ENV:Header'
+soap_body_begin_out
+Element begin tag='SOAP-ENV:Body' level='1' id='0' type=''
+Element begin tag='ns1:get-onetime-password' level='2' id='0' type=''
+Element ending tag='ns1:get-onetime-password'
+soap_body_end_out
+Element ending tag='SOAP-ENV:Body'
+soap_envelope_end_out
+Element ending tag='SOAP-ENV:Envelope'
+End of count phase
+soap_connect_command
+soap_try_connect_command
+tcp_select, sk:2180, flags:7, timeout:0, time:Mon Mar 25 10:41:41 2019
+
+tcp_select ret:3, time:Mon Mar 25 10:41:41 2019
+
+Polling: other end down on socket=2180 select=3
+soap_closesock
+Shutdown socket=2180 how=2
+Close socket=2180
+Connect/reconnect to 'https://10.250.64.7:8443/EPASSoap/service/v105' host='10.250.64.7' path='/EPASSoap/service/v105' port=8443
+tcp_connect
+Opening socket=2180 to host='10.250.64.7' port=8443
+tcp_select, sk:2180, flags:2, timeout:10, time:Mon Mar 25 10:41:41 2019
+
+tcp_select ret:2, time:Mon Mar 25 10:41:41 2019
+
+tcp_select, sk:2180, flags:5, timeout:-104288, time:Mon Mar 25 10:41:41 2019
+
+tcp_select ret:1, time:Mon Mar 25 10:41:41 2019
+
+tcp_select, sk:2180, flags:5, timeout:-104288, time:Mon Mar 25 10:41:41 2019
+
+tcp_select ret:1, time:Mon Mar 25 10:41:41 2019
+
+Calculating the message size with attachments, current count=546
+New count=546
+Initializing for output to socket=2180/fd=1
+Free namespace stack
+Begin send phase (socket=2180 mode=0x2000811 count=546)
+HTTP POST to https://10.250.64.7:8443/EPASSoap/service/v105
+Sending cookies for domain='10.250.64.7' path='/EPASSoap/service/v105'
+soap_envelope_begin_outElement begin tag='SOAP-ENV:Envelope' level='0' id='0' type=''
+Attribute 'xmlns:SOAP-ENV'='http://www.w3.org/2003/05/soap-envelope'
+Attribute 'xmlns:SOAP-ENC'='http://www.w3.org/2003/05/soap-encoding'
+Attribute 'xmlns:xsi'='http://www.w3.org/2001/XMLSchema-instance'
+Attribute 'xmlns:xsd'='http://www.w3.org/2001/XMLSchema'
+Attribute 'xmlns:ns1'='urn:cisco:epas:soap'
+soap_putheader
+Element begin tag='SOAP-ENV:Header' level='1' id='0' type=''
+Element begin tag='ns1:session-key' level='2' id='0' type=''
+Attribute 'SOAP-ENV:mustUnderstand'='true'
+Element ending tag='ns1:session-key'
+Element ending tag='SOAP-ENV:Header'
+soap_body_begin_out
+Element begin tag='SOAP-ENV:Body' level='1' id='0' type=''
+Element begin tag='ns1:get-onetime-password' level='2' id='0' type=''
+Element ending tag='ns1:get-onetime-password'
+soap_body_end_out
+Element ending tag='SOAP-ENV:Body'
+soap_envelope_end_out
+Element ending tag='SOAP-ENV:Envelope'
+soap_end_send
+End send mode=0x2000811
+Send 886 bytes to socket=2180/fd=1
+tcp_select, sk:2180, flags:7, timeout:11, time:Mon Mar 25 10:41:41 2019
+
+tcp_select ret:2, time:Mon Mar 25 10:41:41 2019
+
+End of send phase
+Initializing for input from socket=2180/fd=0
+Free namespace stack
+Free any remaining temp blocks
+Free attribute storage
+Free pointer hashtable
+Free ID hashtable
+Free ID hashtable
+tcp_select, sk:2180, flags:5, timeout:12, time:Mon Mar 25 10:41:41 2019
+
+tcp_select ret:1, time:Mon Mar 25 10:41:41 2019
+
+Read 641 bytes from socket=2180/fd=0
+Read count=641 (+641)
+Waiting for HTTP request/response...
+HTTP status: HTTP/1.1 200 OK
+HTTP header: X-Frame-Options: SAMEORIGIN
+HTTP header: Content-Type: application/soap+xml;charset=UTF-8
+HTTP header: Content-Length: 474
+HTTP header: Date: Mon, 25 Mar 2019 05:11:25 GMT
+HTTP header: Server:  
+Finished HTTP header parsing, status = 200
+Keep alive connection = 1
+soap_envelope_begin_in
+XML PI <?xml version='1.0' ?>
+Enlarging look-aside buffer to append data, size=0
+New look-aside buffer size=256
+Push namespace binding (level=0) 'env' 'http://www.w3.org/2003/05/soap-envelope'
+Push OK ('env' matches 'SOAP-ENV' in namespace table)
+Push namespace binding (level=0) 'xsd' 'http://www.w3.org/2001/XMLSchema'
+Push OK ('xsd' matches 'xsd' in namespace table)
+Push namespace binding (level=0) 'xml' 'http://www.w3.org/XML/1998/namespace'
+Push NOT OK: no match found for 'http://www.w3.org/XML/1998/namespace' in namespace mapping table (added to stack anyway)
+Push namespace binding (level=0) 'xsi' 'http://www.w3.org/2001/XMLSchema-instance'
+Push OK ('xsi' matches 'xsi' in namespace table)
+Tags and (default) namespaces match: 'env:Envelope' 'SOAP-ENV:Envelope'
+Begin element found (level=1) 'env:Envelope'='SOAP-ENV:Envelope'
+soap_recv_header
+soap_body_begin_in
+Tags and (default) namespaces match: 'env:Body' 'SOAP-ENV:Body'
+Begin element found (level=2) 'env:Body'='SOAP-ENV:Body'
+Push namespace binding (level=2) 'epas' 'urn:cisco:epas:soap'
+Push OK ('epas' matches 'ns1' in namespace table)
+Tags and (default) namespaces match: 'epas:get-onetime-password-resp' 'ns1:get-onetime-password-resp'
+Begin element found (level=3) 'epas:get-onetime-password-resp'='ns1:get-onetime-password-resp'
+Enter id='' type=47 loc=08E7F3A8 size=16 level=0
+Tags and (default) namespaces match: 'epas:success' 'ns1:success'
+Begin element found (level=4) 'epas:success'='ns1:success'
+Reverting to last element 'epas:success' (level=3)
+soap_instantiate__ns1__GetOneTimePasswordStatusType_success(-1, , )
+Instantiated location=1E7C4620
+Tags and (default) namespaces match: 'epas:success' 'ns1:success'
+Begin element found (level=4) 'epas:success'='ns1:success'
+Enter id='' type=161 loc=1E7C4620 size=8 level=0
+Tags and (default) namespaces match: 'epas:password' 'ns1:password'
+Begin element found (level=5) 'epas:password'='ns1:password'
+Reading string content, flag=1
+Enter id='' type=98 loc=078F3488 size=4 level=0
+End element found (level=5) 'epas:password'='ns1:password'
+End element found (level=4) 'epas:success'='ns1:success'
+End element found (level=3) 'epas:get-onetime-password-resp'='ns1:get-onetime-password-resp'
+soap_body_end_in
+End element found (level=2) 'env:Body'='SOAP-ENV:Body'
+soap_envelope_end_in
+End element found (level=1) 'env:Envelope'='SOAP-ENV:Envelope'
+soap_end_recv
+End of receive message ok
+Resolving forwarded data
+Resolution phase
+Resolution done
+Free namespace stack
+soap_closesock
+soap_instantiate_SOAP_ENV__Header(-1, , )
+Instantiated location=19BD6678
+Reinitializing context
+Free namespace stack
+Free any remaining temp blocks
+Free attribute storage
+Free pointer hashtable
+Free ID hashtable
+soap_serializeheader
+soap_begin_count
+Free namespace stack
+Begin count phase (socket=2180 mode=0x2000818 count=0)
+soap_envelope_begin_outElement begin tag='SOAP-ENV:Envelope' level='0' id='0' type=''
+Attribute 'xmlns:SOAP-ENV'='http://www.w3.org/2003/05/soap-envelope'
+Attribute 'xmlns:SOAP-ENC'='http://www.w3.org/2003/05/soap-encoding'
+Attribute 'xmlns:xsi'='http://www.w3.org/2001/XMLSchema-instance'
+Attribute 'xmlns:xsd'='http://www.w3.org/2001/XMLSchema'
+Attribute 'xmlns:ns1'='urn:cisco:epas:soap'
+soap_putheader
+Element begin tag='SOAP-ENV:Header' level='1' id='0' type=''
+Element begin tag='ns1:session-key' level='2' id='0' type=''
+Attribute 'SOAP-ENV:mustUnderstand'='true'
+Element ending tag='ns1:session-key'
+Element ending tag='SOAP-ENV:Header'
+soap_body_begin_out
+Element begin tag='SOAP-ENV:Body' level='1' id='0' type=''
+Element begin tag='ns1:get-onetime-password' level='2' id='0' type=''
+Element ending tag='ns1:get-onetime-password'
+soap_body_end_out
+Element ending tag='SOAP-ENV:Body'
+soap_envelope_end_out
+Element ending tag='SOAP-ENV:Envelope'
+End of count phase
+soap_connect_command
+soap_try_connect_command
+tcp_select, sk:2180, flags:7, timeout:0, time:Tue Mar 26 12:13:24 2019
+
+tcp_select ret:3, time:Tue Mar 26 12:13:24 2019
+
+Polling: other end down on socket=2180 select=3
+soap_closesock
+Shutdown socket=2180 how=2
+Close socket=2180
+Connect/reconnect to 'https://10.250.64.7:8443/EPASSoap/service/v105' host='10.250.64.7' path='/EPASSoap/service/v105' port=8443
+tcp_connect
+Opening socket=2180 to host='10.250.64.7' port=8443
+tcp_select, sk:2180, flags:2, timeout:10, time:Tue Mar 26 12:13:24 2019
+
+tcp_select ret:2, time:Tue Mar 26 12:13:24 2019
+
+tcp_select, sk:2180, flags:5, timeout:-104288, time:Tue Mar 26 12:13:24 2019
+
+tcp_select ret:1, time:Tue Mar 26 12:13:24 2019
+
+tcp_select, sk:2180, flags:5, timeout:-104288, time:Tue Mar 26 12:13:24 2019
+
+tcp_select ret:1, time:Tue Mar 26 12:13:24 2019
+
+Calculating the message size with attachments, current count=546
+New count=546
+Initializing for output to socket=2180/fd=1
+Free namespace stack
+Begin send phase (socket=2180 mode=0x2000811 count=546)
+HTTP POST to https://10.250.64.7:8443/EPASSoap/service/v105
+Sending cookies for domain='10.250.64.7' path='/EPASSoap/service/v105'
+soap_envelope_begin_outElement begin tag='SOAP-ENV:Envelope' level='0' id='0' type=''
+Attribute 'xmlns:SOAP-ENV'='http://www.w3.org/2003/05/soap-envelope'
+Attribute 'xmlns:SOAP-ENC'='http://www.w3.org/2003/05/soap-encoding'
+Attribute 'xmlns:xsi'='http://www.w3.org/2001/XMLSchema-instance'
+Attribute 'xmlns:xsd'='http://www.w3.org/2001/XMLSchema'
+Attribute 'xmlns:ns1'='urn:cisco:epas:soap'
+soap_putheader
+Element begin tag='SOAP-ENV:Header' level='1' id='0' type=''
+Element begin tag='ns1:session-key' level='2' id='0' type=''
+Attribute 'SOAP-ENV:mustUnderstand'='true'
+Element ending tag='ns1:session-key'
+Element ending tag='SOAP-ENV:Header'
+soap_body_begin_out
+Element begin tag='SOAP-ENV:Body' level='1' id='0' type=''
+Element begin tag='ns1:get-onetime-password' level='2' id='0' type=''
+Element ending tag='ns1:get-onetime-password'
+soap_body_end_out
+Element ending tag='SOAP-ENV:Body'
+soap_envelope_end_out
+Element ending tag='SOAP-ENV:Envelope'
+soap_end_send
+End send mode=0x2000811
+Send 886 bytes to socket=2180/fd=1
+tcp_select, sk:2180, flags:7, timeout:11, time:Tue Mar 26 12:13:24 2019
+
+tcp_select ret:2, time:Tue Mar 26 12:13:24 2019
+
+End of send phase
+Initializing for input from socket=2180/fd=0
+Free namespace stack
+Free any remaining temp blocks
+Free attribute storage
+Free pointer hashtable
+Free ID hashtable
+Free ID hashtable
+tcp_select, sk:2180, flags:5, timeout:12, time:Tue Mar 26 12:13:24 2019
+
+tcp_select ret:1, time:Tue Mar 26 12:13:24 2019
+
+Read 640 bytes from socket=2180/fd=0
+Read count=640 (+640)
+Waiting for HTTP request/response...
+HTTP status: HTTP/1.1 200 OK
+HTTP header: X-Frame-Options: SAMEORIGIN
+HTTP header: Content-Type: application/soap+xml;charset=UTF-8
+HTTP header: Content-Length: 473
+HTTP header: Date: Tue, 26 Mar 2019 06:43:07 GMT
+HTTP header: Server:  
+Finished HTTP header parsing, status = 200
+Keep alive connection = 1
+soap_envelope_begin_in
+XML PI <?xml version='1.0' ?>
+Enlarging look-aside buffer to append data, size=0
+New look-aside buffer size=256
+Push namespace binding (level=0) 'env' 'http://www.w3.org/2003/05/soap-envelope'
+Push OK ('env' matches 'SOAP-ENV' in namespace table)
+Push namespace binding (level=0) 'xsd' 'http://www.w3.org/2001/XMLSchema'
+Push OK ('xsd' matches 'xsd' in namespace table)
+Push namespace binding (level=0) 'xml' 'http://www.w3.org/XML/1998/namespace'
+Push NOT OK: no match found for 'http://www.w3.org/XML/1998/namespace' in namespace mapping table (added to stack anyway)
+Push namespace binding (level=0) 'xsi' 'http://www.w3.org/2001/XMLSchema-instance'
+Push OK ('xsi' matches 'xsi' in namespace table)
+Tags and (default) namespaces match: 'env:Envelope' 'SOAP-ENV:Envelope'
+Begin element found (level=1) 'env:Envelope'='SOAP-ENV:Envelope'
+soap_recv_header
+soap_body_begin_in
+Tags and (default) namespaces match: 'env:Body' 'SOAP-ENV:Body'
+Begin element found (level=2) 'env:Body'='SOAP-ENV:Body'
+Push namespace binding (level=2) 'epas' 'urn:cisco:epas:soap'
+Push OK ('epas' matches 'ns1' in namespace table)
+Tags and (default) namespaces match: 'epas:get-onetime-password-resp' 'ns1:get-onetime-password-resp'
+Begin element found (level=3) 'epas:get-onetime-password-resp'='ns1:get-onetime-password-resp'
+Enter id='' type=47 loc=08E7F3A8 size=16 level=0
+Tags and (default) namespaces match: 'epas:success' 'ns1:success'
+Begin element found (level=4) 'epas:success'='ns1:success'
+Reverting to last element 'epas:success' (level=3)
+soap_instantiate__ns1__GetOneTimePasswordStatusType_success(-1, , )
+Instantiated location=21397FE0
+Tags and (default) namespaces match: 'epas:success' 'ns1:success'
+Begin element found (level=4) 'epas:success'='ns1:success'
+Enter id='' type=161 loc=21397FE0 size=8 level=0
+Tags and (default) namespaces match: 'epas:password' 'ns1:password'
+Begin element found (level=5) 'epas:password'='ns1:password'
+Reading string content, flag=1
+Enter id='' type=98 loc=19853AD0 size=4 level=0
+End element found (level=5) 'epas:password'='ns1:password'
+End element found (level=4) 'epas:success'='ns1:success'
+End element found (level=3) 'epas:get-onetime-password-resp'='ns1:get-onetime-password-resp'
+soap_body_end_in
+End element found (level=2) 'env:Body'='SOAP-ENV:Body'
+soap_envelope_end_in
+End element found (level=1) 'env:Envelope'='SOAP-ENV:Envelope'
+soap_end_recv
+End of receive message ok
+Resolving forwarded data
+Resolution phase
+Resolution done
+Free namespace stack
+soap_closesock
+soap_instantiate_SOAP_ENV__Header(-1, , )
+Instantiated location=11AE6B28
+Reinitializing context
+Free namespace stack
+Free any remaining temp blocks
+Free attribute storage
+Free pointer hashtable
+Free ID hashtable
+soap_serializeheader
+soap_begin_count
+Free namespace stack
+Begin count phase (socket=2180 mode=0x2000818 count=0)
+soap_envelope_begin_outElement begin tag='SOAP-ENV:Envelope' level='0' id='0' type=''
+Attribute 'xmlns:SOAP-ENV'='http://www.w3.org/2003/05/soap-envelope'
+Attribute 'xmlns:SOAP-ENC'='http://www.w3.org/2003/05/soap-encoding'
+Attribute 'xmlns:xsi'='http://www.w3.org/2001/XMLSchema-instance'
+Attribute 'xmlns:xsd'='http://www.w3.org/2001/XMLSchema'
+Attribute 'xmlns:ns1'='urn:cisco:epas:soap'
+soap_putheader
+Element begin tag='SOAP-ENV:Header' level='1' id='0' type=''
+Element begin tag='ns1:session-key' level='2' id='0' type=''
+Attribute 'SOAP-ENV:mustUnderstand'='true'
+Element ending tag='ns1:session-key'
+Element ending tag='SOAP-ENV:Header'
+soap_body_begin_out
+Element begin tag='SOAP-ENV:Body' level='1' id='0' type=''
+Element begin tag='ns1:get-onetime-password' level='2' id='0' type=''
+Element ending tag='ns1:get-onetime-password'
+soap_body_end_out
+Element ending tag='SOAP-ENV:Body'
+soap_envelope_end_out
+Element ending tag='SOAP-ENV:Envelope'
+End of count phase
+soap_connect_command
+soap_try_connect_command
+tcp_select, sk:2180, flags:7, timeout:0, time:Tue Mar 26 16:43:03 2019
+
+tcp_select ret:3, time:Tue Mar 26 16:43:03 2019
+
+Polling: other end down on socket=2180 select=3
+soap_closesock
+Shutdown socket=2180 how=2
+Close socket=2180
+Connect/reconnect to 'https://10.250.64.7:8443/EPASSoap/service/v105' host='10.250.64.7' path='/EPASSoap/service/v105' port=8443
+tcp_connect
+Opening socket=2180 to host='10.250.64.7' port=8443
+tcp_select, sk:2180, flags:2, timeout:10, time:Tue Mar 26 16:43:03 2019
+
+tcp_select ret:2, time:Tue Mar 26 16:43:03 2019
+
+tcp_select, sk:2180, flags:5, timeout:-104288, time:Tue Mar 26 16:43:03 2019
+
+tcp_select ret:1, time:Tue Mar 26 16:43:03 2019
+
+tcp_select, sk:2180, flags:5, timeout:-104288, time:Tue Mar 26 16:43:03 2019
+
+tcp_select ret:1, time:Tue Mar 26 16:43:03 2019
+
+Calculating the message size with attachments, current count=546
+New count=546
+Initializing for output to socket=2180/fd=1
+Free namespace stack
+Begin send phase (socket=2180 mode=0x2000811 count=546)
+HTTP POST to https://10.250.64.7:8443/EPASSoap/service/v105
+Sending cookies for domain='10.250.64.7' path='/EPASSoap/service/v105'
+soap_envelope_begin_outElement begin tag='SOAP-ENV:Envelope' level='0' id='0' type=''
+Attribute 'xmlns:SOAP-ENV'='http://www.w3.org/2003/05/soap-envelope'
+Attribute 'xmlns:SOAP-ENC'='http://www.w3.org/2003/05/soap-encoding'
+Attribute 'xmlns:xsi'='http://www.w3.org/2001/XMLSchema-instance'
+Attribute 'xmlns:xsd'='http://www.w3.org/2001/XMLSchema'
+Attribute 'xmlns:ns1'='urn:cisco:epas:soap'
+soap_putheader
+Element begin tag='SOAP-ENV:Header' level='1' id='0' type=''
+Element begin tag='ns1:session-key' level='2' id='0' type=''
+Attribute 'SOAP-ENV:mustUnderstand'='true'
+Element ending tag='ns1:session-key'
+Element ending tag='SOAP-ENV:Header'
+soap_body_begin_out
+Element begin tag='SOAP-ENV:Body' level='1' id='0' type=''
+Element begin tag='ns1:get-onetime-password' level='2' id='0' type=''
+Element ending tag='ns1:get-onetime-password'
+soap_body_end_out
+Element ending tag='SOAP-ENV:Body'
+soap_envelope_end_out
+Element ending tag='SOAP-ENV:Envelope'
+soap_end_send
+End send mode=0x2000811
+Send 886 bytes to socket=2180/fd=1
+tcp_select, sk:2180, flags:7, timeout:11, time:Tue Mar 26 16:43:03 2019
+
+tcp_select ret:2, time:Tue Mar 26 16:43:03 2019
+
+End of send phase
+Initializing for input from socket=2180/fd=0
+Free namespace stack
+Free any remaining temp blocks
+Free attribute storage
+Free pointer hashtable
+Free ID hashtable
+Free ID hashtable
+tcp_select, sk:2180, flags:5, timeout:12, time:Tue Mar 26 16:43:03 2019
+
+tcp_select ret:1, time:Tue Mar 26 16:43:03 2019
+
+Read 640 bytes from socket=2180/fd=0
+Read count=640 (+640)
+Waiting for HTTP request/response...
+HTTP status: HTTP/1.1 200 OK
+HTTP header: X-Frame-Options: SAMEORIGIN
+HTTP header: Content-Type: application/soap+xml;charset=UTF-8
+HTTP header: Content-Length: 473
+HTTP header: Date: Tue, 26 Mar 2019 11:12:44 GMT
+HTTP header: Server:  
+Finished HTTP header parsing, status = 200
+Keep alive connection = 1
+soap_envelope_begin_in
+XML PI <?xml version='1.0' ?>
+Enlarging look-aside buffer to append data, size=0
+New look-aside buffer size=256
+Push namespace binding (level=0) 'env' 'http://www.w3.org/2003/05/soap-envelope'
+Push OK ('env' matches 'SOAP-ENV' in namespace table)
+Push namespace binding (level=0) 'xsd' 'http://www.w3.org/2001/XMLSchema'
+Push OK ('xsd' matches 'xsd' in namespace table)
+Push namespace binding (level=0) 'xml' 'http://www.w3.org/XML/1998/namespace'
+Push NOT OK: no match found for 'http://www.w3.org/XML/1998/namespace' in namespace mapping table (added to stack anyway)
+Push namespace binding (level=0) 'xsi' 'http://www.w3.org/2001/XMLSchema-instance'
+Push OK ('xsi' matches 'xsi' in namespace table)
+Tags and (default) namespaces match: 'env:Envelope' 'SOAP-ENV:Envelope'
+Begin element found (level=1) 'env:Envelope'='SOAP-ENV:Envelope'
+soap_recv_header
+soap_body_begin_in
+Tags and (default) namespaces match: 'env:Body' 'SOAP-ENV:Body'
+Begin element found (level=2) 'env:Body'='SOAP-ENV:Body'
+Push namespace binding (level=2) 'epas' 'urn:cisco:epas:soap'
+Push OK ('epas' matches 'ns1' in namespace table)
+Tags and (default) namespaces match: 'epas:get-onetime-password-resp' 'ns1:get-onetime-password-resp'
+Begin element found (level=3) 'epas:get-onetime-password-resp'='ns1:get-onetime-password-resp'
+Enter id='' type=47 loc=08E7F3A8 size=16 level=0
+Tags and (default) namespaces match: 'epas:success' 'ns1:success'
+Begin element found (level=4) 'epas:success'='ns1:success'
+Reverting to last element 'epas:success' (level=3)
+soap_instantiate__ns1__GetOneTimePasswordStatusType_success(-1, , )
+Instantiated location=11AE9FA8
+Tags and (default) namespaces match: 'epas:success' 'ns1:success'
+Begin element found (level=4) 'epas:success'='ns1:success'
+Enter id='' type=161 loc=11AE9FA8 size=8 level=0
+Tags and (default) namespaces match: 'epas:password' 'ns1:password'
+Begin element found (level=5) 'epas:password'='ns1:password'
+Reading string content, flag=1
+Enter id='' type=98 loc=12561300 size=4 level=0
+End element found (level=5) 'epas:password'='ns1:password'
+End element found (level=4) 'epas:success'='ns1:success'
+End element found (level=3) 'epas:get-onetime-password-resp'='ns1:get-onetime-password-resp'
+soap_body_end_in
+End element found (level=2) 'env:Body'='SOAP-ENV:Body'
+soap_envelope_end_in
+End element found (level=1) 'env:Envelope'='SOAP-ENV:Envelope'
+soap_end_recv
+End of receive message ok
+Resolving forwarded data
+Resolution phase
+Resolution done
+Free namespace stack
+soap_closesock
+soap_instantiate_SOAP_ENV__Header(-1, , )
+Instantiated location=1B3BF150
+Reinitializing context
+Free namespace stack
+Free any remaining temp blocks
+Free attribute storage
+Free pointer hashtable
+Free ID hashtable
+soap_serializeheader
+soap_begin_count
+Free namespace stack
+Begin count phase (socket=2180 mode=0x2000818 count=0)
+soap_envelope_begin_outElement begin tag='SOAP-ENV:Envelope' level='0' id='0' type=''
+Attribute 'xmlns:SOAP-ENV'='http://www.w3.org/2003/05/soap-envelope'
+Attribute 'xmlns:SOAP-ENC'='http://www.w3.org/2003/05/soap-encoding'
+Attribute 'xmlns:xsi'='http://www.w3.org/2001/XMLSchema-instance'
+Attribute 'xmlns:xsd'='http://www.w3.org/2001/XMLSchema'
+Attribute 'xmlns:ns1'='urn:cisco:epas:soap'
+soap_putheader
+Element begin tag='SOAP-ENV:Header' level='1' id='0' type=''
+Element begin tag='ns1:session-key' level='2' id='0' type=''
+Attribute 'SOAP-ENV:mustUnderstand'='true'
+Element ending tag='ns1:session-key'
+Element ending tag='SOAP-ENV:Header'
+soap_body_begin_out
+Element begin tag='SOAP-ENV:Body' level='1' id='0' type=''
+Element begin tag='ns1:get-onetime-password' level='2' id='0' type=''
+Element ending tag='ns1:get-onetime-password'
+soap_body_end_out
+Element ending tag='SOAP-ENV:Body'
+soap_envelope_end_out
+Element ending tag='SOAP-ENV:Envelope'
+End of count phase
+soap_connect_command
+soap_try_connect_command
+tcp_select, sk:2180, flags:7, timeout:0, time:Tue Mar 26 16:50:36 2019
+
+tcp_select ret:3, time:Tue Mar 26 16:50:36 2019
+
+Polling: other end down on socket=2180 select=3
+soap_closesock
+Shutdown socket=2180 how=2
+Close socket=2180
+Connect/reconnect to 'https://10.250.64.7:8443/EPASSoap/service/v105' host='10.250.64.7' path='/EPASSoap/service/v105' port=8443
+tcp_connect
+Opening socket=2180 to host='10.250.64.7' port=8443
+tcp_select, sk:2180, flags:2, timeout:10, time:Tue Mar 26 16:50:36 2019
+
+tcp_select ret:2, time:Tue Mar 26 16:50:36 2019
+
+tcp_select, sk:2180, flags:5, timeout:-104288, time:Tue Mar 26 16:50:36 2019
+
+tcp_select ret:1, time:Tue Mar 26 16:50:36 2019
+
+tcp_select, sk:2180, flags:5, timeout:-104288, time:Tue Mar 26 16:50:36 2019
+
+tcp_select ret:1, time:Tue Mar 26 16:50:36 2019
+
+Calculating the message size with attachments, current count=546
+New count=546
+Initializing for output to socket=2180/fd=1
+Free namespace stack
+Begin send phase (socket=2180 mode=0x2000811 count=546)
+HTTP POST to https://10.250.64.7:8443/EPASSoap/service/v105
+Sending cookies for domain='10.250.64.7' path='/EPASSoap/service/v105'
+soap_envelope_begin_outElement begin tag='SOAP-ENV:Envelope' level='0' id='0' type=''
+Attribute 'xmlns:SOAP-ENV'='http://www.w3.org/2003/05/soap-envelope'
+Attribute 'xmlns:SOAP-ENC'='http://www.w3.org/2003/05/soap-encoding'
+Attribute 'xmlns:xsi'='http://www.w3.org/2001/XMLSchema-instance'
+Attribute 'xmlns:xsd'='http://www.w3.org/2001/XMLSchema'
+Attribute 'xmlns:ns1'='urn:cisco:epas:soap'
+soap_putheader
+Element begin tag='SOAP-ENV:Header' level='1' id='0' type=''
+Element begin tag='ns1:session-key' level='2' id='0' type=''
+Attribute 'SOAP-ENV:mustUnderstand'='true'
+Element ending tag='ns1:session-key'
+Element ending tag='SOAP-ENV:Header'
+soap_body_begin_out
+Element begin tag='SOAP-ENV:Body' level='1' id='0' type=''
+Element begin tag='ns1:get-onetime-password' level='2' id='0' type=''
+Element ending tag='ns1:get-onetime-password'
+soap_body_end_out
+Element ending tag='SOAP-ENV:Body'
+soap_envelope_end_out
+Element ending tag='SOAP-ENV:Envelope'
+soap_end_send
+End send mode=0x2000811
+Send 886 bytes to socket=2180/fd=1
+tcp_select, sk:2180, flags:7, timeout:11, time:Tue Mar 26 16:50:36 2019
+
+tcp_select ret:2, time:Tue Mar 26 16:50:36 2019
+
+End of send phase
+Initializing for input from socket=2180/fd=0
+Free namespace stack
+Free any remaining temp blocks
+Free attribute storage
+Free pointer hashtable
+Free ID hashtable
+Free ID hashtable
+tcp_select, sk:2180, flags:5, timeout:12, time:Tue Mar 26 16:50:36 2019
+
+tcp_select ret:1, time:Tue Mar 26 16:50:36 2019
+
+Read 641 bytes from socket=2180/fd=0
+Read count=641 (+641)
+Waiting for HTTP request/response...
+HTTP status: HTTP/1.1 200 OK
+HTTP header: X-Frame-Options: SAMEORIGIN
+HTTP header: Content-Type: application/soap+xml;charset=UTF-8
+HTTP header: Content-Length: 474
+HTTP header: Date: Tue, 26 Mar 2019 11:20:18 GMT
+HTTP header: Server:  
+Finished HTTP header parsing, status = 200
+Keep alive connection = 1
+soap_envelope_begin_in
+XML PI <?xml version='1.0' ?>
+Enlarging look-aside buffer to append data, size=0
+New look-aside buffer size=256
+Push namespace binding (level=0) 'env' 'http://www.w3.org/2003/05/soap-envelope'
+Push OK ('env' matches 'SOAP-ENV' in namespace table)
+Push namespace binding (level=0) 'xsd' 'http://www.w3.org/2001/XMLSchema'
+Push OK ('xsd' matches 'xsd' in namespace table)
+Push namespace binding (level=0) 'xml' 'http://www.w3.org/XML/1998/namespace'
+Push NOT OK: no match found for 'http://www.w3.org/XML/1998/namespace' in namespace mapping table (added to stack anyway)
+Push namespace binding (level=0) 'xsi' 'http://www.w3.org/2001/XMLSchema-instance'
+Push OK ('xsi' matches 'xsi' in namespace table)
+Tags and (default) namespaces match: 'env:Envelope' 'SOAP-ENV:Envelope'
+Begin element found (level=1) 'env:Envelope'='SOAP-ENV:Envelope'
+soap_recv_header
+soap_body_begin_in
+Tags and (default) namespaces match: 'env:Body' 'SOAP-ENV:Body'
+Begin element found (level=2) 'env:Body'='SOAP-ENV:Body'
+Push namespace binding (level=2) 'epas' 'urn:cisco:epas:soap'
+Push OK ('epas' matches 'ns1' in namespace table)
+Tags and (default) namespaces match: 'epas:get-onetime-password-resp' 'ns1:get-onetime-password-resp'
+Begin element found (level=3) 'epas:get-onetime-password-resp'='ns1:get-onetime-password-resp'
+Enter id='' type=47 loc=08E7F3A8 size=16 level=0
+Tags and (default) namespaces match: 'epas:success' 'ns1:success'
+Begin element found (level=4) 'epas:success'='ns1:success'
+Reverting to last element 'epas:success' (level=3)
+soap_instantiate__ns1__GetOneTimePasswordStatusType_success(-1, , )
+Instantiated location=1B3BFE70
+Tags and (default) namespaces match: 'epas:success' 'ns1:success'
+Begin element found (level=4) 'epas:success'='ns1:success'
+Enter id='' type=161 loc=1B3BFE70 size=8 level=0
+Tags and (default) namespaces match: 'epas:password' 'ns1:password'
+Begin element found (level=5) 'epas:password'='ns1:password'
+Reading string content, flag=1
+Enter id='' type=98 loc=2BEBFB60 size=4 level=0
+End element found (level=5) 'epas:password'='ns1:password'
+End element found (level=4) 'epas:success'='ns1:success'
+End element found (level=3) 'epas:get-onetime-password-resp'='ns1:get-onetime-password-resp'
+soap_body_end_in
+End element found (level=2) 'env:Body'='SOAP-ENV:Body'
+soap_envelope_end_in
+End element found (level=1) 'env:Envelope'='SOAP-ENV:Envelope'
+soap_end_recv
+End of receive message ok
+Resolving forwarded data
+Resolution phase
+Resolution done
+Free namespace stack
+soap_closesock
+soap_instantiate_SOAP_ENV__Header(-1, , )
+Instantiated location=19AEC290
+Reinitializing context
+Free namespace stack
+Free any remaining temp blocks
+Free attribute storage
+Free pointer hashtable
+Free ID hashtable
+soap_serializeheader
+soap_begin_count
+Free namespace stack
+Begin count phase (socket=2180 mode=0x2000818 count=0)
+soap_envelope_begin_outElement begin tag='SOAP-ENV:Envelope' level='0' id='0' type=''
+Attribute 'xmlns:SOAP-ENV'='http://www.w3.org/2003/05/soap-envelope'
+Attribute 'xmlns:SOAP-ENC'='http://www.w3.org/2003/05/soap-encoding'
+Attribute 'xmlns:xsi'='http://www.w3.org/2001/XMLSchema-instance'
+Attribute 'xmlns:xsd'='http://www.w3.org/2001/XMLSchema'
+Attribute 'xmlns:ns1'='urn:cisco:epas:soap'
+soap_putheader
+Element begin tag='SOAP-ENV:Header' level='1' id='0' type=''
+Element begin tag='ns1:session-key' level='2' id='0' type=''
+Attribute 'SOAP-ENV:mustUnderstand'='true'
+Element ending tag='ns1:session-key'
+Element ending tag='SOAP-ENV:Header'
+soap_body_begin_out
+Element begin tag='SOAP-ENV:Body' level='1' id='0' type=''
+Element begin tag='ns1:get-onetime-password' level='2' id='0' type=''
+Element ending tag='ns1:get-onetime-password'
+soap_body_end_out
+Element ending tag='SOAP-ENV:Body'
+soap_envelope_end_out
+Element ending tag='SOAP-ENV:Envelope'
+End of count phase
+soap_connect_command
+soap_try_connect_command
+tcp_select, sk:2180, flags:7, timeout:0, time:Tue Mar 26 17:46:51 2019
+
+tcp_select ret:3, time:Tue Mar 26 17:46:51 2019
+
+Polling: other end down on socket=2180 select=3
+soap_closesock
+Shutdown socket=2180 how=2
+Close socket=2180
+Connect/reconnect to 'https://10.250.64.7:8443/EPASSoap/service/v105' host='10.250.64.7' path='/EPASSoap/service/v105' port=8443
+tcp_connect
+Opening socket=2180 to host='10.250.64.7' port=8443
+tcp_select, sk:2180, flags:2, timeout:10, time:Tue Mar 26 17:46:51 2019
+
+tcp_select ret:2, time:Tue Mar 26 17:46:51 2019
+
+tcp_select, sk:2180, flags:5, timeout:-104288, time:Tue Mar 26 17:46:51 2019
+
+tcp_select ret:1, time:Tue Mar 26 17:46:51 2019
+
+tcp_select, sk:2180, flags:5, timeout:-104288, time:Tue Mar 26 17:46:51 2019
+
+tcp_select ret:1, time:Tue Mar 26 17:46:51 2019
+
+Calculating the message size with attachments, current count=546
+New count=546
+Initializing for output to socket=2180/fd=1
+Free namespace stack
+Begin send phase (socket=2180 mode=0x2000811 count=546)
+HTTP POST to https://10.250.64.7:8443/EPASSoap/service/v105
+Sending cookies for domain='10.250.64.7' path='/EPASSoap/service/v105'
+soap_envelope_begin_outElement begin tag='SOAP-ENV:Envelope' level='0' id='0' type=''
+Attribute 'xmlns:SOAP-ENV'='http://www.w3.org/2003/05/soap-envelope'
+Attribute 'xmlns:SOAP-ENC'='http://www.w3.org/2003/05/soap-encoding'
+Attribute 'xmlns:xsi'='http://www.w3.org/2001/XMLSchema-instance'
+Attribute 'xmlns:xsd'='http://www.w3.org/2001/XMLSchema'
+Attribute 'xmlns:ns1'='urn:cisco:epas:soap'
+soap_putheader
+Element begin tag='SOAP-ENV:Header' level='1' id='0' type=''
+Element begin tag='ns1:session-key' level='2' id='0' type=''
+Attribute 'SOAP-ENV:mustUnderstand'='true'
+Element ending tag='ns1:session-key'
+Element ending tag='SOAP-ENV:Header'
+soap_body_begin_out
+Element begin tag='SOAP-ENV:Body' level='1' id='0' type=''
+Element begin tag='ns1:get-onetime-password' level='2' id='0' type=''
+Element ending tag='ns1:get-onetime-password'
+soap_body_end_out
+Element ending tag='SOAP-ENV:Body'
+soap_envelope_end_out
+Element ending tag='SOAP-ENV:Envelope'
+soap_end_send
+End send mode=0x2000811
+Send 886 bytes to socket=2180/fd=1
+tcp_select, sk:2180, flags:7, timeout:11, time:Tue Mar 26 17:46:51 2019
+
+tcp_select ret:2, time:Tue Mar 26 17:46:51 2019
+
+End of send phase
+Initializing for input from socket=2180/fd=0
+Free namespace stack
+Free any remaining temp blocks
+Free attribute storage
+Free pointer hashtable
+Free ID hashtable
+Free ID hashtable
+tcp_select, sk:2180, flags:5, timeout:12, time:Tue Mar 26 17:46:51 2019
+
+tcp_select ret:1, time:Tue Mar 26 17:46:51 2019
+
+Read 639 bytes from socket=2180/fd=0
+Read count=639 (+639)
+Waiting for HTTP request/response...
+HTTP status: HTTP/1.1 200 OK
+HTTP header: X-Frame-Options: SAMEORIGIN
+HTTP header: Content-Type: application/soap+xml;charset=UTF-8
+HTTP header: Content-Length: 472
+HTTP header: Date: Tue, 26 Mar 2019 12:16:33 GMT
+HTTP header: Server:  
+Finished HTTP header parsing, status = 200
+Keep alive connection = 1
+soap_envelope_begin_in
+XML PI <?xml version='1.0' ?>
+Enlarging look-aside buffer to append data, size=0
+New look-aside buffer size=256
+Push namespace binding (level=0) 'env' 'http://www.w3.org/2003/05/soap-envelope'
+Push OK ('env' matches 'SOAP-ENV' in namespace table)
+Push namespace binding (level=0) 'xsd' 'http://www.w3.org/2001/XMLSchema'
+Push OK ('xsd' matches 'xsd' in namespace table)
+Push namespace binding (level=0) 'xml' 'http://www.w3.org/XML/1998/namespace'
+Push NOT OK: no match found for 'http://www.w3.org/XML/1998/namespace' in namespace mapping table (added to stack anyway)
+Push namespace binding (level=0) 'xsi' 'http://www.w3.org/2001/XMLSchema-instance'
+Push OK ('xsi' matches 'xsi' in namespace table)
+Tags and (default) namespaces match: 'env:Envelope' 'SOAP-ENV:Envelope'
+Begin element found (level=1) 'env:Envelope'='SOAP-ENV:Envelope'
+soap_recv_header
+soap_body_begin_in
+Tags and (default) namespaces match: 'env:Body' 'SOAP-ENV:Body'
+Begin element found (level=2) 'env:Body'='SOAP-ENV:Body'
+Push namespace binding (level=2) 'epas' 'urn:cisco:epas:soap'
+Push OK ('epas' matches 'ns1' in namespace table)
+Tags and (default) namespaces match: 'epas:get-onetime-password-resp' 'ns1:get-onetime-password-resp'
+Begin element found (level=3) 'epas:get-onetime-password-resp'='ns1:get-onetime-password-resp'
+Enter id='' type=47 loc=08E7F3A8 size=16 level=0
+Tags and (default) namespaces match: 'epas:success' 'ns1:success'
+Begin element found (level=4) 'epas:success'='ns1:success'
+Reverting to last element 'epas:success' (level=3)
+soap_instantiate__ns1__GetOneTimePasswordStatusType_success(-1, , )
+Instantiated location=1B3BF440
+Tags and (default) namespaces match: 'epas:success' 'ns1:success'
+Begin element found (level=4) 'epas:success'='ns1:success'
+Enter id='' type=161 loc=1B3BF440 size=8 level=0
+Tags and (default) namespaces match: 'epas:password' 'ns1:password'
+Begin element found (level=5) 'epas:password'='ns1:password'
+Reading string content, flag=1
+Enter id='' type=98 loc=2BEBF620 size=4 level=0
+End element found (level=5) 'epas:password'='ns1:password'
+End element found (level=4) 'epas:success'='ns1:success'
+End element found (level=3) 'epas:get-onetime-password-resp'='ns1:get-onetime-password-resp'
+soap_body_end_in
+End element found (level=2) 'env:Body'='SOAP-ENV:Body'
+soap_envelope_end_in
+End element found (level=1) 'env:Envelope'='SOAP-ENV:Envelope'
+soap_end_recv
+End of receive message ok
+Resolving forwarded data
+Resolution phase
+Resolution done
+Free namespace stack
+soap_closesock
+soap_instantiate_SOAP_ENV__Header(-1, , )
+Instantiated location=29F194A8
+Reinitializing context
+Free namespace stack
+Free any remaining temp blocks
+Free attribute storage
+Free pointer hashtable
+Free ID hashtable
+soap_serializeheader
+soap_begin_count
+Free namespace stack
+Begin count phase (socket=2180 mode=0x2000818 count=0)
+soap_envelope_begin_outElement begin tag='SOAP-ENV:Envelope' level='0' id='0' type=''
+Attribute 'xmlns:SOAP-ENV'='http://www.w3.org/2003/05/soap-envelope'
+Attribute 'xmlns:SOAP-ENC'='http://www.w3.org/2003/05/soap-encoding'
+Attribute 'xmlns:xsi'='http://www.w3.org/2001/XMLSchema-instance'
+Attribute 'xmlns:xsd'='http://www.w3.org/2001/XMLSchema'
+Attribute 'xmlns:ns1'='urn:cisco:epas:soap'
+soap_putheader
+Element begin tag='SOAP-ENV:Header' level='1' id='0' type=''
+Element begin tag='ns1:session-key' level='2' id='0' type=''
+Attribute 'SOAP-ENV:mustUnderstand'='true'
+Element ending tag='ns1:session-key'
+Element ending tag='SOAP-ENV:Header'
+soap_body_begin_out
+Element begin tag='SOAP-ENV:Body' level='1' id='0' type=''
+Element begin tag='ns1:get-onetime-password' level='2' id='0' type=''
+Element ending tag='ns1:get-onetime-password'
+soap_body_end_out
+Element ending tag='SOAP-ENV:Body'
+soap_envelope_end_out
+Element ending tag='SOAP-ENV:Envelope'
+End of count phase
+soap_connect_command
+soap_try_connect_command
+tcp_select, sk:2180, flags:7, timeout:0, time:Wed Mar 27 11:30:14 2019
+
+tcp_select ret:3, time:Wed Mar 27 11:30:14 2019
+
+Polling: other end down on socket=2180 select=3
+soap_closesock
+Shutdown socket=2180 how=2
+Close socket=2180
+Connect/reconnect to 'https://10.250.64.7:8443/EPASSoap/service/v105' host='10.250.64.7' path='/EPASSoap/service/v105' port=8443
+tcp_connect
+Opening socket=2180 to host='10.250.64.7' port=8443
+tcp_select, sk:2180, flags:2, timeout:10, time:Wed Mar 27 11:30:14 2019
+
+tcp_select ret:2, time:Wed Mar 27 11:30:14 2019
+
+tcp_select, sk:2180, flags:5, timeout:-104288, time:Wed Mar 27 11:30:14 2019
+
+tcp_select ret:1, time:Wed Mar 27 11:30:14 2019
+
+tcp_select, sk:2180, flags:5, timeout:-104288, time:Wed Mar 27 11:30:14 2019
+
+tcp_select ret:1, time:Wed Mar 27 11:30:14 2019
+
+Calculating the message size with attachments, current count=546
+New count=546
+Initializing for output to socket=2180/fd=1
+Free namespace stack
+Begin send phase (socket=2180 mode=0x2000811 count=546)
+HTTP POST to https://10.250.64.7:8443/EPASSoap/service/v105
+Sending cookies for domain='10.250.64.7' path='/EPASSoap/service/v105'
+soap_envelope_begin_outElement begin tag='SOAP-ENV:Envelope' level='0' id='0' type=''
+Attribute 'xmlns:SOAP-ENV'='http://www.w3.org/2003/05/soap-envelope'
+Attribute 'xmlns:SOAP-ENC'='http://www.w3.org/2003/05/soap-encoding'
+Attribute 'xmlns:xsi'='http://www.w3.org/2001/XMLSchema-instance'
+Attribute 'xmlns:xsd'='http://www.w3.org/2001/XMLSchema'
+Attribute 'xmlns:ns1'='urn:cisco:epas:soap'
+soap_putheader
+Element begin tag='SOAP-ENV:Header' level='1' id='0' type=''
+Element begin tag='ns1:session-key' level='2' id='0' type=''
+Attribute 'SOAP-ENV:mustUnderstand'='true'
+Element ending tag='ns1:session-key'
+Element ending tag='SOAP-ENV:Header'
+soap_body_begin_out
+Element begin tag='SOAP-ENV:Body' level='1' id='0' type=''
+Element begin tag='ns1:get-onetime-password' level='2' id='0' type=''
+Element ending tag='ns1:get-onetime-password'
+soap_body_end_out
+Element ending tag='SOAP-ENV:Body'
+soap_envelope_end_out
+Element ending tag='SOAP-ENV:Envelope'
+soap_end_send
+End send mode=0x2000811
+Send 886 bytes to socket=2180/fd=1
+tcp_select, sk:2180, flags:7, timeout:11, time:Wed Mar 27 11:30:14 2019
+
+tcp_select ret:2, time:Wed Mar 27 11:30:14 2019
+
+End of send phase
+Initializing for input from socket=2180/fd=0
+Free namespace stack
+Free any remaining temp blocks
+Free attribute storage
+Free pointer hashtable
+Free ID hashtable
+Free ID hashtable
+tcp_select, sk:2180, flags:5, timeout:12, time:Wed Mar 27 11:30:14 2019
+
+tcp_select ret:1, time:Wed Mar 27 11:30:14 2019
+
+Read 641 bytes from socket=2180/fd=0
+Read count=641 (+641)
+Waiting for HTTP request/response...
+HTTP status: HTTP/1.1 200 OK
+HTTP header: X-Frame-Options: SAMEORIGIN
+HTTP header: Content-Type: application/soap+xml;charset=UTF-8
+HTTP header: Content-Length: 474
+HTTP header: Date: Wed, 27 Mar 2019 05:59:58 GMT
+HTTP header: Server:  
+Finished HTTP header parsing, status = 200
+Keep alive connection = 1
+soap_envelope_begin_in
+XML PI <?xml version='1.0' ?>
+Enlarging look-aside buffer to append data, size=0
+New look-aside buffer size=256
+Push namespace binding (level=0) 'env' 'http://www.w3.org/2003/05/soap-envelope'
+Push OK ('env' matches 'SOAP-ENV' in namespace table)
+Push namespace binding (level=0) 'xsd' 'http://www.w3.org/2001/XMLSchema'
+Push OK ('xsd' matches 'xsd' in namespace table)
+Push namespace binding (level=0) 'xml' 'http://www.w3.org/XML/1998/namespace'
+Push NOT OK: no match found for 'http://www.w3.org/XML/1998/namespace' in namespace mapping table (added to stack anyway)
+Push namespace binding (level=0) 'xsi' 'http://www.w3.org/2001/XMLSchema-instance'
+Push OK ('xsi' matches 'xsi' in namespace table)
+Tags and (default) namespaces match: 'env:Envelope' 'SOAP-ENV:Envelope'
+Begin element found (level=1) 'env:Envelope'='SOAP-ENV:Envelope'
+soap_recv_header
+soap_body_begin_in
+Tags and (default) namespaces match: 'env:Body' 'SOAP-ENV:Body'
+Begin element found (level=2) 'env:Body'='SOAP-ENV:Body'
+Push namespace binding (level=2) 'epas' 'urn:cisco:epas:soap'
+Push OK ('epas' matches 'ns1' in namespace table)
+Tags and (default) namespaces match: 'epas:get-onetime-password-resp' 'ns1:get-onetime-password-resp'
+Begin element found (level=3) 'epas:get-onetime-password-resp'='ns1:get-onetime-password-resp'
+Enter id='' type=47 loc=08E7F3A8 size=16 level=0
+Tags and (default) namespaces match: 'epas:success' 'ns1:success'
+Begin element found (level=4) 'epas:success'='ns1:success'
+Reverting to last element 'epas:success' (level=3)
+soap_instantiate__ns1__GetOneTimePasswordStatusType_success(-1, , )
+Instantiated location=29F188F8
+Tags and (default) namespaces match: 'epas:success' 'ns1:success'
+Begin element found (level=4) 'epas:success'='ns1:success'
+Enter id='' type=161 loc=29F188F8 size=8 level=0
+Tags and (default) namespaces match: 'epas:password' 'ns1:password'
+Begin element found (level=5) 'epas:password'='ns1:password'
+Reading string content, flag=1
+Enter id='' type=98 loc=222927C8 size=4 level=0
+End element found (level=5) 'epas:password'='ns1:password'
+End element found (level=4) 'epas:success'='ns1:success'
+End element found (level=3) 'epas:get-onetime-password-resp'='ns1:get-onetime-password-resp'
+soap_body_end_in
+End element found (level=2) 'env:Body'='SOAP-ENV:Body'
+soap_envelope_end_in
+End element found (level=1) 'env:Envelope'='SOAP-ENV:Envelope'
+soap_end_recv
+End of receive message ok
+Resolving forwarded data
+Resolution phase
+Resolution done
+Free namespace stack
+soap_closesock
+soap_instantiate_SOAP_ENV__Header(-1, , )
+Instantiated location=29F18A18
+Reinitializing context
+Free namespace stack
+Free any remaining temp blocks
+Free attribute storage
+Free pointer hashtable
+Free ID hashtable
+soap_serializeheader
+soap_begin_count
+Free namespace stack
+Begin count phase (socket=2180 mode=0x2000818 count=0)
+soap_envelope_begin_outElement begin tag='SOAP-ENV:Envelope' level='0' id='0' type=''
+Attribute 'xmlns:SOAP-ENV'='http://www.w3.org/2003/05/soap-envelope'
+Attribute 'xmlns:SOAP-ENC'='http://www.w3.org/2003/05/soap-encoding'
+Attribute 'xmlns:xsi'='http://www.w3.org/2001/XMLSchema-instance'
+Attribute 'xmlns:xsd'='http://www.w3.org/2001/XMLSchema'
+Attribute 'xmlns:ns1'='urn:cisco:epas:soap'
+soap_putheader
+Element begin tag='SOAP-ENV:Header' level='1' id='0' type=''
+Element begin tag='ns1:session-key' level='2' id='0' type=''
+Attribute 'SOAP-ENV:mustUnderstand'='true'
+Element ending tag='ns1:session-key'
+Element ending tag='SOAP-ENV:Header'
+soap_body_begin_out
+Element begin tag='SOAP-ENV:Body' level='1' id='0' type=''
+Element begin tag='ns1:get-onetime-password' level='2' id='0' type=''
+Element ending tag='ns1:get-onetime-password'
+soap_body_end_out
+Element ending tag='SOAP-ENV:Body'
+soap_envelope_end_out
+Element ending tag='SOAP-ENV:Envelope'
+End of count phase
+soap_connect_command
+soap_try_connect_command
+tcp_select, sk:2180, flags:7, timeout:0, time:Wed Mar 27 14:25:28 2019
+
+tcp_select ret:3, time:Wed Mar 27 14:25:28 2019
+
+Polling: other end down on socket=2180 select=3
+soap_closesock
+Shutdown socket=2180 how=2
+Close socket=2180
+Connect/reconnect to 'https://10.250.64.7:8443/EPASSoap/service/v105' host='10.250.64.7' path='/EPASSoap/service/v105' port=8443
+tcp_connect
+Opening socket=2180 to host='10.250.64.7' port=8443
+tcp_select, sk:2180, flags:2, timeout:10, time:Wed Mar 27 14:25:28 2019
+
+tcp_select ret:2, time:Wed Mar 27 14:25:28 2019
+
+tcp_select, sk:2180, flags:5, timeout:-104288, time:Wed Mar 27 14:25:28 2019
+
+tcp_select ret:1, time:Wed Mar 27 14:25:28 2019
+
+tcp_select, sk:2180, flags:5, timeout:-104288, time:Wed Mar 27 14:25:28 2019
+
+tcp_select ret:1, time:Wed Mar 27 14:25:28 2019
+
+Calculating the message size with attachments, current count=546
+New count=546
+Initializing for output to socket=2180/fd=1
+Free namespace stack
+Begin send phase (socket=2180 mode=0x2000811 count=546)
+HTTP POST to https://10.250.64.7:8443/EPASSoap/service/v105
+Sending cookies for domain='10.250.64.7' path='/EPASSoap/service/v105'
+soap_envelope_begin_outElement begin tag='SOAP-ENV:Envelope' level='0' id='0' type=''
+Attribute 'xmlns:SOAP-ENV'='http://www.w3.org/2003/05/soap-envelope'
+Attribute 'xmlns:SOAP-ENC'='http://www.w3.org/2003/05/soap-encoding'
+Attribute 'xmlns:xsi'='http://www.w3.org/2001/XMLSchema-instance'
+Attribute 'xmlns:xsd'='http://www.w3.org/2001/XMLSchema'
+Attribute 'xmlns:ns1'='urn:cisco:epas:soap'
+soap_putheader
+Element begin tag='SOAP-ENV:Header' level='1' id='0' type=''
+Element begin tag='ns1:session-key' level='2' id='0' type=''
+Attribute 'SOAP-ENV:mustUnderstand'='true'
+Element ending tag='ns1:session-key'
+Element ending tag='SOAP-ENV:Header'
+soap_body_begin_out
+Element begin tag='SOAP-ENV:Body' level='1' id='0' type=''
+Element begin tag='ns1:get-onetime-password' level='2' id='0' type=''
+Element ending tag='ns1:get-onetime-password'
+soap_body_end_out
+Element ending tag='SOAP-ENV:Body'
+soap_envelope_end_out
+Element ending tag='SOAP-ENV:Envelope'
+soap_end_send
+End send mode=0x2000811
+Send 886 bytes to socket=2180/fd=1
+tcp_select, sk:2180, flags:7, timeout:11, time:Wed Mar 27 14:25:28 2019
+
+tcp_select ret:2, time:Wed Mar 27 14:25:28 2019
+
+End of send phase
+Initializing for input from socket=2180/fd=0
+Free namespace stack
+Free any remaining temp blocks
+Free attribute storage
+Free pointer hashtable
+Free ID hashtable
+Free ID hashtable
+tcp_select, sk:2180, flags:5, timeout:12, time:Wed Mar 27 14:25:28 2019
+
+tcp_select ret:1, time:Wed Mar 27 14:25:28 2019
+
+Read 641 bytes from socket=2180/fd=0
+Read count=641 (+641)
+Waiting for HTTP request/response...
+HTTP status: HTTP/1.1 200 OK
+HTTP header: X-Frame-Options: SAMEORIGIN
+HTTP header: Content-Type: application/soap+xml;charset=UTF-8
+HTTP header: Content-Length: 474
+HTTP header: Date: Wed, 27 Mar 2019 08:55:10 GMT
+HTTP header: Server:  
+Finished HTTP header parsing, status = 200
+Keep alive connection = 1
+soap_envelope_begin_in
+XML PI <?xml version='1.0' ?>
+Enlarging look-aside buffer to append data, size=0
+New look-aside buffer size=256
+Push namespace binding (level=0) 'env' 'http://www.w3.org/2003/05/soap-envelope'
+Push OK ('env' matches 'SOAP-ENV' in namespace table)
+Push namespace binding (level=0) 'xsd' 'http://www.w3.org/2001/XMLSchema'
+Push OK ('xsd' matches 'xsd' in namespace table)
+Push namespace binding (level=0) 'xml' 'http://www.w3.org/XML/1998/namespace'
+Push NOT OK: no match found for 'http://www.w3.org/XML/1998/namespace' in namespace mapping table (added to stack anyway)
+Push namespace binding (level=0) 'xsi' 'http://www.w3.org/2001/XMLSchema-instance'
+Push OK ('xsi' matches 'xsi' in namespace table)
+Tags and (default) namespaces match: 'env:Envelope' 'SOAP-ENV:Envelope'
+Begin element found (level=1) 'env:Envelope'='SOAP-ENV:Envelope'
+soap_recv_header
+soap_body_begin_in
+Tags and (default) namespaces match: 'env:Body' 'SOAP-ENV:Body'
+Begin element found (level=2) 'env:Body'='SOAP-ENV:Body'
+Push namespace binding (level=2) 'epas' 'urn:cisco:epas:soap'
+Push OK ('epas' matches 'ns1' in namespace table)
+Tags and (default) namespaces match: 'epas:get-onetime-password-resp' 'ns1:get-onetime-password-resp'
+Begin element found (level=3) 'epas:get-onetime-password-resp'='ns1:get-onetime-password-resp'
+Enter id='' type=47 loc=08E7F3A8 size=16 level=0
+Tags and (default) namespaces match: 'epas:success' 'ns1:success'
+Begin element found (level=4) 'epas:success'='ns1:success'
+Reverting to last element 'epas:success' (level=3)
+soap_instantiate__ns1__GetOneTimePasswordStatusType_success(-1, , )
+Instantiated location=29F196A8
+Tags and (default) namespaces match: 'epas:success' 'ns1:success'
+Begin element found (level=4) 'epas:success'='ns1:success'
+Enter id='' type=161 loc=29F196A8 size=8 level=0
+Tags and (default) namespaces match: 'epas:password' 'ns1:password'
+Begin element found (level=5) 'epas:password'='ns1:password'
+Reading string content, flag=1
+Enter id='' type=98 loc=228567F8 size=4 level=0
+End element found (level=5) 'epas:password'='ns1:password'
+End element found (level=4) 'epas:success'='ns1:success'
+End element found (level=3) 'epas:get-onetime-password-resp'='ns1:get-onetime-password-resp'
+soap_body_end_in
+End element found (level=2) 'env:Body'='SOAP-ENV:Body'
+soap_envelope_end_in
+End element found (level=1) 'env:Envelope'='SOAP-ENV:Envelope'
+soap_end_recv
+End of receive message ok
+Resolving forwarded data
+Resolution phase
+Resolution done
+Free namespace stack
+soap_closesock
+soap_instantiate_SOAP_ENV__Header(-1, , )
+Instantiated location=2BEB97D8
+Reinitializing context
+Free namespace stack
+Free any remaining temp blocks
+Free attribute storage
+Free pointer hashtable
+Free ID hashtable
+soap_serializeheader
+soap_begin_count
+Free namespace stack
+Begin count phase (socket=2180 mode=0x2000818 count=0)
+soap_envelope_begin_outElement begin tag='SOAP-ENV:Envelope' level='0' id='0' type=''
+Attribute 'xmlns:SOAP-ENV'='http://www.w3.org/2003/05/soap-envelope'
+Attribute 'xmlns:SOAP-ENC'='http://www.w3.org/2003/05/soap-encoding'
+Attribute 'xmlns:xsi'='http://www.w3.org/2001/XMLSchema-instance'
+Attribute 'xmlns:xsd'='http://www.w3.org/2001/XMLSchema'
+Attribute 'xmlns:ns1'='urn:cisco:epas:soap'
+soap_putheader
+Element begin tag='SOAP-ENV:Header' level='1' id='0' type=''
+Element begin tag='ns1:session-key' level='2' id='0' type=''
+Attribute 'SOAP-ENV:mustUnderstand'='true'
+Element ending tag='ns1:session-key'
+Element ending tag='SOAP-ENV:Header'
+soap_body_begin_out
+Element begin tag='SOAP-ENV:Body' level='1' id='0' type=''
+Element begin tag='ns1:get-onetime-password' level='2' id='0' type=''
+Element ending tag='ns1:get-onetime-password'
+soap_body_end_out
+Element ending tag='SOAP-ENV:Body'
+soap_envelope_end_out
+Element ending tag='SOAP-ENV:Envelope'
+End of count phase
+soap_connect_command
+soap_try_connect_command
+tcp_select, sk:2180, flags:7, timeout:0, time:Thu Mar 28 00:32:56 2019
+
+tcp_select ret:3, time:Thu Mar 28 00:32:56 2019
+
+Polling: other end down on socket=2180 select=3
+soap_closesock
+Shutdown socket=2180 how=2
+Close socket=2180
+Connect/reconnect to 'https://10.250.64.7:8443/EPASSoap/service/v105' host='10.250.64.7' path='/EPASSoap/service/v105' port=8443
+tcp_connect
+Opening socket=2180 to host='10.250.64.7' port=8443
+tcp_select, sk:2180, flags:2, timeout:10, time:Thu Mar 28 00:32:56 2019
+
+tcp_select ret:2, time:Thu Mar 28 00:32:56 2019
+
+tcp_select, sk:2180, flags:5, timeout:-104288, time:Thu Mar 28 00:32:56 2019
+
+tcp_select ret:1, time:Thu Mar 28 00:32:56 2019
+
+tcp_select, sk:2180, flags:5, timeout:-104288, time:Thu Mar 28 00:32:56 2019
+
+tcp_select ret:1, time:Thu Mar 28 00:32:56 2019
+
+Calculating the message size with attachments, current count=546
+New count=546
+Initializing for output to socket=2180/fd=1
+Free namespace stack
+Begin send phase (socket=2180 mode=0x2000811 count=546)
+HTTP POST to https://10.250.64.7:8443/EPASSoap/service/v105
+Sending cookies for domain='10.250.64.7' path='/EPASSoap/service/v105'
+soap_envelope_begin_outElement begin tag='SOAP-ENV:Envelope' level='0' id='0' type=''
+Attribute 'xmlns:SOAP-ENV'='http://www.w3.org/2003/05/soap-envelope'
+Attribute 'xmlns:SOAP-ENC'='http://www.w3.org/2003/05/soap-encoding'
+Attribute 'xmlns:xsi'='http://www.w3.org/2001/XMLSchema-instance'
+Attribute 'xmlns:xsd'='http://www.w3.org/2001/XMLSchema'
+Attribute 'xmlns:ns1'='urn:cisco:epas:soap'
+soap_putheader
+Element begin tag='SOAP-ENV:Header' level='1' id='0' type=''
+Element begin tag='ns1:session-key' level='2' id='0' type=''
+Attribute 'SOAP-ENV:mustUnderstand'='true'
+Element ending tag='ns1:session-key'
+Element ending tag='SOAP-ENV:Header'
+soap_body_begin_out
+Element begin tag='SOAP-ENV:Body' level='1' id='0' type=''
+Element begin tag='ns1:get-onetime-password' level='2' id='0' type=''
+Element ending tag='ns1:get-onetime-password'
+soap_body_end_out
+Element ending tag='SOAP-ENV:Body'
+soap_envelope_end_out
+Element ending tag='SOAP-ENV:Envelope'
+soap_end_send
+End send mode=0x2000811
+Send 886 bytes to socket=2180/fd=1
+tcp_select, sk:2180, flags:7, timeout:11, time:Thu Mar 28 00:32:56 2019
+
+tcp_select ret:2, time:Thu Mar 28 00:32:56 2019
+
+End of send phase
+Initializing for input from socket=2180/fd=0
+Free namespace stack
+Free any remaining temp blocks
+Free attribute storage
+Free pointer hashtable
+Free ID hashtable
+Free ID hashtable
+tcp_select, sk:2180, flags:5, timeout:12, time:Thu Mar 28 00:32:56 2019
+
+tcp_select ret:1, time:Thu Mar 28 00:32:56 2019
+
+Read 639 bytes from socket=2180/fd=0
+Read count=639 (+639)
+Waiting for HTTP request/response...
+HTTP status: HTTP/1.1 200 OK
+HTTP header: X-Frame-Options: SAMEORIGIN
+HTTP header: Content-Type: application/soap+xml;charset=UTF-8
+HTTP header: Content-Length: 472
+HTTP header: Date: Wed, 27 Mar 2019 19:02:38 GMT
+HTTP header: Server:  
+Finished HTTP header parsing, status = 200
+Keep alive connection = 1
+soap_envelope_begin_in
+XML PI <?xml version='1.0' ?>
+Enlarging look-aside buffer to append data, size=0
+New look-aside buffer size=256
+Push namespace binding (level=0) 'env' 'http://www.w3.org/2003/05/soap-envelope'
+Push OK ('env' matches 'SOAP-ENV' in namespace table)
+Push namespace binding (level=0) 'xsd' 'http://www.w3.org/2001/XMLSchema'
+Push OK ('xsd' matches 'xsd' in namespace table)
+Push namespace binding (level=0) 'xml' 'http://www.w3.org/XML/1998/namespace'
+Push NOT OK: no match found for 'http://www.w3.org/XML/1998/namespace' in namespace mapping table (added to stack anyway)
+Push namespace binding (level=0) 'xsi' 'http://www.w3.org/2001/XMLSchema-instance'
+Push OK ('xsi' matches 'xsi' in namespace table)
+Tags and (default) namespaces match: 'env:Envelope' 'SOAP-ENV:Envelope'
+Begin element found (level=1) 'env:Envelope'='SOAP-ENV:Envelope'
+soap_recv_header
+soap_body_begin_in
+Tags and (default) namespaces match: 'env:Body' 'SOAP-ENV:Body'
+Begin element found (level=2) 'env:Body'='SOAP-ENV:Body'
+Push namespace binding (level=2) 'epas' 'urn:cisco:epas:soap'
+Push OK ('epas' matches 'ns1' in namespace table)
+Tags and (default) namespaces match: 'epas:get-onetime-password-resp' 'ns1:get-onetime-password-resp'
+Begin element found (level=3) 'epas:get-onetime-password-resp'='ns1:get-onetime-password-resp'
+Enter id='' type=47 loc=08E7F3A8 size=16 level=0
+Tags and (default) namespaces match: 'epas:success' 'ns1:success'
+Begin element found (level=4) 'epas:success'='ns1:success'
+Reverting to last element 'epas:success' (level=3)
+soap_instantiate__ns1__GetOneTimePasswordStatusType_success(-1, , )
+Instantiated location=2BEBA988
+Tags and (default) namespaces match: 'epas:success' 'ns1:success'
+Begin element found (level=4) 'epas:success'='ns1:success'
+Enter id='' type=161 loc=2BEBA988 size=8 level=0
+Tags and (default) namespaces match: 'epas:password' 'ns1:password'
+Begin element found (level=5) 'epas:password'='ns1:password'
+Reading string content, flag=1
+Enter id='' type=98 loc=0A1FE390 size=4 level=0
+End element found (level=5) 'epas:password'='ns1:password'
+End element found (level=4) 'epas:success'='ns1:success'
+End element found (level=3) 'epas:get-onetime-password-resp'='ns1:get-onetime-password-resp'
+soap_body_end_in
+End element found (level=2) 'env:Body'='SOAP-ENV:Body'
+soap_envelope_end_in
+End element found (level=1) 'env:Envelope'='SOAP-ENV:Envelope'
+soap_end_recv
+End of receive message ok
+Resolving forwarded data
+Resolution phase
+Resolution done
+Free namespace stack
+soap_closesock
+soap_instantiate_SOAP_ENV__Header(-1, , )
+Instantiated location=2BEBA638
+Reinitializing context
+Free namespace stack
+Free any remaining temp blocks
+Free attribute storage
+Free pointer hashtable
+Free ID hashtable
+soap_serializeheader
+soap_begin_count
+Free namespace stack
+Begin count phase (socket=2180 mode=0x2000818 count=0)
+soap_envelope_begin_outElement begin tag='SOAP-ENV:Envelope' level='0' id='0' type=''
+Attribute 'xmlns:SOAP-ENV'='http://www.w3.org/2003/05/soap-envelope'
+Attribute 'xmlns:SOAP-ENC'='http://www.w3.org/2003/05/soap-encoding'
+Attribute 'xmlns:xsi'='http://www.w3.org/2001/XMLSchema-instance'
+Attribute 'xmlns:xsd'='http://www.w3.org/2001/XMLSchema'
+Attribute 'xmlns:ns1'='urn:cisco:epas:soap'
+soap_putheader
+Element begin tag='SOAP-ENV:Header' level='1' id='0' type=''
+Element begin tag='ns1:session-key' level='2' id='0' type=''
+Attribute 'SOAP-ENV:mustUnderstand'='true'
+Element ending tag='ns1:session-key'
+Element ending tag='SOAP-ENV:Header'
+soap_body_begin_out
+Element begin tag='SOAP-ENV:Body' level='1' id='0' type=''
+Element begin tag='ns1:get-onetime-password' level='2' id='0' type=''
+Element ending tag='ns1:get-onetime-password'
+soap_body_end_out
+Element ending tag='SOAP-ENV:Body'
+soap_envelope_end_out
+Element ending tag='SOAP-ENV:Envelope'
+End of count phase
+soap_connect_command
+soap_try_connect_command
+tcp_select, sk:2180, flags:7, timeout:0, time:Thu Mar 28 05:12:18 2019
+
+tcp_select ret:3, time:Thu Mar 28 05:12:18 2019
+
+Polling: other end down on socket=2180 select=3
+soap_closesock
+Shutdown socket=2180 how=2
+Close socket=2180
+Connect/reconnect to 'https://10.250.64.7:8443/EPASSoap/service/v105' host='10.250.64.7' path='/EPASSoap/service/v105' port=8443
+tcp_connect
+Opening socket=2180 to host='10.250.64.7' port=8443
+tcp_select, sk:2180, flags:2, timeout:10, time:Thu Mar 28 05:12:18 2019
+
+tcp_select ret:2, time:Thu Mar 28 05:12:18 2019
+
+tcp_select, sk:2180, flags:5, timeout:-104288, time:Thu Mar 28 05:12:18 2019
+
+tcp_select ret:1, time:Thu Mar 28 05:12:18 2019
+
+tcp_select, sk:2180, flags:5, timeout:-104288, time:Thu Mar 28 05:12:18 2019
+
+tcp_select ret:1, time:Thu Mar 28 05:12:18 2019
+
+Calculating the message size with attachments, current count=546
+New count=546
+Initializing for output to socket=2180/fd=1
+Free namespace stack
+Begin send phase (socket=2180 mode=0x2000811 count=546)
+HTTP POST to https://10.250.64.7:8443/EPASSoap/service/v105
+Sending cookies for domain='10.250.64.7' path='/EPASSoap/service/v105'
+soap_envelope_begin_outElement begin tag='SOAP-ENV:Envelope' level='0' id='0' type=''
+Attribute 'xmlns:SOAP-ENV'='http://www.w3.org/2003/05/soap-envelope'
+Attribute 'xmlns:SOAP-ENC'='http://www.w3.org/2003/05/soap-encoding'
+Attribute 'xmlns:xsi'='http://www.w3.org/2001/XMLSchema-instance'
+Attribute 'xmlns:xsd'='http://www.w3.org/2001/XMLSchema'
+Attribute 'xmlns:ns1'='urn:cisco:epas:soap'
+soap_putheader
+Element begin tag='SOAP-ENV:Header' level='1' id='0' type=''
+Element begin tag='ns1:session-key' level='2' id='0' type=''
+Attribute 'SOAP-ENV:mustUnderstand'='true'
+Element ending tag='ns1:session-key'
+Element ending tag='SOAP-ENV:Header'
+soap_body_begin_out
+Element begin tag='SOAP-ENV:Body' level='1' id='0' type=''
+Element begin tag='ns1:get-onetime-password' level='2' id='0' type=''
+Element ending tag='ns1:get-onetime-password'
+soap_body_end_out
+Element ending tag='SOAP-ENV:Body'
+soap_envelope_end_out
+Element ending tag='SOAP-ENV:Envelope'
+soap_end_send
+End send mode=0x2000811
+Send 886 bytes to socket=2180/fd=1
+tcp_select, sk:2180, flags:7, timeout:11, time:Thu Mar 28 05:12:18 2019
+
+tcp_select ret:2, time:Thu Mar 28 05:12:18 2019
+
+End of send phase
+Initializing for input from socket=2180/fd=0
+Free namespace stack
+Free any remaining temp blocks
+Free attribute storage
+Free pointer hashtable
+Free ID hashtable
+Free ID hashtable
+tcp_select, sk:2180, flags:5, timeout:12, time:Thu Mar 28 05:12:18 2019
+
+tcp_select ret:1, time:Thu Mar 28 05:12:18 2019
+
+Read 640 bytes from socket=2180/fd=0
+Read count=640 (+640)
+Waiting for HTTP request/response...
+HTTP status: HTTP/1.1 200 OK
+HTTP header: X-Frame-Options: SAMEORIGIN
+HTTP header: Content-Type: application/soap+xml;charset=UTF-8
+HTTP header: Content-Length: 473
+HTTP header: Date: Wed, 27 Mar 2019 23:42:00 GMT
+HTTP header: Server:  
+Finished HTTP header parsing, status = 200
+Keep alive connection = 1
+soap_envelope_begin_in
+XML PI <?xml version='1.0' ?>
+Enlarging look-aside buffer to append data, size=0
+New look-aside buffer size=256
+Push namespace binding (level=0) 'env' 'http://www.w3.org/2003/05/soap-envelope'
+Push OK ('env' matches 'SOAP-ENV' in namespace table)
+Push namespace binding (level=0) 'xsd' 'http://www.w3.org/2001/XMLSchema'
+Push OK ('xsd' matches 'xsd' in namespace table)
+Push namespace binding (level=0) 'xml' 'http://www.w3.org/XML/1998/namespace'
+Push NOT OK: no match found for 'http://www.w3.org/XML/1998/namespace' in namespace mapping table (added to stack anyway)
+Push namespace binding (level=0) 'xsi' 'http://www.w3.org/2001/XMLSchema-instance'
+Push OK ('xsi' matches 'xsi' in namespace table)
+Tags and (default) namespaces match: 'env:Envelope' 'SOAP-ENV:Envelope'
+Begin element found (level=1) 'env:Envelope'='SOAP-ENV:Envelope'
+soap_recv_header
+soap_body_begin_in
+Tags and (default) namespaces match: 'env:Body' 'SOAP-ENV:Body'
+Begin element found (level=2) 'env:Body'='SOAP-ENV:Body'
+Push namespace binding (level=2) 'epas' 'urn:cisco:epas:soap'
+Push OK ('epas' matches 'ns1' in namespace table)
+Tags and (default) namespaces match: 'epas:get-onetime-password-resp' 'ns1:get-onetime-password-resp'
+Begin element found (level=3) 'epas:get-onetime-password-resp'='ns1:get-onetime-password-resp'
+Enter id='' type=47 loc=08E7F3A8 size=16 level=0
+Tags and (default) namespaces match: 'epas:success' 'ns1:success'
+Begin element found (level=4) 'epas:success'='ns1:success'
+Reverting to last element 'epas:success' (level=3)
+soap_instantiate__ns1__GetOneTimePasswordStatusType_success(-1, , )
+Instantiated location=2BEBA768
+Tags and (default) namespaces match: 'epas:success' 'ns1:success'
+Begin element found (level=4) 'epas:success'='ns1:success'
+Enter id='' type=161 loc=2BEBA768 size=8 level=0
+Tags and (default) namespaces match: 'epas:password' 'ns1:password'
+Begin element found (level=5) 'epas:password'='ns1:password'
+Reading string content, flag=1
+Enter id='' type=98 loc=0A1FB2F0 size=4 level=0
+End element found (level=5) 'epas:password'='ns1:password'
+End element found (level=4) 'epas:success'='ns1:success'
+End element found (level=3) 'epas:get-onetime-password-resp'='ns1:get-onetime-password-resp'
+soap_body_end_in
+End element found (level=2) 'env:Body'='SOAP-ENV:Body'
+soap_envelope_end_in
+End element found (level=1) 'env:Envelope'='SOAP-ENV:Envelope'
+soap_end_recv
+End of receive message ok
+Resolving forwarded data
+Resolution phase
+Resolution done
+Free namespace stack
+soap_closesock
+soap_instantiate_SOAP_ENV__Header(-1, , )
+Instantiated location=29F18378
+Reinitializing context
+Free namespace stack
+Free any remaining temp blocks
+Free attribute storage
+Free pointer hashtable
+Free ID hashtable
+soap_serializeheader
+soap_begin_count
+Free namespace stack
+Begin count phase (socket=2180 mode=0x2000818 count=0)
+soap_envelope_begin_outElement begin tag='SOAP-ENV:Envelope' level='0' id='0' type=''
+Attribute 'xmlns:SOAP-ENV'='http://www.w3.org/2003/05/soap-envelope'
+Attribute 'xmlns:SOAP-ENC'='http://www.w3.org/2003/05/soap-encoding'
+Attribute 'xmlns:xsi'='http://www.w3.org/2001/XMLSchema-instance'
+Attribute 'xmlns:xsd'='http://www.w3.org/2001/XMLSchema'
+Attribute 'xmlns:ns1'='urn:cisco:epas:soap'
+soap_putheader
+Element begin tag='SOAP-ENV:Header' level='1' id='0' type=''
+Element begin tag='ns1:session-key' level='2' id='0' type=''
+Attribute 'SOAP-ENV:mustUnderstand'='true'
+Element ending tag='ns1:session-key'
+Element ending tag='SOAP-ENV:Header'
+soap_body_begin_out
+Element begin tag='SOAP-ENV:Body' level='1' id='0' type=''
+Element begin tag='ns1:get-onetime-password' level='2' id='0' type=''
+Element ending tag='ns1:get-onetime-password'
+soap_body_end_out
+Element ending tag='SOAP-ENV:Body'
+soap_envelope_end_out
+Element ending tag='SOAP-ENV:Envelope'
+End of count phase
+soap_connect_command
+soap_try_connect_command
+tcp_select, sk:2180, flags:7, timeout:0, time:Thu Mar 28 06:50:41 2019
+
+tcp_select ret:3, time:Thu Mar 28 06:50:41 2019
+
+Polling: other end down on socket=2180 select=3
+soap_closesock
+Shutdown socket=2180 how=2
+Close socket=2180
+Connect/reconnect to 'https://10.250.64.7:8443/EPASSoap/service/v105' host='10.250.64.7' path='/EPASSoap/service/v105' port=8443
+tcp_connect
+Opening socket=2180 to host='10.250.64.7' port=8443
+tcp_select, sk:2180, flags:2, timeout:10, time:Thu Mar 28 06:50:41 2019
+
+tcp_select ret:2, time:Thu Mar 28 06:50:41 2019
+
+tcp_select, sk:2180, flags:5, timeout:-104288, time:Thu Mar 28 06:50:41 2019
+
+tcp_select ret:1, time:Thu Mar 28 06:50:41 2019
+
+tcp_select, sk:2180, flags:5, timeout:-104288, time:Thu Mar 28 06:50:41 2019
+
+tcp_select ret:1, time:Thu Mar 28 06:50:41 2019
+
+Calculating the message size with attachments, current count=546
+New count=546
+Initializing for output to socket=2180/fd=1
+Free namespace stack
+Begin send phase (socket=2180 mode=0x2000811 count=546)
+HTTP POST to https://10.250.64.7:8443/EPASSoap/service/v105
+Sending cookies for domain='10.250.64.7' path='/EPASSoap/service/v105'
+soap_envelope_begin_outElement begin tag='SOAP-ENV:Envelope' level='0' id='0' type=''
+Attribute 'xmlns:SOAP-ENV'='http://www.w3.org/2003/05/soap-envelope'
+Attribute 'xmlns:SOAP-ENC'='http://www.w3.org/2003/05/soap-encoding'
+Attribute 'xmlns:xsi'='http://www.w3.org/2001/XMLSchema-instance'
+Attribute 'xmlns:xsd'='http://www.w3.org/2001/XMLSchema'
+Attribute 'xmlns:ns1'='urn:cisco:epas:soap'
+soap_putheader
+Element begin tag='SOAP-ENV:Header' level='1' id='0' type=''
+Element begin tag='ns1:session-key' level='2' id='0' type=''
+Attribute 'SOAP-ENV:mustUnderstand'='true'
+Element ending tag='ns1:session-key'
+Element ending tag='SOAP-ENV:Header'
+soap_body_begin_out
+Element begin tag='SOAP-ENV:Body' level='1' id='0' type=''
+Element begin tag='ns1:get-onetime-password' level='2' id='0' type=''
+Element ending tag='ns1:get-onetime-password'
+soap_body_end_out
+Element ending tag='SOAP-ENV:Body'
+soap_envelope_end_out
+Element ending tag='SOAP-ENV:Envelope'
+soap_end_send
+End send mode=0x2000811
+Send 886 bytes to socket=2180/fd=1
+tcp_select, sk:2180, flags:7, timeout:11, time:Thu Mar 28 06:50:41 2019
+
+tcp_select ret:2, time:Thu Mar 28 06:50:41 2019
+
+End of send phase
+Initializing for input from socket=2180/fd=0
+Free namespace stack
+Free any remaining temp blocks
+Free attribute storage
+Free pointer hashtable
+Free ID hashtable
+Free ID hashtable
+tcp_select, sk:2180, flags:5, timeout:12, time:Thu Mar 28 06:50:41 2019
+
+tcp_select ret:1, time:Thu Mar 28 06:50:41 2019
+
+Read 641 bytes from socket=2180/fd=0
+Read count=641 (+641)
+Waiting for HTTP request/response...
+HTTP status: HTTP/1.1 200 OK
+HTTP header: X-Frame-Options: SAMEORIGIN
+HTTP header: Content-Type: application/soap+xml;charset=UTF-8
+HTTP header: Content-Length: 474
+HTTP header: Date: Thu, 28 Mar 2019 01:20:23 GMT
+HTTP header: Server:  
+Finished HTTP header parsing, status = 200
+Keep alive connection = 1
+soap_envelope_begin_in
+XML PI <?xml version='1.0' ?>
+Enlarging look-aside buffer to append data, size=0
+New look-aside buffer size=256
+Push namespace binding (level=0) 'env' 'http://www.w3.org/2003/05/soap-envelope'
+Push OK ('env' matches 'SOAP-ENV' in namespace table)
+Push namespace binding (level=0) 'xsd' 'http://www.w3.org/2001/XMLSchema'
+Push OK ('xsd' matches 'xsd' in namespace table)
+Push namespace binding (level=0) 'xml' 'http://www.w3.org/XML/1998/namespace'
+Push NOT OK: no match found for 'http://www.w3.org/XML/1998/namespace' in namespace mapping table (added to stack anyway)
+Push namespace binding (level=0) 'xsi' 'http://www.w3.org/2001/XMLSchema-instance'
+Push OK ('xsi' matches 'xsi' in namespace table)
+Tags and (default) namespaces match: 'env:Envelope' 'SOAP-ENV:Envelope'
+Begin element found (level=1) 'env:Envelope'='SOAP-ENV:Envelope'
+soap_recv_header
+soap_body_begin_in
+Tags and (default) namespaces match: 'env:Body' 'SOAP-ENV:Body'
+Begin element found (level=2) 'env:Body'='SOAP-ENV:Body'
+Push namespace binding (level=2) 'epas' 'urn:cisco:epas:soap'
+Push OK ('epas' matches 'ns1' in namespace table)
+Tags and (default) namespaces match: 'epas:get-onetime-password-resp' 'ns1:get-onetime-password-resp'
+Begin element found (level=3) 'epas:get-onetime-password-resp'='ns1:get-onetime-password-resp'
+Enter id='' type=47 loc=08E7F3A8 size=16 level=0
+Tags and (default) namespaces match: 'epas:success' 'ns1:success'
+Begin element found (level=4) 'epas:success'='ns1:success'
+Reverting to last element 'epas:success' (level=3)
+soap_instantiate__ns1__GetOneTimePasswordStatusType_success(-1, , )
+Instantiated location=29F197B8
+Tags and (default) namespaces match: 'epas:success' 'ns1:success'
+Begin element found (level=4) 'epas:success'='ns1:success'
+Enter id='' type=161 loc=29F197B8 size=8 level=0
+Tags and (default) namespaces match: 'epas:password' 'ns1:password'
+Begin element found (level=5) 'epas:password'='ns1:password'
+Reading string content, flag=1
+Enter id='' type=98 loc=22856B98 size=4 level=0
+End element found (level=5) 'epas:password'='ns1:password'
+End element found (level=4) 'epas:success'='ns1:success'
+End element found (level=3) 'epas:get-onetime-password-resp'='ns1:get-onetime-password-resp'
+soap_body_end_in
+End element found (level=2) 'env:Body'='SOAP-ENV:Body'
+soap_envelope_end_in
+End element found (level=1) 'env:Envelope'='SOAP-ENV:Envelope'
+soap_end_recv
+End of receive message ok
+Resolving forwarded data
+Resolution phase
+Resolution done
+Free namespace stack
+soap_closesock
+soap_instantiate_SOAP_ENV__Header(-1, , )
+Instantiated location=11AE9DA8
+Reinitializing context
+Free namespace stack
+Free any remaining temp blocks
+Free attribute storage
+Free pointer hashtable
+Free ID hashtable
+soap_serializeheader
+soap_begin_count
+Free namespace stack
+Begin count phase (socket=2180 mode=0x2000818 count=0)
+soap_envelope_begin_outElement begin tag='SOAP-ENV:Envelope' level='0' id='0' type=''
+Attribute 'xmlns:SOAP-ENV'='http://www.w3.org/2003/05/soap-envelope'
+Attribute 'xmlns:SOAP-ENC'='http://www.w3.org/2003/05/soap-encoding'
+Attribute 'xmlns:xsi'='http://www.w3.org/2001/XMLSchema-instance'
+Attribute 'xmlns:xsd'='http://www.w3.org/2001/XMLSchema'
+Attribute 'xmlns:ns1'='urn:cisco:epas:soap'
+soap_putheader
+Element begin tag='SOAP-ENV:Header' level='1' id='0' type=''
+Element begin tag='ns1:session-key' level='2' id='0' type=''
+Attribute 'SOAP-ENV:mustUnderstand'='true'
+Element ending tag='ns1:session-key'
+Element ending tag='SOAP-ENV:Header'
+soap_body_begin_out
+Element begin tag='SOAP-ENV:Body' level='1' id='0' type=''
+Element begin tag='ns1:get-onetime-password' level='2' id='0' type=''
+Element ending tag='ns1:get-onetime-password'
+soap_body_end_out
+Element ending tag='SOAP-ENV:Body'
+soap_envelope_end_out
+Element ending tag='SOAP-ENV:Envelope'
+End of count phase
+soap_connect_command
+soap_try_connect_command
+tcp_select, sk:2180, flags:7, timeout:0, time:Thu Mar 28 12:42:58 2019
+
+tcp_select ret:3, time:Thu Mar 28 12:42:58 2019
+
+Polling: other end down on socket=2180 select=3
+soap_closesock
+Shutdown socket=2180 how=2
+Close socket=2180
+Connect/reconnect to 'https://10.250.64.7:8443/EPASSoap/service/v105' host='10.250.64.7' path='/EPASSoap/service/v105' port=8443
+tcp_connect
+Opening socket=2180 to host='10.250.64.7' port=8443
+tcp_select, sk:2180, flags:2, timeout:10, time:Thu Mar 28 12:42:58 2019
+
+tcp_select ret:2, time:Thu Mar 28 12:42:58 2019
+
+tcp_select, sk:2180, flags:5, timeout:-104288, time:Thu Mar 28 12:42:58 2019
+
+tcp_select ret:1, time:Thu Mar 28 12:42:58 2019
+
+tcp_select, sk:2180, flags:5, timeout:-104288, time:Thu Mar 28 12:42:58 2019
+
+tcp_select ret:1, time:Thu Mar 28 12:42:58 2019
+
+Calculating the message size with attachments, current count=546
+New count=546
+Initializing for output to socket=2180/fd=1
+Free namespace stack
+Begin send phase (socket=2180 mode=0x2000811 count=546)
+HTTP POST to https://10.250.64.7:8443/EPASSoap/service/v105
+Sending cookies for domain='10.250.64.7' path='/EPASSoap/service/v105'
+soap_envelope_begin_outElement begin tag='SOAP-ENV:Envelope' level='0' id='0' type=''
+Attribute 'xmlns:SOAP-ENV'='http://www.w3.org/2003/05/soap-envelope'
+Attribute 'xmlns:SOAP-ENC'='http://www.w3.org/2003/05/soap-encoding'
+Attribute 'xmlns:xsi'='http://www.w3.org/2001/XMLSchema-instance'
+Attribute 'xmlns:xsd'='http://www.w3.org/2001/XMLSchema'
+Attribute 'xmlns:ns1'='urn:cisco:epas:soap'
+soap_putheader
+Element begin tag='SOAP-ENV:Header' level='1' id='0' type=''
+Element begin tag='ns1:session-key' level='2' id='0' type=''
+Attribute 'SOAP-ENV:mustUnderstand'='true'
+Element ending tag='ns1:session-key'
+Element ending tag='SOAP-ENV:Header'
+soap_body_begin_out
+Element begin tag='SOAP-ENV:Body' level='1' id='0' type=''
+Element begin tag='ns1:get-onetime-password' level='2' id='0' type=''
+Element ending tag='ns1:get-onetime-password'
+soap_body_end_out
+Element ending tag='SOAP-ENV:Body'
+soap_envelope_end_out
+Element ending tag='SOAP-ENV:Envelope'
+soap_end_send
+End send mode=0x2000811
+Send 886 bytes to socket=2180/fd=1
+tcp_select, sk:2180, flags:7, timeout:11, time:Thu Mar 28 12:42:58 2019
+
+tcp_select ret:2, time:Thu Mar 28 12:42:58 2019
+
+End of send phase
+Initializing for input from socket=2180/fd=0
+Free namespace stack
+Free any remaining temp blocks
+Free attribute storage
+Free pointer hashtable
+Free ID hashtable
+Free ID hashtable
+tcp_select, sk:2180, flags:5, timeout:12, time:Thu Mar 28 12:42:58 2019
+
+tcp_select ret:1, time:Thu Mar 28 12:42:58 2019
+
+Read 640 bytes from socket=2180/fd=0
+Read count=640 (+640)
+Waiting for HTTP request/response...
+HTTP status: HTTP/1.1 200 OK
+HTTP header: X-Frame-Options: SAMEORIGIN
+HTTP header: Content-Type: application/soap+xml;charset=UTF-8
+HTTP header: Content-Length: 473
+HTTP header: Date: Thu, 28 Mar 2019 07:12:39 GMT
+HTTP header: Server:  
+Finished HTTP header parsing, status = 200
+Keep alive connection = 1
+soap_envelope_begin_in
+XML PI <?xml version='1.0' ?>
+Enlarging look-aside buffer to append data, size=0
+New look-aside buffer size=256
+Push namespace binding (level=0) 'env' 'http://www.w3.org/2003/05/soap-envelope'
+Push OK ('env' matches 'SOAP-ENV' in namespace table)
+Push namespace binding (level=0) 'xsd' 'http://www.w3.org/2001/XMLSchema'
+Push OK ('xsd' matches 'xsd' in namespace table)
+Push namespace binding (level=0) 'xml' 'http://www.w3.org/XML/1998/namespace'
+Push NOT OK: no match found for 'http://www.w3.org/XML/1998/namespace' in namespace mapping table (added to stack anyway)
+Push namespace binding (level=0) 'xsi' 'http://www.w3.org/2001/XMLSchema-instance'
+Push OK ('xsi' matches 'xsi' in namespace table)
+Tags and (default) namespaces match: 'env:Envelope' 'SOAP-ENV:Envelope'
+Begin element found (level=1) 'env:Envelope'='SOAP-ENV:Envelope'
+soap_recv_header
+soap_body_begin_in
+Tags and (default) namespaces match: 'env:Body' 'SOAP-ENV:Body'
+Begin element found (level=2) 'env:Body'='SOAP-ENV:Body'
+Push namespace binding (level=2) 'epas' 'urn:cisco:epas:soap'
+Push OK ('epas' matches 'ns1' in namespace table)
+Tags and (default) namespaces match: 'epas:get-onetime-password-resp' 'ns1:get-onetime-password-resp'
+Begin element found (level=3) 'epas:get-onetime-password-resp'='ns1:get-onetime-password-resp'
+Enter id='' type=47 loc=08E7F3A8 size=16 level=0
+Tags and (default) namespaces match: 'epas:success' 'ns1:success'
+Begin element found (level=4) 'epas:success'='ns1:success'
+Reverting to last element 'epas:success' (level=3)
+soap_instantiate__ns1__GetOneTimePasswordStatusType_success(-1, , )
+Instantiated location=11AE7DB8
+Tags and (default) namespaces match: 'epas:success' 'ns1:success'
+Begin element found (level=4) 'epas:success'='ns1:success'
+Enter id='' type=161 loc=11AE7DB8 size=8 level=0
+Tags and (default) namespaces match: 'epas:password' 'ns1:password'
+Begin element found (level=5) 'epas:password'='ns1:password'
+Reading string content, flag=1
+Enter id='' type=98 loc=12561880 size=4 level=0
+End element found (level=5) 'epas:password'='ns1:password'
+End element found (level=4) 'epas:success'='ns1:success'
+End element found (level=3) 'epas:get-onetime-password-resp'='ns1:get-onetime-password-resp'
+soap_body_end_in
+End element found (level=2) 'env:Body'='SOAP-ENV:Body'
+soap_envelope_end_in
+End element found (level=1) 'env:Envelope'='SOAP-ENV:Envelope'
+soap_end_recv
+End of receive message ok
+Resolving forwarded data
+Resolution phase
+Resolution done
+Free namespace stack
+soap_closesock
+soap_instantiate_SOAP_ENV__Header(-1, , )
+Instantiated location=211759C0
+Reinitializing context
+Free namespace stack
+Free any remaining temp blocks
+Free attribute storage
+Free pointer hashtable
+Free ID hashtable
+soap_serializeheader
+soap_begin_count
+Free namespace stack
+Begin count phase (socket=2180 mode=0x2000818 count=0)
+soap_envelope_begin_outElement begin tag='SOAP-ENV:Envelope' level='0' id='0' type=''
+Attribute 'xmlns:SOAP-ENV'='http://www.w3.org/2003/05/soap-envelope'
+Attribute 'xmlns:SOAP-ENC'='http://www.w3.org/2003/05/soap-encoding'
+Attribute 'xmlns:xsi'='http://www.w3.org/2001/XMLSchema-instance'
+Attribute 'xmlns:xsd'='http://www.w3.org/2001/XMLSchema'
+Attribute 'xmlns:ns1'='urn:cisco:epas:soap'
+soap_putheader
+Element begin tag='SOAP-ENV:Header' level='1' id='0' type=''
+Element begin tag='ns1:session-key' level='2' id='0' type=''
+Attribute 'SOAP-ENV:mustUnderstand'='true'
+Element ending tag='ns1:session-key'
+Element ending tag='SOAP-ENV:Header'
+soap_body_begin_out
+Element begin tag='SOAP-ENV:Body' level='1' id='0' type=''
+Element begin tag='ns1:get-onetime-password' level='2' id='0' type=''
+Element ending tag='ns1:get-onetime-password'
+soap_body_end_out
+Element ending tag='SOAP-ENV:Body'
+soap_envelope_end_out
+Element ending tag='SOAP-ENV:Envelope'
+End of count phase
+soap_connect_command
+soap_try_connect_command
+tcp_select, sk:2180, flags:7, timeout:0, time:Fri Mar 29 14:55:51 2019
+
+tcp_select ret:3, time:Fri Mar 29 14:55:51 2019
+
+Polling: other end down on socket=2180 select=3
+soap_closesock
+Shutdown socket=2180 how=2
+Close socket=2180
+Connect/reconnect to 'https://10.250.64.7:8443/EPASSoap/service/v105' host='10.250.64.7' path='/EPASSoap/service/v105' port=8443
+tcp_connect
+Opening socket=2180 to host='10.250.64.7' port=8443
+tcp_select, sk:2180, flags:2, timeout:10, time:Fri Mar 29 14:55:51 2019
+
+tcp_select ret:2, time:Fri Mar 29 14:55:51 2019
+
+tcp_select, sk:2180, flags:5, timeout:-104288, time:Fri Mar 29 14:55:51 2019
+
+tcp_select ret:1, time:Fri Mar 29 14:55:51 2019
+
+tcp_select, sk:2180, flags:5, timeout:-104288, time:Fri Mar 29 14:55:51 2019
+
+tcp_select ret:1, time:Fri Mar 29 14:55:51 2019
+
+Calculating the message size with attachments, current count=546
+New count=546
+Initializing for output to socket=2180/fd=1
+Free namespace stack
+Begin send phase (socket=2180 mode=0x2000811 count=546)
+HTTP POST to https://10.250.64.7:8443/EPASSoap/service/v105
+Sending cookies for domain='10.250.64.7' path='/EPASSoap/service/v105'
+soap_envelope_begin_outElement begin tag='SOAP-ENV:Envelope' level='0' id='0' type=''
+Attribute 'xmlns:SOAP-ENV'='http://www.w3.org/2003/05/soap-envelope'
+Attribute 'xmlns:SOAP-ENC'='http://www.w3.org/2003/05/soap-encoding'
+Attribute 'xmlns:xsi'='http://www.w3.org/2001/XMLSchema-instance'
+Attribute 'xmlns:xsd'='http://www.w3.org/2001/XMLSchema'
+Attribute 'xmlns:ns1'='urn:cisco:epas:soap'
+soap_putheader
+Element begin tag='SOAP-ENV:Header' level='1' id='0' type=''
+Element begin tag='ns1:session-key' level='2' id='0' type=''
+Attribute 'SOAP-ENV:mustUnderstand'='true'
+Element ending tag='ns1:session-key'
+Element ending tag='SOAP-ENV:Header'
+soap_body_begin_out
+Element begin tag='SOAP-ENV:Body' level='1' id='0' type=''
+Element begin tag='ns1:get-onetime-password' level='2' id='0' type=''
+Element ending tag='ns1:get-onetime-password'
+soap_body_end_out
+Element ending tag='SOAP-ENV:Body'
+soap_envelope_end_out
+Element ending tag='SOAP-ENV:Envelope'
+soap_end_send
+End send mode=0x2000811
+Send 886 bytes to socket=2180/fd=1
+tcp_select, sk:2180, flags:7, timeout:11, time:Fri Mar 29 14:55:51 2019
+
+tcp_select ret:2, time:Fri Mar 29 14:55:51 2019
+
+End of send phase
+Initializing for input from socket=2180/fd=0
+Free namespace stack
+Free any remaining temp blocks
+Free attribute storage
+Free pointer hashtable
+Free ID hashtable
+Free ID hashtable
+tcp_select, sk:2180, flags:5, timeout:12, time:Fri Mar 29 14:55:51 2019
+
+tcp_select ret:1, time:Fri Mar 29 14:55:51 2019
+
+Read 641 bytes from socket=2180/fd=0
+Read count=641 (+641)
+Waiting for HTTP request/response...
+HTTP status: HTTP/1.1 200 OK
+HTTP header: X-Frame-Options: SAMEORIGIN
+HTTP header: Content-Type: application/soap+xml;charset=UTF-8
+HTTP header: Content-Length: 474
+HTTP header: Date: Fri, 29 Mar 2019 09:25:32 GMT
+HTTP header: Server:  
+Finished HTTP header parsing, status = 200
+Keep alive connection = 1
+soap_envelope_begin_in
+XML PI <?xml version='1.0' ?>
+Enlarging look-aside buffer to append data, size=0
+New look-aside buffer size=256
+Push namespace binding (level=0) 'env' 'http://www.w3.org/2003/05/soap-envelope'
+Push OK ('env' matches 'SOAP-ENV' in namespace table)
+Push namespace binding (level=0) 'xsd' 'http://www.w3.org/2001/XMLSchema'
+Push OK ('xsd' matches 'xsd' in namespace table)
+Push namespace binding (level=0) 'xml' 'http://www.w3.org/XML/1998/namespace'
+Push NOT OK: no match found for 'http://www.w3.org/XML/1998/namespace' in namespace mapping table (added to stack anyway)
+Push namespace binding (level=0) 'xsi' 'http://www.w3.org/2001/XMLSchema-instance'
+Push OK ('xsi' matches 'xsi' in namespace table)
+Tags and (default) namespaces match: 'env:Envelope' 'SOAP-ENV:Envelope'
+Begin element found (level=1) 'env:Envelope'='SOAP-ENV:Envelope'
+soap_recv_header
+soap_body_begin_in
+Tags and (default) namespaces match: 'env:Body' 'SOAP-ENV:Body'
+Begin element found (level=2) 'env:Body'='SOAP-ENV:Body'
+Push namespace binding (level=2) 'epas' 'urn:cisco:epas:soap'
+Push OK ('epas' matches 'ns1' in namespace table)
+Tags and (default) namespaces match: 'epas:get-onetime-password-resp' 'ns1:get-onetime-password-resp'
+Begin element found (level=3) 'epas:get-onetime-password-resp'='ns1:get-onetime-password-resp'
+Enter id='' type=47 loc=08E7F3A8 size=16 level=0
+Tags and (default) namespaces match: 'epas:success' 'ns1:success'
+Begin element found (level=4) 'epas:success'='ns1:success'
+Reverting to last element 'epas:success' (level=3)
+soap_instantiate__ns1__GetOneTimePasswordStatusType_success(-1, , )
+Instantiated location=211750F0
+Tags and (default) namespaces match: 'epas:success' 'ns1:success'
+Begin element found (level=4) 'epas:success'='ns1:success'
+Enter id='' type=161 loc=211750F0 size=8 level=0
+Tags and (default) namespaces match: 'epas:password' 'ns1:password'
+Begin element found (level=5) 'epas:password'='ns1:password'
+Reading string content, flag=1
+Enter id='' type=98 loc=2BEBF760 size=4 level=0
+End element found (level=5) 'epas:password'='ns1:password'
+End element found (level=4) 'epas:success'='ns1:success'
+End element found (level=3) 'epas:get-onetime-password-resp'='ns1:get-onetime-password-resp'
+soap_body_end_in
+End element found (level=2) 'env:Body'='SOAP-ENV:Body'
+soap_envelope_end_in
+End element found (level=1) 'env:Envelope'='SOAP-ENV:Envelope'
+soap_end_recv
+End of receive message ok
+Resolving forwarded data
+Resolution phase
+Resolution done
+Free namespace stack
+soap_closesock
+soap_instantiate_SOAP_ENV__Header(-1, , )
+Instantiated location=1CAF1750
+Reinitializing context
+Free namespace stack
+Free any remaining temp blocks
+Free attribute storage
+Free pointer hashtable
+Free ID hashtable
+soap_serializeheader
+soap_begin_count
+Free namespace stack
+Begin count phase (socket=2180 mode=0x2000818 count=0)
+soap_envelope_begin_outElement begin tag='SOAP-ENV:Envelope' level='0' id='0' type=''
+Attribute 'xmlns:SOAP-ENV'='http://www.w3.org/2003/05/soap-envelope'
+Attribute 'xmlns:SOAP-ENC'='http://www.w3.org/2003/05/soap-encoding'
+Attribute 'xmlns:xsi'='http://www.w3.org/2001/XMLSchema-instance'
+Attribute 'xmlns:xsd'='http://www.w3.org/2001/XMLSchema'
+Attribute 'xmlns:ns1'='urn:cisco:epas:soap'
+soap_putheader
+Element begin tag='SOAP-ENV:Header' level='1' id='0' type=''
+Element begin tag='ns1:session-key' level='2' id='0' type=''
+Attribute 'SOAP-ENV:mustUnderstand'='true'
+Element ending tag='ns1:session-key'
+Element ending tag='SOAP-ENV:Header'
+soap_body_begin_out
+Element begin tag='SOAP-ENV:Body' level='1' id='0' type=''
+Element begin tag='ns1:get-onetime-password' level='2' id='0' type=''
+Element ending tag='ns1:get-onetime-password'
+soap_body_end_out
+Element ending tag='SOAP-ENV:Body'
+soap_envelope_end_out
+Element ending tag='SOAP-ENV:Envelope'
+End of count phase
+soap_connect_command
+soap_try_connect_command
+tcp_select, sk:2180, flags:7, timeout:0, time:Fri Mar 29 15:23:31 2019
+
+tcp_select ret:3, time:Fri Mar 29 15:23:31 2019
+
+Polling: other end down on socket=2180 select=3
+soap_closesock
+Shutdown socket=2180 how=2
+Close socket=2180
+Connect/reconnect to 'https://10.250.64.7:8443/EPASSoap/service/v105' host='10.250.64.7' path='/EPASSoap/service/v105' port=8443
+tcp_connect
+Opening socket=2180 to host='10.250.64.7' port=8443
+tcp_select, sk:2180, flags:2, timeout:10, time:Fri Mar 29 15:23:31 2019
+
+tcp_select ret:2, time:Fri Mar 29 15:23:31 2019
+
+tcp_select, sk:2180, flags:5, timeout:-104288, time:Fri Mar 29 15:23:31 2019
+
+tcp_select ret:1, time:Fri Mar 29 15:23:31 2019
+
+tcp_select, sk:2180, flags:5, timeout:-104288, time:Fri Mar 29 15:23:31 2019
+
+tcp_select ret:1, time:Fri Mar 29 15:23:31 2019
+
+Calculating the message size with attachments, current count=546
+New count=546
+Initializing for output to socket=2180/fd=1
+Free namespace stack
+Begin send phase (socket=2180 mode=0x2000811 count=546)
+HTTP POST to https://10.250.64.7:8443/EPASSoap/service/v105
+Sending cookies for domain='10.250.64.7' path='/EPASSoap/service/v105'
+soap_envelope_begin_outElement begin tag='SOAP-ENV:Envelope' level='0' id='0' type=''
+Attribute 'xmlns:SOAP-ENV'='http://www.w3.org/2003/05/soap-envelope'
+Attribute 'xmlns:SOAP-ENC'='http://www.w3.org/2003/05/soap-encoding'
+Attribute 'xmlns:xsi'='http://www.w3.org/2001/XMLSchema-instance'
+Attribute 'xmlns:xsd'='http://www.w3.org/2001/XMLSchema'
+Attribute 'xmlns:ns1'='urn:cisco:epas:soap'
+soap_putheader
+Element begin tag='SOAP-ENV:Header' level='1' id='0' type=''
+Element begin tag='ns1:session-key' level='2' id='0' type=''
+Attribute 'SOAP-ENV:mustUnderstand'='true'
+Element ending tag='ns1:session-key'
+Element ending tag='SOAP-ENV:Header'
+soap_body_begin_out
+Element begin tag='SOAP-ENV:Body' level='1' id='0' type=''
+Element begin tag='ns1:get-onetime-password' level='2' id='0' type=''
+Element ending tag='ns1:get-onetime-password'
+soap_body_end_out
+Element ending tag='SOAP-ENV:Body'
+soap_envelope_end_out
+Element ending tag='SOAP-ENV:Envelope'
+soap_end_send
+End send mode=0x2000811
+Send 886 bytes to socket=2180/fd=1
+tcp_select, sk:2180, flags:7, timeout:11, time:Fri Mar 29 15:23:31 2019
+
+tcp_select ret:2, time:Fri Mar 29 15:23:31 2019
+
+End of send phase
+Initializing for input from socket=2180/fd=0
+Free namespace stack
+Free any remaining temp blocks
+Free attribute storage
+Free pointer hashtable
+Free ID hashtable
+Free ID hashtable
+tcp_select, sk:2180, flags:5, timeout:12, time:Fri Mar 29 15:23:31 2019
+
+tcp_select ret:1, time:Fri Mar 29 15:23:31 2019
+
+Read 640 bytes from socket=2180/fd=0
+Read count=640 (+640)
+Waiting for HTTP request/response...
+HTTP status: HTTP/1.1 200 OK
+HTTP header: X-Frame-Options: SAMEORIGIN
+HTTP header: Content-Type: application/soap+xml;charset=UTF-8
+HTTP header: Content-Length: 473
+HTTP header: Date: Fri, 29 Mar 2019 09:53:13 GMT
+HTTP header: Server:  
+Finished HTTP header parsing, status = 200
+Keep alive connection = 1
+soap_envelope_begin_in
+XML PI <?xml version='1.0' ?>
+Enlarging look-aside buffer to append data, size=0
+New look-aside buffer size=256
+Push namespace binding (level=0) 'env' 'http://www.w3.org/2003/05/soap-envelope'
+Push OK ('env' matches 'SOAP-ENV' in namespace table)
+Push namespace binding (level=0) 'xsd' 'http://www.w3.org/2001/XMLSchema'
+Push OK ('xsd' matches 'xsd' in namespace table)
+Push namespace binding (level=0) 'xml' 'http://www.w3.org/XML/1998/namespace'
+Push NOT OK: no match found for 'http://www.w3.org/XML/1998/namespace' in namespace mapping table (added to stack anyway)
+Push namespace binding (level=0) 'xsi' 'http://www.w3.org/2001/XMLSchema-instance'
+Push OK ('xsi' matches 'xsi' in namespace table)
+Tags and (default) namespaces match: 'env:Envelope' 'SOAP-ENV:Envelope'
+Begin element found (level=1) 'env:Envelope'='SOAP-ENV:Envelope'
+soap_recv_header
+soap_body_begin_in
+Tags and (default) namespaces match: 'env:Body' 'SOAP-ENV:Body'
+Begin element found (level=2) 'env:Body'='SOAP-ENV:Body'
+Push namespace binding (level=2) 'epas' 'urn:cisco:epas:soap'
+Push OK ('epas' matches 'ns1' in namespace table)
+Tags and (default) namespaces match: 'epas:get-onetime-password-resp' 'ns1:get-onetime-password-resp'
+Begin element found (level=3) 'epas:get-onetime-password-resp'='ns1:get-onetime-password-resp'
+Enter id='' type=47 loc=08E7F3A8 size=16 level=0
+Tags and (default) namespaces match: 'epas:success' 'ns1:success'
+Begin element found (level=4) 'epas:success'='ns1:success'
+Reverting to last element 'epas:success' (level=3)
+soap_instantiate__ns1__GetOneTimePasswordStatusType_success(-1, , )
+Instantiated location=1CAF0E80
+Tags and (default) namespaces match: 'epas:success' 'ns1:success'
+Begin element found (level=4) 'epas:success'='ns1:success'
+Enter id='' type=161 loc=1CAF0E80 size=8 level=0
+Tags and (default) namespaces match: 'epas:password' 'ns1:password'
+Begin element found (level=5) 'epas:password'='ns1:password'
+Reading string content, flag=1
+Enter id='' type=98 loc=2AEEE0B0 size=4 level=0
+End element found (level=5) 'epas:password'='ns1:password'
+End element found (level=4) 'epas:success'='ns1:success'
+End element found (level=3) 'epas:get-onetime-password-resp'='ns1:get-onetime-password-resp'
+soap_body_end_in
+End element found (level=2) 'env:Body'='SOAP-ENV:Body'
+soap_envelope_end_in
+End element found (level=1) 'env:Envelope'='SOAP-ENV:Envelope'
+soap_end_recv
+End of receive message ok
+Resolving forwarded data
+Resolution phase
+Resolution done
+Free namespace stack
+soap_closesock
+soap_instantiate_SOAP_ENV__Header(-1, , )
+Instantiated location=213958D0
+Reinitializing context
+Free namespace stack
+Free any remaining temp blocks
+Free attribute storage
+Free pointer hashtable
+Free ID hashtable
+soap_serializeheader
+soap_begin_count
+Free namespace stack
+Begin count phase (socket=2180 mode=0x2000818 count=0)
+soap_envelope_begin_outElement begin tag='SOAP-ENV:Envelope' level='0' id='0' type=''
+Attribute 'xmlns:SOAP-ENV'='http://www.w3.org/2003/05/soap-envelope'
+Attribute 'xmlns:SOAP-ENC'='http://www.w3.org/2003/05/soap-encoding'
+Attribute 'xmlns:xsi'='http://www.w3.org/2001/XMLSchema-instance'
+Attribute 'xmlns:xsd'='http://www.w3.org/2001/XMLSchema'
+Attribute 'xmlns:ns1'='urn:cisco:epas:soap'
+soap_putheader
+Element begin tag='SOAP-ENV:Header' level='1' id='0' type=''
+Element begin tag='ns1:session-key' level='2' id='0' type=''
+Attribute 'SOAP-ENV:mustUnderstand'='true'
+Element ending tag='ns1:session-key'
+Element ending tag='SOAP-ENV:Header'
+soap_body_begin_out
+Element begin tag='SOAP-ENV:Body' level='1' id='0' type=''
+Element begin tag='ns1:get-onetime-password' level='2' id='0' type=''
+Element ending tag='ns1:get-onetime-password'
+soap_body_end_out
+Element ending tag='SOAP-ENV:Body'
+soap_envelope_end_out
+Element ending tag='SOAP-ENV:Envelope'
+End of count phase
+soap_connect_command
+soap_try_connect_command
+tcp_select, sk:2180, flags:7, timeout:0, time:Fri Mar 29 16:33:07 2019
+
+tcp_select ret:3, time:Fri Mar 29 16:33:07 2019
+
+Polling: other end down on socket=2180 select=3
+soap_closesock
+Shutdown socket=2180 how=2
+Close socket=2180
+Connect/reconnect to 'https://10.250.64.7:8443/EPASSoap/service/v105' host='10.250.64.7' path='/EPASSoap/service/v105' port=8443
+tcp_connect
+Opening socket=2180 to host='10.250.64.7' port=8443
+tcp_select, sk:2180, flags:2, timeout:10, time:Fri Mar 29 16:33:07 2019
+
+tcp_select ret:2, time:Fri Mar 29 16:33:07 2019
+
+tcp_select, sk:2180, flags:5, timeout:-104288, time:Fri Mar 29 16:33:07 2019
+
+tcp_select ret:1, time:Fri Mar 29 16:33:07 2019
+
+tcp_select, sk:2180, flags:5, timeout:-104288, time:Fri Mar 29 16:33:07 2019
+
+tcp_select ret:1, time:Fri Mar 29 16:33:07 2019
+
+Calculating the message size with attachments, current count=546
+New count=546
+Initializing for output to socket=2180/fd=1
+Free namespace stack
+Begin send phase (socket=2180 mode=0x2000811 count=546)
+HTTP POST to https://10.250.64.7:8443/EPASSoap/service/v105
+Sending cookies for domain='10.250.64.7' path='/EPASSoap/service/v105'
+soap_envelope_begin_outElement begin tag='SOAP-ENV:Envelope' level='0' id='0' type=''
+Attribute 'xmlns:SOAP-ENV'='http://www.w3.org/2003/05/soap-envelope'
+Attribute 'xmlns:SOAP-ENC'='http://www.w3.org/2003/05/soap-encoding'
+Attribute 'xmlns:xsi'='http://www.w3.org/2001/XMLSchema-instance'
+Attribute 'xmlns:xsd'='http://www.w3.org/2001/XMLSchema'
+Attribute 'xmlns:ns1'='urn:cisco:epas:soap'
+soap_putheader
+Element begin tag='SOAP-ENV:Header' level='1' id='0' type=''
+Element begin tag='ns1:session-key' level='2' id='0' type=''
+Attribute 'SOAP-ENV:mustUnderstand'='true'
+Element ending tag='ns1:session-key'
+Element ending tag='SOAP-ENV:Header'
+soap_body_begin_out
+Element begin tag='SOAP-ENV:Body' level='1' id='0' type=''
+Element begin tag='ns1:get-onetime-password' level='2' id='0' type=''
+Element ending tag='ns1:get-onetime-password'
+soap_body_end_out
+Element ending tag='SOAP-ENV:Body'
+soap_envelope_end_out
+Element ending tag='SOAP-ENV:Envelope'
+soap_end_send
+End send mode=0x2000811
+Send 886 bytes to socket=2180/fd=1
+tcp_select, sk:2180, flags:7, timeout:11, time:Fri Mar 29 16:33:07 2019
+
+tcp_select ret:2, time:Fri Mar 29 16:33:07 2019
+
+End of send phase
+Initializing for input from socket=2180/fd=0
+Free namespace stack
+Free any remaining temp blocks
+Free attribute storage
+Free pointer hashtable
+Free ID hashtable
+Free ID hashtable
+tcp_select, sk:2180, flags:5, timeout:12, time:Fri Mar 29 16:33:07 2019
+
+tcp_select ret:1, time:Fri Mar 29 16:33:07 2019
+
+Read 640 bytes from socket=2180/fd=0
+Read count=640 (+640)
+Waiting for HTTP request/response...
+HTTP status: HTTP/1.1 200 OK
+HTTP header: X-Frame-Options: SAMEORIGIN
+HTTP header: Content-Type: application/soap+xml;charset=UTF-8
+HTTP header: Content-Length: 473
+HTTP header: Date: Fri, 29 Mar 2019 11:02:49 GMT
+HTTP header: Server:  
+Finished HTTP header parsing, status = 200
+Keep alive connection = 1
+soap_envelope_begin_in
+XML PI <?xml version='1.0' ?>
+Enlarging look-aside buffer to append data, size=0
+New look-aside buffer size=256
+Push namespace binding (level=0) 'env' 'http://www.w3.org/2003/05/soap-envelope'
+Push OK ('env' matches 'SOAP-ENV' in namespace table)
+Push namespace binding (level=0) 'xsd' 'http://www.w3.org/2001/XMLSchema'
+Push OK ('xsd' matches 'xsd' in namespace table)
+Push namespace binding (level=0) 'xml' 'http://www.w3.org/XML/1998/namespace'
+Push NOT OK: no match found for 'http://www.w3.org/XML/1998/namespace' in namespace mapping table (added to stack anyway)
+Push namespace binding (level=0) 'xsi' 'http://www.w3.org/2001/XMLSchema-instance'
+Push OK ('xsi' matches 'xsi' in namespace table)
+Tags and (default) namespaces match: 'env:Envelope' 'SOAP-ENV:Envelope'
+Begin element found (level=1) 'env:Envelope'='SOAP-ENV:Envelope'
+soap_recv_header
+soap_body_begin_in
+Tags and (default) namespaces match: 'env:Body' 'SOAP-ENV:Body'
+Begin element found (level=2) 'env:Body'='SOAP-ENV:Body'
+Push namespace binding (level=2) 'epas' 'urn:cisco:epas:soap'
+Push OK ('epas' matches 'ns1' in namespace table)
+Tags and (default) namespaces match: 'epas:get-onetime-password-resp' 'ns1:get-onetime-password-resp'
+Begin element found (level=3) 'epas:get-onetime-password-resp'='ns1:get-onetime-password-resp'
+Enter id='' type=47 loc=08E7F3A8 size=16 level=0
+Tags and (default) namespaces match: 'epas:success' 'ns1:success'
+Begin element found (level=4) 'epas:success'='ns1:success'
+Reverting to last element 'epas:success' (level=3)
+soap_instantiate__ns1__GetOneTimePasswordStatusType_success(-1, , )
+Instantiated location=21395D80
+Tags and (default) namespaces match: 'epas:success' 'ns1:success'
+Begin element found (level=4) 'epas:success'='ns1:success'
+Enter id='' type=161 loc=21395D80 size=8 level=0
+Tags and (default) namespaces match: 'epas:password' 'ns1:password'
+Begin element found (level=5) 'epas:password'='ns1:password'
+Reading string content, flag=1
+Enter id='' type=98 loc=1AE0A7E0 size=4 level=0
+End element found (level=5) 'epas:password'='ns1:password'
+End element found (level=4) 'epas:success'='ns1:success'
+End element found (level=3) 'epas:get-onetime-password-resp'='ns1:get-onetime-password-resp'
+soap_body_end_in
+End element found (level=2) 'env:Body'='SOAP-ENV:Body'
+soap_envelope_end_in
+End element found (level=1) 'env:Envelope'='SOAP-ENV:Envelope'
+soap_end_recv
+End of receive message ok
+Resolving forwarded data
+Resolution phase
+Resolution done
+Free namespace stack
+soap_closesock
+soap_instantiate_SOAP_ENV__Header(-1, , )
+Instantiated location=34319ED0
+Reinitializing context
+Free namespace stack
+Free any remaining temp blocks
+Free attribute storage
+Free pointer hashtable
+Free ID hashtable
+soap_serializeheader
+soap_begin_count
+Free namespace stack
+Begin count phase (socket=2180 mode=0x2000818 count=0)
+soap_envelope_begin_outElement begin tag='SOAP-ENV:Envelope' level='0' id='0' type=''
+Attribute 'xmlns:SOAP-ENV'='http://www.w3.org/2003/05/soap-envelope'
+Attribute 'xmlns:SOAP-ENC'='http://www.w3.org/2003/05/soap-encoding'
+Attribute 'xmlns:xsi'='http://www.w3.org/2001/XMLSchema-instance'
+Attribute 'xmlns:xsd'='http://www.w3.org/2001/XMLSchema'
+Attribute 'xmlns:ns1'='urn:cisco:epas:soap'
+soap_putheader
+Element begin tag='SOAP-ENV:Header' level='1' id='0' type=''
+Element begin tag='ns1:session-key' level='2' id='0' type=''
+Attribute 'SOAP-ENV:mustUnderstand'='true'
+Element ending tag='ns1:session-key'
+Element ending tag='SOAP-ENV:Header'
+soap_body_begin_out
+Element begin tag='SOAP-ENV:Body' level='1' id='0' type=''
+Element begin tag='ns1:get-onetime-password' level='2' id='0' type=''
+Element ending tag='ns1:get-onetime-password'
+soap_body_end_out
+Element ending tag='SOAP-ENV:Body'
+soap_envelope_end_out
+Element ending tag='SOAP-ENV:Envelope'
+End of count phase
+soap_connect_command
+soap_try_connect_command
+tcp_select, sk:2180, flags:7, timeout:0, time:Fri Mar 29 19:33:34 2019
+
+tcp_select ret:3, time:Fri Mar 29 19:33:34 2019
+
+Polling: other end down on socket=2180 select=3
+soap_closesock
+Shutdown socket=2180 how=2
+Close socket=2180
+Connect/reconnect to 'https://10.250.64.7:8443/EPASSoap/service/v105' host='10.250.64.7' path='/EPASSoap/service/v105' port=8443
+tcp_connect
+Opening socket=2180 to host='10.250.64.7' port=8443
+tcp_select, sk:2180, flags:2, timeout:10, time:Fri Mar 29 19:33:34 2019
+
+tcp_select ret:2, time:Fri Mar 29 19:33:34 2019
+
+tcp_select, sk:2180, flags:5, timeout:-104288, time:Fri Mar 29 19:33:34 2019
+
+tcp_select ret:1, time:Fri Mar 29 19:33:34 2019
+
+tcp_select, sk:2180, flags:5, timeout:-104288, time:Fri Mar 29 19:33:34 2019
+
+tcp_select ret:1, time:Fri Mar 29 19:33:34 2019
+
+Calculating the message size with attachments, current count=546
+New count=546
+Initializing for output to socket=2180/fd=1
+Free namespace stack
+Begin send phase (socket=2180 mode=0x2000811 count=546)
+HTTP POST to https://10.250.64.7:8443/EPASSoap/service/v105
+Sending cookies for domain='10.250.64.7' path='/EPASSoap/service/v105'
+soap_envelope_begin_outElement begin tag='SOAP-ENV:Envelope' level='0' id='0' type=''
+Attribute 'xmlns:SOAP-ENV'='http://www.w3.org/2003/05/soap-envelope'
+Attribute 'xmlns:SOAP-ENC'='http://www.w3.org/2003/05/soap-encoding'
+Attribute 'xmlns:xsi'='http://www.w3.org/2001/XMLSchema-instance'
+Attribute 'xmlns:xsd'='http://www.w3.org/2001/XMLSchema'
+Attribute 'xmlns:ns1'='urn:cisco:epas:soap'
+soap_putheader
+Element begin tag='SOAP-ENV:Header' level='1' id='0' type=''
+Element begin tag='ns1:session-key' level='2' id='0' type=''
+Attribute 'SOAP-ENV:mustUnderstand'='true'
+Element ending tag='ns1:session-key'
+Element ending tag='SOAP-ENV:Header'
+soap_body_begin_out
+Element begin tag='SOAP-ENV:Body' level='1' id='0' type=''
+Element begin tag='ns1:get-onetime-password' level='2' id='0' type=''
+Element ending tag='ns1:get-onetime-password'
+soap_body_end_out
+Element ending tag='SOAP-ENV:Body'
+soap_envelope_end_out
+Element ending tag='SOAP-ENV:Envelope'
+soap_end_send
+End send mode=0x2000811
+Send 886 bytes to socket=2180/fd=1
+tcp_select, sk:2180, flags:7, timeout:11, time:Fri Mar 29 19:33:34 2019
+
+tcp_select ret:2, time:Fri Mar 29 19:33:34 2019
+
+End of send phase
+Initializing for input from socket=2180/fd=0
+Free namespace stack
+Free any remaining temp blocks
+Free attribute storage
+Free pointer hashtable
+Free ID hashtable
+Free ID hashtable
+tcp_select, sk:2180, flags:5, timeout:12, time:Fri Mar 29 19:33:34 2019
+
+tcp_select ret:1, time:Fri Mar 29 19:33:34 2019
+
+Read 640 bytes from socket=2180/fd=0
+Read count=640 (+640)
+Waiting for HTTP request/response...
+HTTP status: HTTP/1.1 200 OK
+HTTP header: X-Frame-Options: SAMEORIGIN
+HTTP header: Content-Type: application/soap+xml;charset=UTF-8
+HTTP header: Content-Length: 473
+HTTP header: Date: Fri, 29 Mar 2019 14:03:16 GMT
+HTTP header: Server:  
+Finished HTTP header parsing, status = 200
+Keep alive connection = 1
+soap_envelope_begin_in
+XML PI <?xml version='1.0' ?>
+Enlarging look-aside buffer to append data, size=0
+New look-aside buffer size=256
+Push namespace binding (level=0) 'env' 'http://www.w3.org/2003/05/soap-envelope'
+Push OK ('env' matches 'SOAP-ENV' in namespace table)
+Push namespace binding (level=0) 'xsd' 'http://www.w3.org/2001/XMLSchema'
+Push OK ('xsd' matches 'xsd' in namespace table)
+Push namespace binding (level=0) 'xml' 'http://www.w3.org/XML/1998/namespace'
+Push NOT OK: no match found for 'http://www.w3.org/XML/1998/namespace' in namespace mapping table (added to stack anyway)
+Push namespace binding (level=0) 'xsi' 'http://www.w3.org/2001/XMLSchema-instance'
+Push OK ('xsi' matches 'xsi' in namespace table)
+Tags and (default) namespaces match: 'env:Envelope' 'SOAP-ENV:Envelope'
+Begin element found (level=1) 'env:Envelope'='SOAP-ENV:Envelope'
+soap_recv_header
+soap_body_begin_in
+Tags and (default) namespaces match: 'env:Body' 'SOAP-ENV:Body'
+Begin element found (level=2) 'env:Body'='SOAP-ENV:Body'
+Push namespace binding (level=2) 'epas' 'urn:cisco:epas:soap'
+Push OK ('epas' matches 'ns1' in namespace table)
+Tags and (default) namespaces match: 'epas:get-onetime-password-resp' 'ns1:get-onetime-password-resp'
+Begin element found (level=3) 'epas:get-onetime-password-resp'='ns1:get-onetime-password-resp'
+Enter id='' type=47 loc=08E7F3A8 size=16 level=0
+Tags and (default) namespaces match: 'epas:success' 'ns1:success'
+Begin element found (level=4) 'epas:success'='ns1:success'
+Reverting to last element 'epas:success' (level=3)
+soap_instantiate__ns1__GetOneTimePasswordStatusType_success(-1, , )
+Instantiated location=3431A600
+Tags and (default) namespaces match: 'epas:success' 'ns1:success'
+Begin element found (level=4) 'epas:success'='ns1:success'
+Enter id='' type=161 loc=3431A600 size=8 level=0
+Tags and (default) namespaces match: 'epas:password' 'ns1:password'
+Begin element found (level=5) 'epas:password'='ns1:password'
+Reading string content, flag=1
+Enter id='' type=98 loc=1DC1E320 size=4 level=0
+End element found (level=5) 'epas:password'='ns1:password'
+End element found (level=4) 'epas:success'='ns1:success'
+End element found (level=3) 'epas:get-onetime-password-resp'='ns1:get-onetime-password-resp'
+soap_body_end_in
+End element found (level=2) 'env:Body'='SOAP-ENV:Body'
+soap_envelope_end_in
+End element found (level=1) 'env:Envelope'='SOAP-ENV:Envelope'
+soap_end_recv
+End of receive message ok
+Resolving forwarded data
+Resolution phase
+Resolution done
+Free namespace stack
+soap_closesock
+soap_instantiate_SOAP_ENV__Header(-1, , )
+Instantiated location=1CAF12E0
+Reinitializing context
+Free namespace stack
+Free any remaining temp blocks
+Free attribute storage
+Free pointer hashtable
+Free ID hashtable
+soap_serializeheader
+soap_begin_count
+Free namespace stack
+Begin count phase (socket=2180 mode=0x2000818 count=0)
+soap_envelope_begin_outElement begin tag='SOAP-ENV:Envelope' level='0' id='0' type=''
+Attribute 'xmlns:SOAP-ENV'='http://www.w3.org/2003/05/soap-envelope'
+Attribute 'xmlns:SOAP-ENC'='http://www.w3.org/2003/05/soap-encoding'
+Attribute 'xmlns:xsi'='http://www.w3.org/2001/XMLSchema-instance'
+Attribute 'xmlns:xsd'='http://www.w3.org/2001/XMLSchema'
+Attribute 'xmlns:ns1'='urn:cisco:epas:soap'
+soap_putheader
+Element begin tag='SOAP-ENV:Header' level='1' id='0' type=''
+Element begin tag='ns1:session-key' level='2' id='0' type=''
+Attribute 'SOAP-ENV:mustUnderstand'='true'
+Element ending tag='ns1:session-key'
+Element ending tag='SOAP-ENV:Header'
+soap_body_begin_out
+Element begin tag='SOAP-ENV:Body' level='1' id='0' type=''
+Element begin tag='ns1:get-onetime-password' level='2' id='0' type=''
+Element ending tag='ns1:get-onetime-password'
+soap_body_end_out
+Element ending tag='SOAP-ENV:Body'
+soap_envelope_end_out
+Element ending tag='SOAP-ENV:Envelope'
+End of count phase
+soap_connect_command
+soap_try_connect_command
+tcp_select, sk:2180, flags:7, timeout:0, time:Sat Mar 30 17:00:31 2019
+
+tcp_select ret:3, time:Sat Mar 30 17:00:31 2019
+
+Polling: other end down on socket=2180 select=3
+soap_closesock
+Shutdown socket=2180 how=2
+Close socket=2180
+Connect/reconnect to 'https://10.250.64.7:8443/EPASSoap/service/v105' host='10.250.64.7' path='/EPASSoap/service/v105' port=8443
+tcp_connect
+Opening socket=2180 to host='10.250.64.7' port=8443
+tcp_select, sk:2180, flags:2, timeout:10, time:Sat Mar 30 17:00:31 2019
+
+tcp_select ret:2, time:Sat Mar 30 17:00:31 2019
+
+tcp_select, sk:2180, flags:5, timeout:-104288, time:Sat Mar 30 17:00:31 2019
+
+tcp_select ret:1, time:Sat Mar 30 17:00:31 2019
+
+tcp_select, sk:2180, flags:5, timeout:-104288, time:Sat Mar 30 17:00:31 2019
+
+tcp_select ret:1, time:Sat Mar 30 17:00:31 2019
+
+Calculating the message size with attachments, current count=546
+New count=546
+Initializing for output to socket=2180/fd=1
+Free namespace stack
+Begin send phase (socket=2180 mode=0x2000811 count=546)
+HTTP POST to https://10.250.64.7:8443/EPASSoap/service/v105
+Sending cookies for domain='10.250.64.7' path='/EPASSoap/service/v105'
+soap_envelope_begin_outElement begin tag='SOAP-ENV:Envelope' level='0' id='0' type=''
+Attribute 'xmlns:SOAP-ENV'='http://www.w3.org/2003/05/soap-envelope'
+Attribute 'xmlns:SOAP-ENC'='http://www.w3.org/2003/05/soap-encoding'
+Attribute 'xmlns:xsi'='http://www.w3.org/2001/XMLSchema-instance'
+Attribute 'xmlns:xsd'='http://www.w3.org/2001/XMLSchema'
+Attribute 'xmlns:ns1'='urn:cisco:epas:soap'
+soap_putheader
+Element begin tag='SOAP-ENV:Header' level='1' id='0' type=''
+Element begin tag='ns1:session-key' level='2' id='0' type=''
+Attribute 'SOAP-ENV:mustUnderstand'='true'
+Element ending tag='ns1:session-key'
+Element ending tag='SOAP-ENV:Header'
+soap_body_begin_out
+Element begin tag='SOAP-ENV:Body' level='1' id='0' type=''
+Element begin tag='ns1:get-onetime-password' level='2' id='0' type=''
+Element ending tag='ns1:get-onetime-password'
+soap_body_end_out
+Element ending tag='SOAP-ENV:Body'
+soap_envelope_end_out
+Element ending tag='SOAP-ENV:Envelope'
+soap_end_send
+End send mode=0x2000811
+Send 886 bytes to socket=2180/fd=1
+tcp_select, sk:2180, flags:7, timeout:11, time:Sat Mar 30 17:00:31 2019
+
+tcp_select ret:2, time:Sat Mar 30 17:00:31 2019
+
+End of send phase
+Initializing for input from socket=2180/fd=0
+Free namespace stack
+Free any remaining temp blocks
+Free attribute storage
+Free pointer hashtable
+Free ID hashtable
+Free ID hashtable
+tcp_select, sk:2180, flags:5, timeout:12, time:Sat Mar 30 17:00:31 2019
+
+tcp_select ret:1, time:Sat Mar 30 17:00:31 2019
+
+Read 640 bytes from socket=2180/fd=0
+Read count=640 (+640)
+Waiting for HTTP request/response...
+HTTP status: HTTP/1.1 200 OK
+HTTP header: X-Frame-Options: SAMEORIGIN
+HTTP header: Content-Type: application/soap+xml;charset=UTF-8
+HTTP header: Content-Length: 473
+HTTP header: Date: Sat, 30 Mar 2019 11:30:13 GMT
+HTTP header: Server:  
+Finished HTTP header parsing, status = 200
+Keep alive connection = 1
+soap_envelope_begin_in
+XML PI <?xml version='1.0' ?>
+Enlarging look-aside buffer to append data, size=0
+New look-aside buffer size=256
+Push namespace binding (level=0) 'env' 'http://www.w3.org/2003/05/soap-envelope'
+Push OK ('env' matches 'SOAP-ENV' in namespace table)
+Push namespace binding (level=0) 'xsd' 'http://www.w3.org/2001/XMLSchema'
+Push OK ('xsd' matches 'xsd' in namespace table)
+Push namespace binding (level=0) 'xml' 'http://www.w3.org/XML/1998/namespace'
+Push NOT OK: no match found for 'http://www.w3.org/XML/1998/namespace' in namespace mapping table (added to stack anyway)
+Push namespace binding (level=0) 'xsi' 'http://www.w3.org/2001/XMLSchema-instance'
+Push OK ('xsi' matches 'xsi' in namespace table)
+Tags and (default) namespaces match: 'env:Envelope' 'SOAP-ENV:Envelope'
+Begin element found (level=1) 'env:Envelope'='SOAP-ENV:Envelope'
+soap_recv_header
+soap_body_begin_in
+Tags and (default) namespaces match: 'env:Body' 'SOAP-ENV:Body'
+Begin element found (level=2) 'env:Body'='SOAP-ENV:Body'
+Push namespace binding (level=2) 'epas' 'urn:cisco:epas:soap'
+Push OK ('epas' matches 'ns1' in namespace table)
+Tags and (default) namespaces match: 'epas:get-onetime-password-resp' 'ns1:get-onetime-password-resp'
+Begin element found (level=3) 'epas:get-onetime-password-resp'='ns1:get-onetime-password-resp'
+Enter id='' type=47 loc=08E7F3A8 size=16 level=0
+Tags and (default) namespaces match: 'epas:success' 'ns1:success'
+Begin element found (level=4) 'epas:success'='ns1:success'
+Reverting to last element 'epas:success' (level=3)
+soap_instantiate__ns1__GetOneTimePasswordStatusType_success(-1, , )
+Instantiated location=1CAF1980
+Tags and (default) namespaces match: 'epas:success' 'ns1:success'
+Begin element found (level=4) 'epas:success'='ns1:success'
+Enter id='' type=161 loc=1CAF1980 size=8 level=0
+Tags and (default) namespaces match: 'epas:password' 'ns1:password'
+Begin element found (level=5) 'epas:password'='ns1:password'
+Reading string content, flag=1
+Enter id='' type=98 loc=2AEEE370 size=4 level=0
+End element found (level=5) 'epas:password'='ns1:password'
+End element found (level=4) 'epas:success'='ns1:success'
+End element found (level=3) 'epas:get-onetime-password-resp'='ns1:get-onetime-password-resp'
+soap_body_end_in
+End element found (level=2) 'env:Body'='SOAP-ENV:Body'
+soap_envelope_end_in
+End element found (level=1) 'env:Envelope'='SOAP-ENV:Envelope'
+soap_end_recv
+End of receive message ok
+Resolving forwarded data
+Resolution phase
+Resolution done
+Free namespace stack
+soap_closesock
+soap_instantiate_SOAP_ENV__Header(-1, , )
+Instantiated location=1BA5EA28
+Reinitializing context
+Free namespace stack
+Free any remaining temp blocks
+Free attribute storage
+Free pointer hashtable
+Free ID hashtable
+soap_serializeheader
+soap_begin_count
+Free namespace stack
+Begin count phase (socket=2180 mode=0x2000818 count=0)
+soap_envelope_begin_outElement begin tag='SOAP-ENV:Envelope' level='0' id='0' type=''
+Attribute 'xmlns:SOAP-ENV'='http://www.w3.org/2003/05/soap-envelope'
+Attribute 'xmlns:SOAP-ENC'='http://www.w3.org/2003/05/soap-encoding'
+Attribute 'xmlns:xsi'='http://www.w3.org/2001/XMLSchema-instance'
+Attribute 'xmlns:xsd'='http://www.w3.org/2001/XMLSchema'
+Attribute 'xmlns:ns1'='urn:cisco:epas:soap'
+soap_putheader
+Element begin tag='SOAP-ENV:Header' level='1' id='0' type=''
+Element begin tag='ns1:session-key' level='2' id='0' type=''
+Attribute 'SOAP-ENV:mustUnderstand'='true'
+Element ending tag='ns1:session-key'
+Element ending tag='SOAP-ENV:Header'
+soap_body_begin_out
+Element begin tag='SOAP-ENV:Body' level='1' id='0' type=''
+Element begin tag='ns1:get-onetime-password' level='2' id='0' type=''
+Element ending tag='ns1:get-onetime-password'
+soap_body_end_out
+Element ending tag='SOAP-ENV:Body'
+soap_envelope_end_out
+Element ending tag='SOAP-ENV:Envelope'
+End of count phase
+soap_connect_command
+soap_try_connect_command
+tcp_select, sk:2180, flags:7, timeout:0, time:Sat Mar 30 17:16:10 2019
+
+tcp_select ret:3, time:Sat Mar 30 17:16:10 2019
+
+Polling: other end down on socket=2180 select=3
+soap_closesock
+Shutdown socket=2180 how=2
+Close socket=2180
+Connect/reconnect to 'https://10.250.64.7:8443/EPASSoap/service/v105' host='10.250.64.7' path='/EPASSoap/service/v105' port=8443
+tcp_connect
+Opening socket=2180 to host='10.250.64.7' port=8443
+tcp_select, sk:2180, flags:2, timeout:10, time:Sat Mar 30 17:16:10 2019
+
+tcp_select ret:2, time:Sat Mar 30 17:16:10 2019
+
+tcp_select, sk:2180, flags:5, timeout:-104288, time:Sat Mar 30 17:16:10 2019
+
+tcp_select ret:1, time:Sat Mar 30 17:16:10 2019
+
+tcp_select, sk:2180, flags:5, timeout:-104288, time:Sat Mar 30 17:16:10 2019
+
+tcp_select ret:1, time:Sat Mar 30 17:16:10 2019
+
+Calculating the message size with attachments, current count=546
+New count=546
+Initializing for output to socket=2180/fd=1
+Free namespace stack
+Begin send phase (socket=2180 mode=0x2000811 count=546)
+HTTP POST to https://10.250.64.7:8443/EPASSoap/service/v105
+Sending cookies for domain='10.250.64.7' path='/EPASSoap/service/v105'
+soap_envelope_begin_outElement begin tag='SOAP-ENV:Envelope' level='0' id='0' type=''
+Attribute 'xmlns:SOAP-ENV'='http://www.w3.org/2003/05/soap-envelope'
+Attribute 'xmlns:SOAP-ENC'='http://www.w3.org/2003/05/soap-encoding'
+Attribute 'xmlns:xsi'='http://www.w3.org/2001/XMLSchema-instance'
+Attribute 'xmlns:xsd'='http://www.w3.org/2001/XMLSchema'
+Attribute 'xmlns:ns1'='urn:cisco:epas:soap'
+soap_putheader
+Element begin tag='SOAP-ENV:Header' level='1' id='0' type=''
+Element begin tag='ns1:session-key' level='2' id='0' type=''
+Attribute 'SOAP-ENV:mustUnderstand'='true'
+Element ending tag='ns1:session-key'
+Element ending tag='SOAP-ENV:Header'
+soap_body_begin_out
+Element begin tag='SOAP-ENV:Body' level='1' id='0' type=''
+Element begin tag='ns1:get-onetime-password' level='2' id='0' type=''
+Element ending tag='ns1:get-onetime-password'
+soap_body_end_out
+Element ending tag='SOAP-ENV:Body'
+soap_envelope_end_out
+Element ending tag='SOAP-ENV:Envelope'
+soap_end_send
+End send mode=0x2000811
+Send 886 bytes to socket=2180/fd=1
+tcp_select, sk:2180, flags:7, timeout:11, time:Sat Mar 30 17:16:10 2019
+
+tcp_select ret:2, time:Sat Mar 30 17:16:10 2019
+
+End of send phase
+Initializing for input from socket=2180/fd=0
+Free namespace stack
+Free any remaining temp blocks
+Free attribute storage
+Free pointer hashtable
+Free ID hashtable
+Free ID hashtable
+tcp_select, sk:2180, flags:5, timeout:12, time:Sat Mar 30 17:16:10 2019
+
+tcp_select ret:1, time:Sat Mar 30 17:16:10 2019
+
+Read 640 bytes from socket=2180/fd=0
+Read count=640 (+640)
+Waiting for HTTP request/response...
+HTTP status: HTTP/1.1 200 OK
+HTTP header: X-Frame-Options: SAMEORIGIN
+HTTP header: Content-Type: application/soap+xml;charset=UTF-8
+HTTP header: Content-Length: 473
+HTTP header: Date: Sat, 30 Mar 2019 11:45:53 GMT
+HTTP header: Server:  
+Finished HTTP header parsing, status = 200
+Keep alive connection = 1
+soap_envelope_begin_in
+XML PI <?xml version='1.0' ?>
+Enlarging look-aside buffer to append data, size=0
+New look-aside buffer size=256
+Push namespace binding (level=0) 'env' 'http://www.w3.org/2003/05/soap-envelope'
+Push OK ('env' matches 'SOAP-ENV' in namespace table)
+Push namespace binding (level=0) 'xsd' 'http://www.w3.org/2001/XMLSchema'
+Push OK ('xsd' matches 'xsd' in namespace table)
+Push namespace binding (level=0) 'xml' 'http://www.w3.org/XML/1998/namespace'
+Push NOT OK: no match found for 'http://www.w3.org/XML/1998/namespace' in namespace mapping table (added to stack anyway)
+Push namespace binding (level=0) 'xsi' 'http://www.w3.org/2001/XMLSchema-instance'
+Push OK ('xsi' matches 'xsi' in namespace table)
+Tags and (default) namespaces match: 'env:Envelope' 'SOAP-ENV:Envelope'
+Begin element found (level=1) 'env:Envelope'='SOAP-ENV:Envelope'
+soap_recv_header
+soap_body_begin_in
+Tags and (default) namespaces match: 'env:Body' 'SOAP-ENV:Body'
+Begin element found (level=2) 'env:Body'='SOAP-ENV:Body'
+Push namespace binding (level=2) 'epas' 'urn:cisco:epas:soap'
+Push OK ('epas' matches 'ns1' in namespace table)
+Tags and (default) namespaces match: 'epas:get-onetime-password-resp' 'ns1:get-onetime-password-resp'
+Begin element found (level=3) 'epas:get-onetime-password-resp'='ns1:get-onetime-password-resp'
+Enter id='' type=47 loc=08E7F3A8 size=16 level=0
+Tags and (default) namespaces match: 'epas:success' 'ns1:success'
+Begin element found (level=4) 'epas:success'='ns1:success'
+Reverting to last element 'epas:success' (level=3)
+soap_instantiate__ns1__GetOneTimePasswordStatusType_success(-1, , )
+Instantiated location=29F18008
+Tags and (default) namespaces match: 'epas:success' 'ns1:success'
+Begin element found (level=4) 'epas:success'='ns1:success'
+Enter id='' type=161 loc=29F18008 size=8 level=0
+Tags and (default) namespaces match: 'epas:password' 'ns1:password'
+Begin element found (level=5) 'epas:password'='ns1:password'
+Reading string content, flag=1
+Enter id='' type=98 loc=22858558 size=4 level=0
+End element found (level=5) 'epas:password'='ns1:password'
+End element found (level=4) 'epas:success'='ns1:success'
+End element found (level=3) 'epas:get-onetime-password-resp'='ns1:get-onetime-password-resp'
+soap_body_end_in
+End element found (level=2) 'env:Body'='SOAP-ENV:Body'
+soap_envelope_end_in
+End element found (level=1) 'env:Envelope'='SOAP-ENV:Envelope'
+soap_end_recv
+End of receive message ok
+Resolving forwarded data
+Resolution phase
+Resolution done
+Free namespace stack
+soap_closesock
+soap_instantiate_SOAP_ENV__Header(-1, , )
+Instantiated location=3459FD18
+Reinitializing context
+Free namespace stack
+Free any remaining temp blocks
+Free attribute storage
+Free pointer hashtable
+Free ID hashtable
+soap_serializeheader
+soap_begin_count
+Free namespace stack
+Begin count phase (socket=2180 mode=0x2000818 count=0)
+soap_envelope_begin_outElement begin tag='SOAP-ENV:Envelope' level='0' id='0' type=''
+Attribute 'xmlns:SOAP-ENV'='http://www.w3.org/2003/05/soap-envelope'
+Attribute 'xmlns:SOAP-ENC'='http://www.w3.org/2003/05/soap-encoding'
+Attribute 'xmlns:xsi'='http://www.w3.org/2001/XMLSchema-instance'
+Attribute 'xmlns:xsd'='http://www.w3.org/2001/XMLSchema'
+Attribute 'xmlns:ns1'='urn:cisco:epas:soap'
+soap_putheader
+Element begin tag='SOAP-ENV:Header' level='1' id='0' type=''
+Element begin tag='ns1:session-key' level='2' id='0' type=''
+Attribute 'SOAP-ENV:mustUnderstand'='true'
+Element ending tag='ns1:session-key'
+Element ending tag='SOAP-ENV:Header'
+soap_body_begin_out
+Element begin tag='SOAP-ENV:Body' level='1' id='0' type=''
+Element begin tag='ns1:get-onetime-password' level='2' id='0' type=''
+Element ending tag='ns1:get-onetime-password'
+soap_body_end_out
+Element ending tag='SOAP-ENV:Body'
+soap_envelope_end_out
+Element ending tag='SOAP-ENV:Envelope'
+End of count phase
+soap_connect_command
+soap_try_connect_command
+tcp_select, sk:2180, flags:7, timeout:0, time:Sun Mar 31 09:07:59 2019
+
+tcp_select ret:3, time:Sun Mar 31 09:07:59 2019
+
+Polling: other end down on socket=2180 select=3
+soap_closesock
+Shutdown socket=2180 how=2
+Close socket=2180
+Connect/reconnect to 'https://10.250.64.7:8443/EPASSoap/service/v105' host='10.250.64.7' path='/EPASSoap/service/v105' port=8443
+tcp_connect
+Opening socket=2180 to host='10.250.64.7' port=8443
+tcp_select, sk:2180, flags:2, timeout:10, time:Sun Mar 31 09:07:59 2019
+
+tcp_select ret:2, time:Sun Mar 31 09:07:59 2019
+
+tcp_select, sk:2180, flags:5, timeout:-104288, time:Sun Mar 31 09:07:59 2019
+
+tcp_select ret:1, time:Sun Mar 31 09:07:59 2019
+
+tcp_select, sk:2180, flags:5, timeout:-104288, time:Sun Mar 31 09:07:59 2019
+
+tcp_select ret:1, time:Sun Mar 31 09:07:59 2019
+
+Calculating the message size with attachments, current count=546
+New count=546
+Initializing for output to socket=2180/fd=1
+Free namespace stack
+Begin send phase (socket=2180 mode=0x2000811 count=546)
+HTTP POST to https://10.250.64.7:8443/EPASSoap/service/v105
+Sending cookies for domain='10.250.64.7' path='/EPASSoap/service/v105'
+soap_envelope_begin_outElement begin tag='SOAP-ENV:Envelope' level='0' id='0' type=''
+Attribute 'xmlns:SOAP-ENV'='http://www.w3.org/2003/05/soap-envelope'
+Attribute 'xmlns:SOAP-ENC'='http://www.w3.org/2003/05/soap-encoding'
+Attribute 'xmlns:xsi'='http://www.w3.org/2001/XMLSchema-instance'
+Attribute 'xmlns:xsd'='http://www.w3.org/2001/XMLSchema'
+Attribute 'xmlns:ns1'='urn:cisco:epas:soap'
+soap_putheader
+Element begin tag='SOAP-ENV:Header' level='1' id='0' type=''
+Element begin tag='ns1:session-key' level='2' id='0' type=''
+Attribute 'SOAP-ENV:mustUnderstand'='true'
+Element ending tag='ns1:session-key'
+Element ending tag='SOAP-ENV:Header'
+soap_body_begin_out
+Element begin tag='SOAP-ENV:Body' level='1' id='0' type=''
+Element begin tag='ns1:get-onetime-password' level='2' id='0' type=''
+Element ending tag='ns1:get-onetime-password'
+soap_body_end_out
+Element ending tag='SOAP-ENV:Body'
+soap_envelope_end_out
+Element ending tag='SOAP-ENV:Envelope'
+soap_end_send
+End send mode=0x2000811
+Send 886 bytes to socket=2180/fd=1
+tcp_select, sk:2180, flags:7, timeout:11, time:Sun Mar 31 09:07:59 2019
+
+tcp_select ret:2, time:Sun Mar 31 09:07:59 2019
+
+End of send phase
+Initializing for input from socket=2180/fd=0
+Free namespace stack
+Free any remaining temp blocks
+Free attribute storage
+Free pointer hashtable
+Free ID hashtable
+Free ID hashtable
+tcp_select, sk:2180, flags:5, timeout:12, time:Sun Mar 31 09:07:59 2019
+
+tcp_select ret:1, time:Sun Mar 31 09:07:59 2019
+
+Read 640 bytes from socket=2180/fd=0
+Read count=640 (+640)
+Waiting for HTTP request/response...
+HTTP status: HTTP/1.1 200 OK
+HTTP header: X-Frame-Options: SAMEORIGIN
+HTTP header: Content-Type: application/soap+xml;charset=UTF-8
+HTTP header: Content-Length: 473
+HTTP header: Date: Sun, 31 Mar 2019 03:37:40 GMT
+HTTP header: Server:  
+Finished HTTP header parsing, status = 200
+Keep alive connection = 1
+soap_envelope_begin_in
+XML PI <?xml version='1.0' ?>
+Enlarging look-aside buffer to append data, size=0
+New look-aside buffer size=256
+Push namespace binding (level=0) 'env' 'http://www.w3.org/2003/05/soap-envelope'
+Push OK ('env' matches 'SOAP-ENV' in namespace table)
+Push namespace binding (level=0) 'xsd' 'http://www.w3.org/2001/XMLSchema'
+Push OK ('xsd' matches 'xsd' in namespace table)
+Push namespace binding (level=0) 'xml' 'http://www.w3.org/XML/1998/namespace'
+Push NOT OK: no match found for 'http://www.w3.org/XML/1998/namespace' in namespace mapping table (added to stack anyway)
+Push namespace binding (level=0) 'xsi' 'http://www.w3.org/2001/XMLSchema-instance'
+Push OK ('xsi' matches 'xsi' in namespace table)
+Tags and (default) namespaces match: 'env:Envelope' 'SOAP-ENV:Envelope'
+Begin element found (level=1) 'env:Envelope'='SOAP-ENV:Envelope'
+soap_recv_header
+soap_body_begin_in
+Tags and (default) namespaces match: 'env:Body' 'SOAP-ENV:Body'
+Begin element found (level=2) 'env:Body'='SOAP-ENV:Body'
+Push namespace binding (level=2) 'epas' 'urn:cisco:epas:soap'
+Push OK ('epas' matches 'ns1' in namespace table)
+Tags and (default) namespaces match: 'epas:get-onetime-password-resp' 'ns1:get-onetime-password-resp'
+Begin element found (level=3) 'epas:get-onetime-password-resp'='ns1:get-onetime-password-resp'
+Enter id='' type=47 loc=08E7F3A8 size=16 level=0
+Tags and (default) namespaces match: 'epas:success' 'ns1:success'
+Begin element found (level=4) 'epas:success'='ns1:success'
+Reverting to last element 'epas:success' (level=3)
+soap_instantiate__ns1__GetOneTimePasswordStatusType_success(-1, , )
+Instantiated location=3459F8B8
+Tags and (default) namespaces match: 'epas:success' 'ns1:success'
+Begin element found (level=4) 'epas:success'='ns1:success'
+Enter id='' type=161 loc=3459F8B8 size=8 level=0
+Tags and (default) namespaces match: 'epas:password' 'ns1:password'
+Begin element found (level=5) 'epas:password'='ns1:password'
+Reading string content, flag=1
+Enter id='' type=98 loc=22856C18 size=4 level=0
+End element found (level=5) 'epas:password'='ns1:password'
+End element found (level=4) 'epas:success'='ns1:success'
+End element found (level=3) 'epas:get-onetime-password-resp'='ns1:get-onetime-password-resp'
+soap_body_end_in
+End element found (level=2) 'env:Body'='SOAP-ENV:Body'
+soap_envelope_end_in
+End element found (level=1) 'env:Envelope'='SOAP-ENV:Envelope'
+soap_end_recv
+End of receive message ok
+Resolving forwarded data
+Resolution phase
+Resolution done
+Free namespace stack
+soap_closesock
+soap_instantiate_SOAP_ENV__Header(-1, , )
+Instantiated location=343192F0
+Reinitializing context
+Free namespace stack
+Free any remaining temp blocks
+Free attribute storage
+Free pointer hashtable
+Free ID hashtable
+soap_serializeheader
+soap_begin_count
+Free namespace stack
+Begin count phase (socket=2180 mode=0x2000818 count=0)
+soap_envelope_begin_outElement begin tag='SOAP-ENV:Envelope' level='0' id='0' type=''
+Attribute 'xmlns:SOAP-ENV'='http://www.w3.org/2003/05/soap-envelope'
+Attribute 'xmlns:SOAP-ENC'='http://www.w3.org/2003/05/soap-encoding'
+Attribute 'xmlns:xsi'='http://www.w3.org/2001/XMLSchema-instance'
+Attribute 'xmlns:xsd'='http://www.w3.org/2001/XMLSchema'
+Attribute 'xmlns:ns1'='urn:cisco:epas:soap'
+soap_putheader
+Element begin tag='SOAP-ENV:Header' level='1' id='0' type=''
+Element begin tag='ns1:session-key' level='2' id='0' type=''
+Attribute 'SOAP-ENV:mustUnderstand'='true'
+Element ending tag='ns1:session-key'
+Element ending tag='SOAP-ENV:Header'
+soap_body_begin_out
+Element begin tag='SOAP-ENV:Body' level='1' id='0' type=''
+Element begin tag='ns1:get-onetime-password' level='2' id='0' type=''
+Element ending tag='ns1:get-onetime-password'
+soap_body_end_out
+Element ending tag='SOAP-ENV:Body'
+soap_envelope_end_out
+Element ending tag='SOAP-ENV:Envelope'
+End of count phase
+soap_connect_command
+soap_try_connect_command
+tcp_select, sk:2180, flags:7, timeout:0, time:Sun Mar 31 10:17:58 2019
+
+tcp_select ret:3, time:Sun Mar 31 10:17:58 2019
+
+Polling: other end down on socket=2180 select=3
+soap_closesock
+Shutdown socket=2180 how=2
+Close socket=2180
+Connect/reconnect to 'https://10.250.64.7:8443/EPASSoap/service/v105' host='10.250.64.7' path='/EPASSoap/service/v105' port=8443
+tcp_connect
+Opening socket=7532 to host='10.250.64.7' port=8443
+tcp_select, sk:7532, flags:2, timeout:10, time:Sun Mar 31 10:17:58 2019
+
+tcp_select ret:2, time:Sun Mar 31 10:17:58 2019
+
+tcp_select, sk:7532, flags:5, timeout:-104288, time:Sun Mar 31 10:17:58 2019
+
+tcp_select ret:1, time:Sun Mar 31 10:17:58 2019
+
+tcp_select, sk:7532, flags:5, timeout:-104288, time:Sun Mar 31 10:17:58 2019
+
+tcp_select ret:1, time:Sun Mar 31 10:17:58 2019
+
+Calculating the message size with attachments, current count=546
+New count=546
+Initializing for output to socket=7532/fd=1
+Free namespace stack
+Begin send phase (socket=7532 mode=0x2000811 count=546)
+HTTP POST to https://10.250.64.7:8443/EPASSoap/service/v105
+Sending cookies for domain='10.250.64.7' path='/EPASSoap/service/v105'
+soap_envelope_begin_outElement begin tag='SOAP-ENV:Envelope' level='0' id='0' type=''
+Attribute 'xmlns:SOAP-ENV'='http://www.w3.org/2003/05/soap-envelope'
+Attribute 'xmlns:SOAP-ENC'='http://www.w3.org/2003/05/soap-encoding'
+Attribute 'xmlns:xsi'='http://www.w3.org/2001/XMLSchema-instance'
+Attribute 'xmlns:xsd'='http://www.w3.org/2001/XMLSchema'
+Attribute 'xmlns:ns1'='urn:cisco:epas:soap'
+soap_putheader
+Element begin tag='SOAP-ENV:Header' level='1' id='0' type=''
+Element begin tag='ns1:session-key' level='2' id='0' type=''
+Attribute 'SOAP-ENV:mustUnderstand'='true'
+Element ending tag='ns1:session-key'
+Element ending tag='SOAP-ENV:Header'
+soap_body_begin_out
+Element begin tag='SOAP-ENV:Body' level='1' id='0' type=''
+Element begin tag='ns1:get-onetime-password' level='2' id='0' type=''
+Element ending tag='ns1:get-onetime-password'
+soap_body_end_out
+Element ending tag='SOAP-ENV:Body'
+soap_envelope_end_out
+Element ending tag='SOAP-ENV:Envelope'
+soap_end_send
+End send mode=0x2000811
+Send 886 bytes to socket=7532/fd=1
+tcp_select, sk:7532, flags:7, timeout:11, time:Sun Mar 31 10:17:58 2019
+
+tcp_select ret:2, time:Sun Mar 31 10:17:58 2019
+
+End of send phase
+Initializing for input from socket=7532/fd=0
+Free namespace stack
+Free any remaining temp blocks
+Free attribute storage
+Free pointer hashtable
+Free ID hashtable
+Free ID hashtable
+tcp_select, sk:7532, flags:5, timeout:12, time:Sun Mar 31 10:17:58 2019
+
+tcp_select ret:1, time:Sun Mar 31 10:17:58 2019
+
+Read 640 bytes from socket=7532/fd=0
+Read count=640 (+640)
+Waiting for HTTP request/response...
+HTTP status: HTTP/1.1 200 OK
+HTTP header: X-Frame-Options: SAMEORIGIN
+HTTP header: Content-Type: application/soap+xml;charset=UTF-8
+HTTP header: Content-Length: 473
+HTTP header: Date: Sun, 31 Mar 2019 04:47:40 GMT
+HTTP header: Server:  
+Finished HTTP header parsing, status = 200
+Keep alive connection = 1
+soap_envelope_begin_in
+XML PI <?xml version='1.0' ?>
+Enlarging look-aside buffer to append data, size=0
+New look-aside buffer size=256
+Push namespace binding (level=0) 'env' 'http://www.w3.org/2003/05/soap-envelope'
+Push OK ('env' matches 'SOAP-ENV' in namespace table)
+Push namespace binding (level=0) 'xsd' 'http://www.w3.org/2001/XMLSchema'
+Push OK ('xsd' matches 'xsd' in namespace table)
+Push namespace binding (level=0) 'xml' 'http://www.w3.org/XML/1998/namespace'
+Push NOT OK: no match found for 'http://www.w3.org/XML/1998/namespace' in namespace mapping table (added to stack anyway)
+Push namespace binding (level=0) 'xsi' 'http://www.w3.org/2001/XMLSchema-instance'
+Push OK ('xsi' matches 'xsi' in namespace table)
+Tags and (default) namespaces match: 'env:Envelope' 'SOAP-ENV:Envelope'
+Begin element found (level=1) 'env:Envelope'='SOAP-ENV:Envelope'
+soap_recv_header
+soap_body_begin_in
+Tags and (default) namespaces match: 'env:Body' 'SOAP-ENV:Body'
+Begin element found (level=2) 'env:Body'='SOAP-ENV:Body'
+Push namespace binding (level=2) 'epas' 'urn:cisco:epas:soap'
+Push OK ('epas' matches 'ns1' in namespace table)
+Tags and (default) namespaces match: 'epas:get-onetime-password-resp' 'ns1:get-onetime-password-resp'
+Begin element found (level=3) 'epas:get-onetime-password-resp'='ns1:get-onetime-password-resp'
+Enter id='' type=47 loc=08E7F3A8 size=16 level=0
+Tags and (default) namespaces match: 'epas:success' 'ns1:success'
+Begin element found (level=4) 'epas:success'='ns1:success'
+Reverting to last element 'epas:success' (level=3)
+soap_instantiate__ns1__GetOneTimePasswordStatusType_success(-1, , )
+Instantiated location=3431A5C0
+Tags and (default) namespaces match: 'epas:success' 'ns1:success'
+Begin element found (level=4) 'epas:success'='ns1:success'
+Enter id='' type=161 loc=3431A5C0 size=8 level=0
+Tags and (default) namespaces match: 'epas:password' 'ns1:password'
+Begin element found (level=5) 'epas:password'='ns1:password'
+Reading string content, flag=1
+Enter id='' type=98 loc=1DC1DEA0 size=4 level=0
+End element found (level=5) 'epas:password'='ns1:password'
+End element found (level=4) 'epas:success'='ns1:success'
+End element found (level=3) 'epas:get-onetime-password-resp'='ns1:get-onetime-password-resp'
+soap_body_end_in
+End element found (level=2) 'env:Body'='SOAP-ENV:Body'
+soap_envelope_end_in
+End element found (level=1) 'env:Envelope'='SOAP-ENV:Envelope'
+soap_end_recv
+End of receive message ok
+Resolving forwarded data
+Resolution phase
+Resolution done
+Free namespace stack
+soap_closesock
+soap_instantiate_SOAP_ENV__Header(-1, , )
+Instantiated location=1C3E1360
+Reinitializing context
+Free namespace stack
+Free any remaining temp blocks
+Free attribute storage
+Free pointer hashtable
+Free ID hashtable
+soap_serializeheader
+soap_begin_count
+Free namespace stack
+Begin count phase (socket=7532 mode=0x2000818 count=0)
+soap_envelope_begin_outElement begin tag='SOAP-ENV:Envelope' level='0' id='0' type=''
+Attribute 'xmlns:SOAP-ENV'='http://www.w3.org/2003/05/soap-envelope'
+Attribute 'xmlns:SOAP-ENC'='http://www.w3.org/2003/05/soap-encoding'
+Attribute 'xmlns:xsi'='http://www.w3.org/2001/XMLSchema-instance'
+Attribute 'xmlns:xsd'='http://www.w3.org/2001/XMLSchema'
+Attribute 'xmlns:ns1'='urn:cisco:epas:soap'
+soap_putheader
+Element begin tag='SOAP-ENV:Header' level='1' id='0' type=''
+Element begin tag='ns1:session-key' level='2' id='0' type=''
+Attribute 'SOAP-ENV:mustUnderstand'='true'
+Element ending tag='ns1:session-key'
+Element ending tag='SOAP-ENV:Header'
+soap_body_begin_out
+Element begin tag='SOAP-ENV:Body' level='1' id='0' type=''
+Element begin tag='ns1:get-onetime-password' level='2' id='0' type=''
+Element ending tag='ns1:get-onetime-password'
+soap_body_end_out
+Element ending tag='SOAP-ENV:Body'
+soap_envelope_end_out
+Element ending tag='SOAP-ENV:Envelope'
+End of count phase
+soap_connect_command
+soap_try_connect_command
+tcp_select, sk:7532, flags:7, timeout:0, time:Sun Mar 31 16:20:32 2019
+
+tcp_select ret:3, time:Sun Mar 31 16:20:32 2019
+
+Polling: other end down on socket=7532 select=3
+soap_closesock
+Shutdown socket=7532 how=2
+Close socket=7532
+Connect/reconnect to 'https://10.250.64.7:8443/EPASSoap/service/v105' host='10.250.64.7' path='/EPASSoap/service/v105' port=8443
+tcp_connect
+Opening socket=7532 to host='10.250.64.7' port=8443
+tcp_select, sk:7532, flags:2, timeout:10, time:Sun Mar 31 16:20:32 2019
+
+tcp_select ret:2, time:Sun Mar 31 16:20:32 2019
+
+tcp_select, sk:7532, flags:5, timeout:-104288, time:Sun Mar 31 16:20:32 2019
+
+tcp_select ret:1, time:Sun Mar 31 16:20:32 2019
+
+tcp_select, sk:7532, flags:5, timeout:-104288, time:Sun Mar 31 16:20:32 2019
+
+tcp_select ret:1, time:Sun Mar 31 16:20:32 2019
+
+Calculating the message size with attachments, current count=546
+New count=546
+Initializing for output to socket=7532/fd=1
+Free namespace stack
+Begin send phase (socket=7532 mode=0x2000811 count=546)
+HTTP POST to https://10.250.64.7:8443/EPASSoap/service/v105
+Sending cookies for domain='10.250.64.7' path='/EPASSoap/service/v105'
+soap_envelope_begin_outElement begin tag='SOAP-ENV:Envelope' level='0' id='0' type=''
+Attribute 'xmlns:SOAP-ENV'='http://www.w3.org/2003/05/soap-envelope'
+Attribute 'xmlns:SOAP-ENC'='http://www.w3.org/2003/05/soap-encoding'
+Attribute 'xmlns:xsi'='http://www.w3.org/2001/XMLSchema-instance'
+Attribute 'xmlns:xsd'='http://www.w3.org/2001/XMLSchema'
+Attribute 'xmlns:ns1'='urn:cisco:epas:soap'
+soap_putheader
+Element begin tag='SOAP-ENV:Header' level='1' id='0' type=''
+Element begin tag='ns1:session-key' level='2' id='0' type=''
+Attribute 'SOAP-ENV:mustUnderstand'='true'
+Element ending tag='ns1:session-key'
+Element ending tag='SOAP-ENV:Header'
+soap_body_begin_out
+Element begin tag='SOAP-ENV:Body' level='1' id='0' type=''
+Element begin tag='ns1:get-onetime-password' level='2' id='0' type=''
+Element ending tag='ns1:get-onetime-password'
+soap_body_end_out
+Element ending tag='SOAP-ENV:Body'
+soap_envelope_end_out
+Element ending tag='SOAP-ENV:Envelope'
+soap_end_send
+End send mode=0x2000811
+Send 886 bytes to socket=7532/fd=1
+tcp_select, sk:7532, flags:7, timeout:11, time:Sun Mar 31 16:20:32 2019
+
+tcp_select ret:2, time:Sun Mar 31 16:20:32 2019
+
+End of send phase
+Initializing for input from socket=7532/fd=0
+Free namespace stack
+Free any remaining temp blocks
+Free attribute storage
+Free pointer hashtable
+Free ID hashtable
+Free ID hashtable
+tcp_select, sk:7532, flags:5, timeout:12, time:Sun Mar 31 16:20:32 2019
+
+tcp_select ret:1, time:Sun Mar 31 16:20:32 2019
+
+Read 641 bytes from socket=7532/fd=0
+Read count=641 (+641)
+Waiting for HTTP request/response...
+HTTP status: HTTP/1.1 200 OK
+HTTP header: X-Frame-Options: SAMEORIGIN
+HTTP header: Content-Type: application/soap+xml;charset=UTF-8
+HTTP header: Content-Length: 474
+HTTP header: Date: Sun, 31 Mar 2019 10:50:13 GMT
+HTTP header: Server:  
+Finished HTTP header parsing, status = 200
+Keep alive connection = 1
+soap_envelope_begin_in
+XML PI <?xml version='1.0' ?>
+Enlarging look-aside buffer to append data, size=0
+New look-aside buffer size=256
+Push namespace binding (level=0) 'env' 'http://www.w3.org/2003/05/soap-envelope'
+Push OK ('env' matches 'SOAP-ENV' in namespace table)
+Push namespace binding (level=0) 'xsd' 'http://www.w3.org/2001/XMLSchema'
+Push OK ('xsd' matches 'xsd' in namespace table)
+Push namespace binding (level=0) 'xml' 'http://www.w3.org/XML/1998/namespace'
+Push NOT OK: no match found for 'http://www.w3.org/XML/1998/namespace' in namespace mapping table (added to stack anyway)
+Push namespace binding (level=0) 'xsi' 'http://www.w3.org/2001/XMLSchema-instance'
+Push OK ('xsi' matches 'xsi' in namespace table)
+Tags and (default) namespaces match: 'env:Envelope' 'SOAP-ENV:Envelope'
+Begin element found (level=1) 'env:Envelope'='SOAP-ENV:Envelope'
+soap_recv_header
+soap_body_begin_in
+Tags and (default) namespaces match: 'env:Body' 'SOAP-ENV:Body'
+Begin element found (level=2) 'env:Body'='SOAP-ENV:Body'
+Push namespace binding (level=2) 'epas' 'urn:cisco:epas:soap'
+Push OK ('epas' matches 'ns1' in namespace table)
+Tags and (default) namespaces match: 'epas:get-onetime-password-resp' 'ns1:get-onetime-password-resp'
+Begin element found (level=3) 'epas:get-onetime-password-resp'='ns1:get-onetime-password-resp'
+Enter id='' type=47 loc=08E7F3A8 size=16 level=0
+Tags and (default) namespaces match: 'epas:success' 'ns1:success'
+Begin element found (level=4) 'epas:success'='ns1:success'
+Reverting to last element 'epas:success' (level=3)
+soap_instantiate__ns1__GetOneTimePasswordStatusType_success(-1, , )
+Instantiated location=3476EC18
+Tags and (default) namespaces match: 'epas:success' 'ns1:success'
+Begin element found (level=4) 'epas:success'='ns1:success'
+Enter id='' type=161 loc=3476EC18 size=8 level=0
+Tags and (default) namespaces match: 'epas:password' 'ns1:password'
+Begin element found (level=5) 'epas:password'='ns1:password'
+Reading string content, flag=1
+Enter id='' type=98 loc=21183E90 size=4 level=0
+End element found (level=5) 'epas:password'='ns1:password'
+End element found (level=4) 'epas:success'='ns1:success'
+End element found (level=3) 'epas:get-onetime-password-resp'='ns1:get-onetime-password-resp'
+soap_body_end_in
+End element found (level=2) 'env:Body'='SOAP-ENV:Body'
+soap_envelope_end_in
+End element found (level=1) 'env:Envelope'='SOAP-ENV:Envelope'
+soap_end_recv
+End of receive message ok
+Resolving forwarded data
+Resolution phase
+Resolution done
+Free namespace stack
+soap_closesock
+soap_instantiate_SOAP_ENV__Header(-1, , )
+Instantiated location=2F2D9500
+Reinitializing context
+Free namespace stack
+Free any remaining temp blocks
+Free attribute storage
+Free pointer hashtable
+Free ID hashtable
+soap_serializeheader
+soap_begin_count
+Free namespace stack
+Begin count phase (socket=7532 mode=0x2000818 count=0)
+soap_envelope_begin_outElement begin tag='SOAP-ENV:Envelope' level='0' id='0' type=''
+Attribute 'xmlns:SOAP-ENV'='http://www.w3.org/2003/05/soap-envelope'
+Attribute 'xmlns:SOAP-ENC'='http://www.w3.org/2003/05/soap-encoding'
+Attribute 'xmlns:xsi'='http://www.w3.org/2001/XMLSchema-instance'
+Attribute 'xmlns:xsd'='http://www.w3.org/2001/XMLSchema'
+Attribute 'xmlns:ns1'='urn:cisco:epas:soap'
+soap_putheader
+Element begin tag='SOAP-ENV:Header' level='1' id='0' type=''
+Element begin tag='ns1:session-key' level='2' id='0' type=''
+Attribute 'SOAP-ENV:mustUnderstand'='true'
+Element ending tag='ns1:session-key'
+Element ending tag='SOAP-ENV:Header'
+soap_body_begin_out
+Element begin tag='SOAP-ENV:Body' level='1' id='0' type=''
+Element begin tag='ns1:get-onetime-password' level='2' id='0' type=''
+Element ending tag='ns1:get-onetime-password'
+soap_body_end_out
+Element ending tag='SOAP-ENV:Body'
+soap_envelope_end_out
+Element ending tag='SOAP-ENV:Envelope'
+End of count phase
+soap_connect_command
+soap_try_connect_command
+tcp_select, sk:7532, flags:7, timeout:0, time:Mon Apr 01 13:51:17 2019
+
+tcp_select ret:3, time:Mon Apr 01 13:51:17 2019
+
+Polling: other end down on socket=7532 select=3
+soap_closesock
+Shutdown socket=7532 how=2
+Close socket=7532
+Connect/reconnect to 'https://10.250.64.7:8443/EPASSoap/service/v105' host='10.250.64.7' path='/EPASSoap/service/v105' port=8443
+tcp_connect
+Opening socket=7532 to host='10.250.64.7' port=8443
+tcp_select, sk:7532, flags:2, timeout:10, time:Mon Apr 01 13:51:17 2019
+
+tcp_select ret:2, time:Mon Apr 01 13:51:17 2019
+
+tcp_select, sk:7532, flags:5, timeout:-104288, time:Mon Apr 01 13:51:17 2019
+
+tcp_select ret:1, time:Mon Apr 01 13:51:17 2019
+
+tcp_select, sk:7532, flags:5, timeout:-104288, time:Mon Apr 01 13:51:17 2019
+
+tcp_select ret:1, time:Mon Apr 01 13:51:17 2019
+
+Calculating the message size with attachments, current count=546
+New count=546
+Initializing for output to socket=7532/fd=1
+Free namespace stack
+Begin send phase (socket=7532 mode=0x2000811 count=546)
+HTTP POST to https://10.250.64.7:8443/EPASSoap/service/v105
+Sending cookies for domain='10.250.64.7' path='/EPASSoap/service/v105'
+soap_envelope_begin_outElement begin tag='SOAP-ENV:Envelope' level='0' id='0' type=''
+Attribute 'xmlns:SOAP-ENV'='http://www.w3.org/2003/05/soap-envelope'
+Attribute 'xmlns:SOAP-ENC'='http://www.w3.org/2003/05/soap-encoding'
+Attribute 'xmlns:xsi'='http://www.w3.org/2001/XMLSchema-instance'
+Attribute 'xmlns:xsd'='http://www.w3.org/2001/XMLSchema'
+Attribute 'xmlns:ns1'='urn:cisco:epas:soap'
+soap_putheader
+Element begin tag='SOAP-ENV:Header' level='1' id='0' type=''
+Element begin tag='ns1:session-key' level='2' id='0' type=''
+Attribute 'SOAP-ENV:mustUnderstand'='true'
+Element ending tag='ns1:session-key'
+Element ending tag='SOAP-ENV:Header'
+soap_body_begin_out
+Element begin tag='SOAP-ENV:Body' level='1' id='0' type=''
+Element begin tag='ns1:get-onetime-password' level='2' id='0' type=''
+Element ending tag='ns1:get-onetime-password'
+soap_body_end_out
+Element ending tag='SOAP-ENV:Body'
+soap_envelope_end_out
+Element ending tag='SOAP-ENV:Envelope'
+soap_end_send
+End send mode=0x2000811
+Send 886 bytes to socket=7532/fd=1
+tcp_select, sk:7532, flags:7, timeout:11, time:Mon Apr 01 13:51:17 2019
+
+tcp_select ret:2, time:Mon Apr 01 13:51:17 2019
+
+End of send phase
+Initializing for input from socket=7532/fd=0
+Free namespace stack
+Free any remaining temp blocks
+Free attribute storage
+Free pointer hashtable
+Free ID hashtable
+Free ID hashtable
+Read 640 bytes from socket=7532/fd=0
+Read count=640 (+640)
+Waiting for HTTP request/response...
+HTTP status: HTTP/1.1 200 OK
+HTTP header: X-Frame-Options: SAMEORIGIN
+HTTP header: Content-Type: application/soap+xml;charset=UTF-8
+HTTP header: Content-Length: 473
+HTTP header: Date: Mon, 01 Apr 2019 08:20:59 GMT
+HTTP header: Server:  
+Finished HTTP header parsing, status = 200
+Keep alive connection = 1
+soap_envelope_begin_in
+XML PI <?xml version='1.0' ?>
+Enlarging look-aside buffer to append data, size=0
+New look-aside buffer size=256
+Push namespace binding (level=0) 'env' 'http://www.w3.org/2003/05/soap-envelope'
+Push OK ('env' matches 'SOAP-ENV' in namespace table)
+Push namespace binding (level=0) 'xsd' 'http://www.w3.org/2001/XMLSchema'
+Push OK ('xsd' matches 'xsd' in namespace table)
+Push namespace binding (level=0) 'xml' 'http://www.w3.org/XML/1998/namespace'
+Push NOT OK: no match found for 'http://www.w3.org/XML/1998/namespace' in namespace mapping table (added to stack anyway)
+Push namespace binding (level=0) 'xsi' 'http://www.w3.org/2001/XMLSchema-instance'
+Push OK ('xsi' matches 'xsi' in namespace table)
+Tags and (default) namespaces match: 'env:Envelope' 'SOAP-ENV:Envelope'
+Begin element found (level=1) 'env:Envelope'='SOAP-ENV:Envelope'
+soap_recv_header
+soap_body_begin_in
+Tags and (default) namespaces match: 'env:Body' 'SOAP-ENV:Body'
+Begin element found (level=2) 'env:Body'='SOAP-ENV:Body'
+Push namespace binding (level=2) 'epas' 'urn:cisco:epas:soap'
+Push OK ('epas' matches 'ns1' in namespace table)
+Tags and (default) namespaces match: 'epas:get-onetime-password-resp' 'ns1:get-onetime-password-resp'
+Begin element found (level=3) 'epas:get-onetime-password-resp'='ns1:get-onetime-password-resp'
+Enter id='' type=47 loc=08E7F3A8 size=16 level=0
+Tags and (default) namespaces match: 'epas:success' 'ns1:success'
+Begin element found (level=4) 'epas:success'='ns1:success'
+Reverting to last element 'epas:success' (level=3)
+soap_instantiate__ns1__GetOneTimePasswordStatusType_success(-1, , )
+Instantiated location=2F2DA700
+Tags and (default) namespaces match: 'epas:success' 'ns1:success'
+Begin element found (level=4) 'epas:success'='ns1:success'
+Enter id='' type=161 loc=2F2DA700 size=8 level=0
+Tags and (default) namespaces match: 'epas:password' 'ns1:password'
+Begin element found (level=5) 'epas:password'='ns1:password'
+Reading string content, flag=1
+Enter id='' type=98 loc=1CE05AE0 size=4 level=0
+End element found (level=5) 'epas:password'='ns1:password'
+End element found (level=4) 'epas:success'='ns1:success'
+End element found (level=3) 'epas:get-onetime-password-resp'='ns1:get-onetime-password-resp'
+soap_body_end_in
+End element found (level=2) 'env:Body'='SOAP-ENV:Body'
+soap_envelope_end_in
+End element found (level=1) 'env:Envelope'='SOAP-ENV:Envelope'
+soap_end_recv
+End of receive message ok
+Resolving forwarded data
+Resolution phase
+Resolution done
+Free namespace stack
+soap_closesock
+soap_instantiate_SOAP_ENV__Header(-1, , )
+Instantiated location=1E837EE8
+Reinitializing context
+Free namespace stack
+Free any remaining temp blocks
+Free attribute storage
+Free pointer hashtable
+Free ID hashtable
+soap_serializeheader
+soap_begin_count
+Free namespace stack
+Begin count phase (socket=7532 mode=0x2000818 count=0)
+soap_envelope_begin_outElement begin tag='SOAP-ENV:Envelope' level='0' id='0' type=''
+Attribute 'xmlns:SOAP-ENV'='http://www.w3.org/2003/05/soap-envelope'
+Attribute 'xmlns:SOAP-ENC'='http://www.w3.org/2003/05/soap-encoding'
+Attribute 'xmlns:xsi'='http://www.w3.org/2001/XMLSchema-instance'
+Attribute 'xmlns:xsd'='http://www.w3.org/2001/XMLSchema'
+Attribute 'xmlns:ns1'='urn:cisco:epas:soap'
+soap_putheader
+Element begin tag='SOAP-ENV:Header' level='1' id='0' type=''
+Element begin tag='ns1:session-key' level='2' id='0' type=''
+Attribute 'SOAP-ENV:mustUnderstand'='true'
+Element ending tag='ns1:session-key'
+Element ending tag='SOAP-ENV:Header'
+soap_body_begin_out
+Element begin tag='SOAP-ENV:Body' level='1' id='0' type=''
+Element begin tag='ns1:get-onetime-password' level='2' id='0' type=''
+Element ending tag='ns1:get-onetime-password'
+soap_body_end_out
+Element ending tag='SOAP-ENV:Body'
+soap_envelope_end_out
+Element ending tag='SOAP-ENV:Envelope'
+End of count phase
+soap_connect_command
+soap_try_connect_command
+tcp_select, sk:7532, flags:7, timeout:0, time:Tue Apr 02 00:17:55 2019
+
+tcp_select ret:3, time:Tue Apr 02 00:17:55 2019
+
+Polling: other end down on socket=7532 select=3
+soap_closesock
+Shutdown socket=7532 how=2
+Close socket=7532
+Connect/reconnect to 'https://10.250.64.7:8443/EPASSoap/service/v105' host='10.250.64.7' path='/EPASSoap/service/v105' port=8443
+tcp_connect
+Opening socket=7532 to host='10.250.64.7' port=8443
+tcp_select, sk:7532, flags:2, timeout:10, time:Tue Apr 02 00:17:55 2019
+
+tcp_select ret:2, time:Tue Apr 02 00:17:55 2019
+
+tcp_select, sk:7532, flags:5, timeout:-104288, time:Tue Apr 02 00:17:55 2019
+
+tcp_select ret:1, time:Tue Apr 02 00:17:55 2019
+
+tcp_select, sk:7532, flags:5, timeout:-104288, time:Tue Apr 02 00:17:55 2019
+
+tcp_select ret:1, time:Tue Apr 02 00:17:55 2019
+
+Calculating the message size with attachments, current count=546
+New count=546
+Initializing for output to socket=7532/fd=1
+Free namespace stack
+Begin send phase (socket=7532 mode=0x2000811 count=546)
+HTTP POST to https://10.250.64.7:8443/EPASSoap/service/v105
+Sending cookies for domain='10.250.64.7' path='/EPASSoap/service/v105'
+soap_envelope_begin_outElement begin tag='SOAP-ENV:Envelope' level='0' id='0' type=''
+Attribute 'xmlns:SOAP-ENV'='http://www.w3.org/2003/05/soap-envelope'
+Attribute 'xmlns:SOAP-ENC'='http://www.w3.org/2003/05/soap-encoding'
+Attribute 'xmlns:xsi'='http://www.w3.org/2001/XMLSchema-instance'
+Attribute 'xmlns:xsd'='http://www.w3.org/2001/XMLSchema'
+Attribute 'xmlns:ns1'='urn:cisco:epas:soap'
+soap_putheader
+Element begin tag='SOAP-ENV:Header' level='1' id='0' type=''
+Element begin tag='ns1:session-key' level='2' id='0' type=''
+Attribute 'SOAP-ENV:mustUnderstand'='true'
+Element ending tag='ns1:session-key'
+Element ending tag='SOAP-ENV:Header'
+soap_body_begin_out
+Element begin tag='SOAP-ENV:Body' level='1' id='0' type=''
+Element begin tag='ns1:get-onetime-password' level='2' id='0' type=''
+Element ending tag='ns1:get-onetime-password'
+soap_body_end_out
+Element ending tag='SOAP-ENV:Body'
+soap_envelope_end_out
+Element ending tag='SOAP-ENV:Envelope'
+soap_end_send
+End send mode=0x2000811
+Send 886 bytes to socket=7532/fd=1
+tcp_select, sk:7532, flags:7, timeout:11, time:Tue Apr 02 00:17:55 2019
+
+tcp_select ret:2, time:Tue Apr 02 00:17:55 2019
+
+End of send phase
+Initializing for input from socket=7532/fd=0
+Free namespace stack
+Free any remaining temp blocks
+Free attribute storage
+Free pointer hashtable
+Free ID hashtable
+Free ID hashtable
+tcp_select, sk:7532, flags:5, timeout:12, time:Tue Apr 02 00:17:55 2019
+
+tcp_select ret:1, time:Tue Apr 02 00:17:55 2019
+
+Read 641 bytes from socket=7532/fd=0
+Read count=641 (+641)
+Waiting for HTTP request/response...
+HTTP status: HTTP/1.1 200 OK
+HTTP header: X-Frame-Options: SAMEORIGIN
+HTTP header: Content-Type: application/soap+xml;charset=UTF-8
+HTTP header: Content-Length: 474
+HTTP header: Date: Mon, 01 Apr 2019 18:47:37 GMT
+HTTP header: Server:  
+Finished HTTP header parsing, status = 200
+Keep alive connection = 1
+soap_envelope_begin_in
+XML PI <?xml version='1.0' ?>
+Enlarging look-aside buffer to append data, size=0
+New look-aside buffer size=256
+Push namespace binding (level=0) 'env' 'http://www.w3.org/2003/05/soap-envelope'
+Push OK ('env' matches 'SOAP-ENV' in namespace table)
+Push namespace binding (level=0) 'xsd' 'http://www.w3.org/2001/XMLSchema'
+Push OK ('xsd' matches 'xsd' in namespace table)
+Push namespace binding (level=0) 'xml' 'http://www.w3.org/XML/1998/namespace'
+Push NOT OK: no match found for 'http://www.w3.org/XML/1998/namespace' in namespace mapping table (added to stack anyway)
+Push namespace binding (level=0) 'xsi' 'http://www.w3.org/2001/XMLSchema-instance'
+Push OK ('xsi' matches 'xsi' in namespace table)
+Tags and (default) namespaces match: 'env:Envelope' 'SOAP-ENV:Envelope'
+Begin element found (level=1) 'env:Envelope'='SOAP-ENV:Envelope'
+soap_recv_header
+soap_body_begin_in
+Tags and (default) namespaces match: 'env:Body' 'SOAP-ENV:Body'
+Begin element found (level=2) 'env:Body'='SOAP-ENV:Body'
+Push namespace binding (level=2) 'epas' 'urn:cisco:epas:soap'
+Push OK ('epas' matches 'ns1' in namespace table)
+Tags and (default) namespaces match: 'epas:get-onetime-password-resp' 'ns1:get-onetime-password-resp'
+Begin element found (level=3) 'epas:get-onetime-password-resp'='ns1:get-onetime-password-resp'
+Enter id='' type=47 loc=08E7F3A8 size=16 level=0
+Tags and (default) namespaces match: 'epas:success' 'ns1:success'
+Begin element found (level=4) 'epas:success'='ns1:success'
+Reverting to last element 'epas:success' (level=3)
+soap_instantiate__ns1__GetOneTimePasswordStatusType_success(-1, , )
+Instantiated location=2068F8A8
+Tags and (default) namespaces match: 'epas:success' 'ns1:success'
+Begin element found (level=4) 'epas:success'='ns1:success'
+Enter id='' type=161 loc=2068F8A8 size=8 level=0
+Tags and (default) namespaces match: 'epas:password' 'ns1:password'
+Begin element found (level=5) 'epas:password'='ns1:password'
+Reading string content, flag=1
+Enter id='' type=98 loc=1C365C40 size=4 level=0
+End element found (level=5) 'epas:password'='ns1:password'
+End element found (level=4) 'epas:success'='ns1:success'
+End element found (level=3) 'epas:get-onetime-password-resp'='ns1:get-onetime-password-resp'
+soap_body_end_in
+End element found (level=2) 'env:Body'='SOAP-ENV:Body'
+soap_envelope_end_in
+End element found (level=1) 'env:Envelope'='SOAP-ENV:Envelope'
+soap_end_recv
+End of receive message ok
+Resolving forwarded data
+Resolution phase
+Resolution done
+Free namespace stack
+soap_closesock
+soap_instantiate_SOAP_ENV__Header(-1, , )
+Instantiated location=2F2DA370
+Reinitializing context
+Free namespace stack
+Free any remaining temp blocks
+Free attribute storage
+Free pointer hashtable
+Free ID hashtable
+soap_serializeheader
+soap_begin_count
+Free namespace stack
+Begin count phase (socket=7532 mode=0x2000818 count=0)
+soap_envelope_begin_outElement begin tag='SOAP-ENV:Envelope' level='0' id='0' type=''
+Attribute 'xmlns:SOAP-ENV'='http://www.w3.org/2003/05/soap-envelope'
+Attribute 'xmlns:SOAP-ENC'='http://www.w3.org/2003/05/soap-encoding'
+Attribute 'xmlns:xsi'='http://www.w3.org/2001/XMLSchema-instance'
+Attribute 'xmlns:xsd'='http://www.w3.org/2001/XMLSchema'
+Attribute 'xmlns:ns1'='urn:cisco:epas:soap'
+soap_putheader
+Element begin tag='SOAP-ENV:Header' level='1' id='0' type=''
+Element begin tag='ns1:session-key' level='2' id='0' type=''
+Attribute 'SOAP-ENV:mustUnderstand'='true'
+Element ending tag='ns1:session-key'
+Element ending tag='SOAP-ENV:Header'
+soap_body_begin_out
+Element begin tag='SOAP-ENV:Body' level='1' id='0' type=''
+Element begin tag='ns1:get-onetime-password' level='2' id='0' type=''
+Element ending tag='ns1:get-onetime-password'
+soap_body_end_out
+Element ending tag='SOAP-ENV:Body'
+soap_envelope_end_out
+Element ending tag='SOAP-ENV:Envelope'
+End of count phase
+soap_connect_command
+soap_try_connect_command
+tcp_select, sk:7532, flags:7, timeout:0, time:Tue Apr 02 00:18:57 2019
+
+tcp_select ret:3, time:Tue Apr 02 00:18:57 2019
+
+Polling: other end down on socket=7532 select=3
+soap_closesock
+Shutdown socket=7532 how=2
+Close socket=7532
+Connect/reconnect to 'https://10.250.64.7:8443/EPASSoap/service/v105' host='10.250.64.7' path='/EPASSoap/service/v105' port=8443
+tcp_connect
+Opening socket=7532 to host='10.250.64.7' port=8443
+tcp_select, sk:7532, flags:2, timeout:10, time:Tue Apr 02 00:18:57 2019
+
+tcp_select ret:2, time:Tue Apr 02 00:18:57 2019
+
+tcp_select, sk:7532, flags:5, timeout:-104288, time:Tue Apr 02 00:18:57 2019
+
+tcp_select ret:1, time:Tue Apr 02 00:18:57 2019
+
+tcp_select, sk:7532, flags:5, timeout:-104288, time:Tue Apr 02 00:18:57 2019
+
+tcp_select ret:1, time:Tue Apr 02 00:18:57 2019
+
+Calculating the message size with attachments, current count=546
+New count=546
+Initializing for output to socket=7532/fd=1
+Free namespace stack
+Begin send phase (socket=7532 mode=0x2000811 count=546)
+HTTP POST to https://10.250.64.7:8443/EPASSoap/service/v105
+Sending cookies for domain='10.250.64.7' path='/EPASSoap/service/v105'
+soap_envelope_begin_outElement begin tag='SOAP-ENV:Envelope' level='0' id='0' type=''
+Attribute 'xmlns:SOAP-ENV'='http://www.w3.org/2003/05/soap-envelope'
+Attribute 'xmlns:SOAP-ENC'='http://www.w3.org/2003/05/soap-encoding'
+Attribute 'xmlns:xsi'='http://www.w3.org/2001/XMLSchema-instance'
+Attribute 'xmlns:xsd'='http://www.w3.org/2001/XMLSchema'
+Attribute 'xmlns:ns1'='urn:cisco:epas:soap'
+soap_putheader
+Element begin tag='SOAP-ENV:Header' level='1' id='0' type=''
+Element begin tag='ns1:session-key' level='2' id='0' type=''
+Attribute 'SOAP-ENV:mustUnderstand'='true'
+Element ending tag='ns1:session-key'
+Element ending tag='SOAP-ENV:Header'
+soap_body_begin_out
+Element begin tag='SOAP-ENV:Body' level='1' id='0' type=''
+Element begin tag='ns1:get-onetime-password' level='2' id='0' type=''
+Element ending tag='ns1:get-onetime-password'
+soap_body_end_out
+Element ending tag='SOAP-ENV:Body'
+soap_envelope_end_out
+Element ending tag='SOAP-ENV:Envelope'
+soap_end_send
+End send mode=0x2000811
+Send 886 bytes to socket=7532/fd=1
+tcp_select, sk:7532, flags:7, timeout:11, time:Tue Apr 02 00:18:57 2019
+
+tcp_select ret:2, time:Tue Apr 02 00:18:57 2019
+
+End of send phase
+Initializing for input from socket=7532/fd=0
+Free namespace stack
+Free any remaining temp blocks
+Free attribute storage
+Free pointer hashtable
+Free ID hashtable
+Free ID hashtable
+tcp_select, sk:7532, flags:5, timeout:12, time:Tue Apr 02 00:18:57 2019
+
+tcp_select ret:1, time:Tue Apr 02 00:18:57 2019
+
+Read 641 bytes from socket=7532/fd=0
+Read count=641 (+641)
+Waiting for HTTP request/response...
+HTTP status: HTTP/1.1 200 OK
+HTTP header: X-Frame-Options: SAMEORIGIN
+HTTP header: Content-Type: application/soap+xml;charset=UTF-8
+HTTP header: Content-Length: 474
+HTTP header: Date: Mon, 01 Apr 2019 18:48:39 GMT
+HTTP header: Server:  
+Finished HTTP header parsing, status = 200
+Keep alive connection = 1
+soap_envelope_begin_in
+XML PI <?xml version='1.0' ?>
+Enlarging look-aside buffer to append data, size=0
+New look-aside buffer size=256
+Push namespace binding (level=0) 'env' 'http://www.w3.org/2003/05/soap-envelope'
+Push OK ('env' matches 'SOAP-ENV' in namespace table)
+Push namespace binding (level=0) 'xsd' 'http://www.w3.org/2001/XMLSchema'
+Push OK ('xsd' matches 'xsd' in namespace table)
+Push namespace binding (level=0) 'xml' 'http://www.w3.org/XML/1998/namespace'
+Push NOT OK: no match found for 'http://www.w3.org/XML/1998/namespace' in namespace mapping table (added to stack anyway)
+Push namespace binding (level=0) 'xsi' 'http://www.w3.org/2001/XMLSchema-instance'
+Push OK ('xsi' matches 'xsi' in namespace table)
+Tags and (default) namespaces match: 'env:Envelope' 'SOAP-ENV:Envelope'
+Begin element found (level=1) 'env:Envelope'='SOAP-ENV:Envelope'
+soap_recv_header
+soap_body_begin_in
+Tags and (default) namespaces match: 'env:Body' 'SOAP-ENV:Body'
+Begin element found (level=2) 'env:Body'='SOAP-ENV:Body'
+Push namespace binding (level=2) 'epas' 'urn:cisco:epas:soap'
+Push OK ('epas' matches 'ns1' in namespace table)
+Tags and (default) namespaces match: 'epas:get-onetime-password-resp' 'ns1:get-onetime-password-resp'
+Begin element found (level=3) 'epas:get-onetime-password-resp'='ns1:get-onetime-password-resp'
+Enter id='' type=47 loc=08E7F3A8 size=16 level=0
+Tags and (default) namespaces match: 'epas:success' 'ns1:success'
+Begin element found (level=4) 'epas:success'='ns1:success'
+Reverting to last element 'epas:success' (level=3)
+soap_instantiate__ns1__GetOneTimePasswordStatusType_success(-1, , )
+Instantiated location=2F2D90A0
+Tags and (default) namespaces match: 'epas:success' 'ns1:success'
+Begin element found (level=4) 'epas:success'='ns1:success'
+Enter id='' type=161 loc=2F2D90A0 size=8 level=0
+Tags and (default) namespaces match: 'epas:password' 'ns1:password'
+Begin element found (level=5) 'epas:password'='ns1:password'
+Reading string content, flag=1
+Enter id='' type=98 loc=1CE04C80 size=4 level=0
+End element found (level=5) 'epas:password'='ns1:password'
+End element found (level=4) 'epas:success'='ns1:success'
+End element found (level=3) 'epas:get-onetime-password-resp'='ns1:get-onetime-password-resp'
+soap_body_end_in
+End element found (level=2) 'env:Body'='SOAP-ENV:Body'
+soap_envelope_end_in
+End element found (level=1) 'env:Envelope'='SOAP-ENV:Envelope'
+soap_end_recv
+End of receive message ok
+Resolving forwarded data
+Resolution phase
+Resolution done
+Free namespace stack
+soap_closesock

@@ -1,0 +1,36 @@
+﻿<div>
+<style>
+label { display: block; }
+.validationMessage { color: Red; }
+.customMessage { color: Orange; }
+</style>
+<script id="customMessageTemplate" type="text/html">
+    <em class="customMessage" data-bind='validationMessage: field'></em>
+</script>
+    <h1>User Form</h1>
+    <div class='well'>
+        <form>
+    <legend>User: <span data-bind='text: errors().length'></span> errors</legend>
+    <label>First name: <input data-bind='value: firstName'/></label>
+    <label>Last name: <input data-bind='value: lastName'/></label> 
+            <br/>
+            <button type="sumit" data-bind='click: submitRecord'>Submit</button>
+        </form>
+    </div>
+	<!-- Data Table Start -->
+	<div>
+		<h1>User Records</h1>
+		<div class="well">
+			<div data-bind='compose: gridViewModel'></div>
+			<button class="btn btn-default" data-bind="click: sortFld('FIRST_NAME')">
+				Sort by Name
+			</button>
+	 
+			<button class="btn btn-default" data-bind='click: jumpToFirstPage, enable: gridViewModel.currentPageIndex'>
+				Jump to First Page
+			</button> 
+		</div>
+	</div>
+	<!-- Data Table End -->
+
+</div>

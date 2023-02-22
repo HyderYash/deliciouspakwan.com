@@ -1,0 +1,19 @@
+﻿<div>
+    <h1>Working with Collections</h1>
+    <div class="well">
+		 <ul data-bind="foreach: { data: categories, as: 'category' }">
+			<li><span data-bind="text: category.name"></span>
+				<ul data-bind="foreach: { data: items, as: 'item' }">
+					<li>
+						<input type="checkbox" data-bind="value: item.checkval, checked: item.checked" />
+						<span data-bind="text: item.id"></span>
+						
+					</li>
+				</ul>
+			</li>
+			<li>
+				<input type="checkbox" data-bind="value: category.name, checked: $root.doselAll(category.mcheck,category.name),  attr: {id: category.name}" /><span>Select All</span>
+			</li>
+		</ul>
+    </div>
+</div>

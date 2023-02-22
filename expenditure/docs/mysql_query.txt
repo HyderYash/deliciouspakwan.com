@@ -1,0 +1,8 @@
+SELECT acct.exp_account,i.exp_item_name,it.exp_item_type,exp_amt,exp_date 
+FROM `ec_expenditure`, ec_accounts AS acct,ec_items AS i,ec_items_types AS it 
+WHERE month(exp_date) = 2 
+AND acct.id = `EXP_ACCOUNT_ID` 
+AND i.id = `EXP_ITEM_ID` 
+AND it.id = `EXP_ITEM_TYPE_ID` 
+ORDER BY i.exp_item ASC
+

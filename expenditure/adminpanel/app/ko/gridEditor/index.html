@@ -1,0 +1,41 @@
+﻿<style>
+label { display: block; }
+.validationMessage { color: Red; }
+.customMessage { color: Orange; }
+</style>
+
+<div>
+<script id="customMessageTemplate" type="text/html">
+    <em class="customMessage" data-bind='validationMessage: field'></em>
+</script>
+    <h1>Grid Editor</h1>
+	<legend>Errors: <span data-bind='text: errors()().length'></span> errors</legend>
+    <div class='well'>
+        <form data-bind='submit: save'>
+            <p>You have asked for <span data-bind='text: gifts().length'>&nbsp;</span> gift(s).</p>
+            <table data-bind='visible: gifts().length > 0'>
+                <thead>
+                    <tr>
+                        <th>Gift Name</th>
+                        <th>Price</th>
+                        <th />
+                    </tr>
+                </thead>
+                <tbody data-bind='foreach: gifts'>
+                    <tr>
+                        <td><input class='form-control' data-bind='value: name' /></td>
+                        <td><input class='form-control' data-bind='value: price' /></td>
+                        <td>
+                            <button class="btn btn-danger" data-bind='click: $root.removeGift'>
+                                <span class="fa fa-trash-o"></span>
+                            </button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <br/>
+            <button class="btn btn-default" data-bind='click: addGift'>Add Gift</button>
+            <button class="btn btn-success" data-bind='enable: gifts().length > 0' type="submit">Submit</button>
+        </form>
+    </div>
+</div>

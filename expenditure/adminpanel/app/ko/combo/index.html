@@ -1,0 +1,22 @@
+﻿<div id="doctypes" class="wfp-form wfpTreeList">
+  <h2 class="hidden">Document Types</h2>
+  <ul class="wfpList" data-bind="foreach: types">
+   
+    <li class="root">
+      <input type="checkbox" name="types" class="wfp-checkbox" data-select="multi" data-bind="checked: isSelected,value: rid">
+      
+      <span data-bind="text: label" class="root-title"></span>
+      <ul data-bind="foreach: members">
+
+          <li>
+            <label data-bind="attr: { for: 'dt-child-' + $parent.rid + '-' + $index() }">
+              <input name="types" type="checkbox" data-bind=" checked: isSelected, value: id, attr: { id: 'dt-child-' + $parent.rid + '-' + $index() }">
+              <span data-bind="text: label"></span>
+            </label>
+          </li>
+
+      </ul>
+    </li>
+  
+  </ul>
+</div>

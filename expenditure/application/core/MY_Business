@@ -1,0 +1,34 @@
+<?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
+if (!isset($_SESSION)) { 
+  session_start();
+  $_SESSION['executedFunctionHistoryArr'] = array();
+  $_SESSION['currentCalledMethod'] = '';
+}
+class MY_Business extends CI_Controller {
+
+	public function __construct() {
+        parent::__construct();
+	
+		$this->load->library('db');
+		$this->load->model('businessSqlmodel', 'businessSqlModel');
+		$this->load->helper('html');
+
+		
+    }
+	
+	function load_business_template($content,$forMethod='')
+	{	
+		$themeInfoArr['MetaTitle'] =  'Business Game';
+        $themeInfoArr['MetaDescription'] =   'Business Game';
+        $themeInfoArr['MetaKeyWords'] =   'Business Game';
+        $themeInfoArr['MetaRobots'] =  'INDEX FOLLOW';
+        $data = array(
+            'header'      => $this->load->view('common/business/header',$themeInfoArr, true),
+            'content'     => $content,
+            'footer'      => $this->load->view('common/business/footer','', true),
+			'debug_info'  => '',
+        );
+        $this->load->view('template/business/template', $data);
+	}
+
+}

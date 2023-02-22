@@ -1,0 +1,2 @@
+https://stackoverflow.com/questions/13610769/validating-observablearray-against-a-condition
+http://www.mustbebuilt.co.uk/demo/jquery/adding-form-fields/adding-fields-example-ko.html

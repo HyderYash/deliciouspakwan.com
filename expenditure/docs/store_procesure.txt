@@ -1,0 +1,45 @@
+INSERT IGNORE INTO ec_expenditure (EXP_ITEM_ID, EXP_AMT,EXP_SLOT) VALUES (33,500,2);
+
+
+INSERT IGNORE INTO `ec_expenditure` (`ID`, `EXP_ITEM_ID`, `EXP_AMT`, `EXP_DATE`) VALUES (null, (SELECT ID FROM ec_exp_items WHERE EXP_ITEM_NAME LIKE 'School Van'),1150,'2017-02-10 00:00:00');
+
+
+delimiter $$
+DROP PROCEDURE IF EXISTS `update_or_insert`$$
+create procedure update_or_insert(
+   e_i_i int(11),
+   e_s tinyint(4),
+   m_e_d varchar(4),
+   y_e_d varchar(4),
+   e_amt float(10,2),
+   e_date datetime
+)
+begin
+  IF EXISTS (select * from ec_expenditure where EXP_ITEM_ID = e_i_i AND EXP_SLOT = e_s AND month(EXP_DATE) = m_e_d AND year(EXP_DATE) = y_e_d) THEN
+    update ec_expenditure set EXP_AMT = e_amt,  EXP_DATE = e_date where EXP_ITEM_ID = e_i_i AND EXP_SLOT = e_s AND month(EXP_DATE) = m_e_d AND year(EXP_DATE) = y_e_d;
+  ELSE 
+    insert into ec_expenditure (`ID`, `EXP_ITEM_ID`, `EXP_AMT`, `EXP_DATE`,`EXP_SLOT`,`USER_ID`) VALUES (null, e_i_i,e_amt,e_date,e_s,1);
+  END IF;
+end $$
+delimiter ;
+
+=CONCATENATE("INSERT INTO `ec_expenditure` (`ID`, `EXP_ITEM_ID`, `EXP_AMT`, `EXP_DATE`) VALUES (null, (SELECT ID FROM ec_exp_items WHERE EXP_ITEM_NAME LIKE '", A2, "'),", K2,",'2017-02-10 00:00:00');")
+=CONCATENATE("update_or_insert((SELECT ID FROM ec_exp_items WHERE EXP_ITEM_NAME LIKE '", A2, "'),",$F$1,'02','2017',K2,",'2017-02-10 00:00:00');")")
+
+update_or_insert(1,1,'02','2017',1150,'2017-02-10 00:00:00');
+
+call update_or_insert(1,1,'02','2017','1149.00','2017-02-10 00:00:00')
+call update_or_insert((SELECT ID FROM ec_exp_items WHERE EXP_ITEM_NAME LIKE 'School Van'),1,'02','2017',1150,'2017-02-10 00:00:00');
+call update_or_insert((SELECT ID FROM ec_exp_items WHERE EXP_ITEM_NAME LIKE 'School Van'),1,'02','2017',1150,'2017-02-10 00:00:00');
+call update_or_insert((SELECT ID FROM ec_exp_items WHERE EXP_ITEM_NAME LIKE 'School Van'),1,'02','2017',,'2017-02-10 00:00:00');
+call update_or_insert((SELECT ID FROM ec_exp_items WHERE EXP_ITEM_NAME LIKE 'Home Saving'),1,'MONTH(TODAY())','YEAR(TODAY())',1000,'2017-02-10 00:00:00');
+
+
+=IF(F2<>"",CONCATENATE("call update_or_insert((SELECT ID FROM ec_exp_items WHERE EXP_ITEM_NAME LIKE '",A2,"'),",REPLACE($F$1,1,3,""),",'02'",",'2017',",F2,",'2017-02-10 00:00:00');"),"")
+
+=CONCATENATE(
+
+
+
+
+call ();
