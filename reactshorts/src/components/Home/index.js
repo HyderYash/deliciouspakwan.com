@@ -11,7 +11,7 @@ const Home = () => {
 
   const getAllShorts = async () => {
     // const ytShortsURL = `https://www.googleapis.com/youtube/v3/search?videoDuration=short&channelId=UCg22-16kmYWZTUQF9wVkqFA&order=date&part=snippet&type=video&maxResults=1000&key=AIzaSyBvoa_cVYNcrQn8SqwaaVb3bCI2rGqxrpQ`;
-    const ytShortsURL = `/api/shorts/shorts_list.php`;
+    const ytShortsURL = `${API_ROOT_PATH}/api/shorts/shorts_list.php`;
     const { data } = await axios.get(ytShortsURL, {
       method: "get",
     });
