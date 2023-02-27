@@ -62,9 +62,9 @@ const Home = () => {
     <div className="w-full p-4 bg-white">
       <div className="flex items-end justify-between mb-2 header">
         <div className="flex justify-between title w-full">
-          <p className="text-4xl font-bold text-gray-800">
+          {/* <p className="text-4xl font-bold text-gray-800">
             Lastest {filterShorts === true ? "Shorts" : "Videos"}
-          </p>
+          </p> */}
           {/* <button
             onClick={() => {
               setFilterShorts(!filterShorts);
