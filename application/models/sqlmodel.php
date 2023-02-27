@@ -157,6 +157,7 @@ class sqlmodel extends CI_Model
 		);		
 
 		$videoDetails = file_get_contents('https://www.googleapis.com/youtube/v3/videos?part=statistics&id=' . $videoId .'&key=' . DP_YT_API_KEY,false,$context);
+		
 
 		$videoDetails = json_decode($videoDetails);
 
@@ -391,7 +392,6 @@ class sqlmodel extends CI_Model
 		}
 
 		$this->_getExecutionTime($funcId); 
-
 		return $result;
 
 	}
@@ -507,7 +507,7 @@ class sqlmodel extends CI_Model
 
 		$funcId = $this->_setFunctionHistory(__method__);	
 
-		$chkStr = "SELECT * FROM `dp_yt_videos_master` WHERE " . $this->removeShortsQuery . " AND VIDEO_ID = '" . $video_id . "'";
+		$chkStr = "SELECT * FROM `dp_yt_videos_master` WHERE VIDEO_ID = '" . $video_id . "'";
 
 		$result = $this->db->get_multiple_tables_records($chkStr);
 
@@ -1168,44 +1168,46 @@ class sqlmodel extends CI_Model
 	}
 
 	function createRandomSiteUrls($forWhat,$rec){
-
+		
+								
 		$randomDpUrl = '';
+		if(isset($rec['VIDEO_ID'])){
+			$sql = "SELECT ID FROM `dp_yt_videos_master` WHERE VIDEO_ID = '" . $rec['VIDEO_ID'] . "' AND " . $this->removeShortsQuery; 
+			$chkSqlPtr = $this->db->get_sql_exec($sql);
+			$chkSqlRows = $this->db->get_db_num_rows($chkSqlPtr);
+			if($chkSqlRows == 0)
+			{		
+				$randomDpUrl = 'https://dpshorts.netlify.app/shortsviewer/' . $rec['VIDEO_ID'];
+			}
+		}
+		if($randomDpUrl === ''){
+			switch($forWhat)
+			{
+				case 'video':
+					$randomDpUrl = $this->tmpRandomUrl($rec['VIDEO_DP_URL'],$forWhat);
+				break;
+				case 'playlistDetails':
+					$randomDpUrl = $this->tmpRandomUrl($rec['PLAYLIST_DP_URL'],$forWhat);
+				break;
+				case 'PlaylistVideos':
 
-		switch($forWhat)
+					$randomDpUrl_part1 = $this->tmpRandomUrl($rec['PLAYLIST_DP_URL'],'playlistDetails');
 
-		{
+					$randomDpUrl_part2 = $this->tmpRandomUrl($rec['VIDEO_DP_URL'],'video');
 
-			case 'video':
+					$randomDpUrl = $randomDpUrl_part1 . str_replace('/video','', $randomDpUrl_part2);
 
-				$randomDpUrl = $this->tmpRandomUrl($rec['VIDEO_DP_URL'],$forWhat);
+				break;			
 
-			break;
+				default:
 
-			case 'playlistDetails':
+					$randomDpUrl = '/';
 
-				$randomDpUrl = $this->tmpRandomUrl($rec['PLAYLIST_DP_URL'],$forWhat);
+				break;
 
-			break;
-
-			case 'PlaylistVideos':
-
-				$randomDpUrl_part1 = $this->tmpRandomUrl($rec['PLAYLIST_DP_URL'],'playlistDetails');
-
-				$randomDpUrl_part2 = $this->tmpRandomUrl($rec['VIDEO_DP_URL'],'video');
-
-				$randomDpUrl = $randomDpUrl_part1 . str_replace('/video','', $randomDpUrl_part2);
-
-			break;			
-
-			default:
-
-				$randomDpUrl = '/';
-
-			break;
+			}
 
 		}
-
-
 
 		$this->addDynamicUrlToSitemapTable($randomDpUrl);
 

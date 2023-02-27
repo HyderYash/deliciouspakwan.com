@@ -5,8 +5,7 @@
 		echo '<ul class="category-list">';
 		$count = count($sitemapContentArr);
 		$i = 0;
-		foreach($sitemapContentArr as $rec){ 
-			echo '<li class="sitemap_li_class"><a href="' . $rec['SITE_URL'] . '" title="' . $rec['SITEMAP_LABEL'] . '">' . $rec['SITEMAP_LABEL'] . '</a></li>';
+		foreach($sitemapContentArr as $rec){ 			echo '<li class="sitemap_li_class"><a href="' . $rec['SITE_URL'] . '" title="' . $rec['SITEMAP_LABEL'] . '">' . $rec['SITEMAP_LABEL'] . '</a></li>';
 			if($i == round((($count/3)*2))){
 					echo '</ul>';
 				echo '</div>';

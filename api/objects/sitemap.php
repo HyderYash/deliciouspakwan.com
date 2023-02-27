@@ -46,7 +46,11 @@ class Sitemap{
 		
 		foreach ($sitemapContentArr as $sitemapUrl) {
 			$url = $xml->addChild('url');
-			$url->addChild('loc', BASEURL . $sitemapUrl['SITE_URL']);
+			if (strpos($string, "http") === 0) {
+				$url->addChild('loc', $sitemapUrl['SITE_URL']);
+			}else{
+				$url->addChild('loc', BASEURL . $sitemapUrl['SITE_URL']);
+			}
 			$url->addChild('lastmod',$sitemapUrl['LAST_UPDATED']);
 			$url->addChild('changefreq', 'monthly');
 			$url->addChild('priority', '0.5');

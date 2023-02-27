@@ -14,7 +14,7 @@ class Shorts{
 	public function getShortsList(){
 		// select query
 		$result = array();
-		$sql = "SELECT `ID`, `VIDEO_ID`, `VIDEO_TITLE`, `VIDEO_THUMB_URL`, `VIDEO_PUBLISH_DATE` FROM `dp_yt_videos_master` WHERE `VIDEO_TITLE` LIKE '%#shorts%'";
+		$sql = "SELECT `ID`, `VIDEO_ID`, `VIDEO_TITLE`, `VIDEO_THUMB_URL`, `VIDEO_PUBLISH_DATE` FROM `dp_yt_videos_master` WHERE `VIDEO_TITLE` LIKE '%#shorts%'  ORDER BY VIDEO_PUBLISH_DATE DESC";
 		$chkSqlPtr = $this->db->get_sql_exec($sql);
 		$chkSqlRows = $this->db->get_db_num_rows($chkSqlPtr);
 		if($chkSqlRows > 0){				

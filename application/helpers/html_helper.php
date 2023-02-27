@@ -243,6 +243,7 @@ function displaySliderCardForPlaylist($listOfPlaylist){
 					$i = 0;
 					$randHOne = rand($i, count($listOfPlaylist));					
 					foreach($listOfPlaylist as $rec) {
+
 						$randomSiteUrl = $CI->sqlModel->createRandomSiteUrls('playlistDetails',$rec);
 						$tmp .= '<div class="blog-content" data-aos="fade-right" data-aos-delay="200">';
 							$tmp .= _getYtVideoImage($rec['PLAYLIST_THUMB_URL'],$randomSiteUrl,$rec['PLAYLIST_TITLE'],$rec['PLAYLIST_THUMB_URL']);
@@ -321,7 +322,7 @@ function popularPlaylistsSideBar($rec) {
 				$tmp .= '</div>';
 			$tmp .= '</div>';
 			$tmp .= '<div class="post-title remove-pad">';
-				$tmp .= _getYtVideoTitle($randomSiteUrl,$rec['PLAYLIST_TITLE'] . $CI->correctPattern("title", $rec['VIDEO_SEARCH_KEYWORDS']));
+				$tmp .= _getYtVideoTitle($randomSiteUrl,$rec['PLAYLIST_TITLE'] . $CI->correctPattern("title", ''));
 				$tmp .= _getVideoSmallDesc($rec['PLAYLIST_DESC'],$rec['PLAYLIST_TITLE'],$randomSiteUrl);
 			$tmp .= '</div>';
 			$tmp .= '<div style="display:flex;text-align:center;justify-content:center;">';
