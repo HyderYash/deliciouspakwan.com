@@ -106,21 +106,25 @@ const Home = () => {
             <Image
               alt="blog photo"
               src={item.VIDEO_THUMB_URL}
-              className="object-cover w-full max-h-40"
+              width="0"
+              height="0"
+              sizes="100vw"
+              className="object-cover w-full h-auto"
             />
             <div className="w-full p-4 bg-white dark:bg-gray-800">
               <p className="font-medium text-indigo-500 text-md">Short</p>
               <p className="mb-2 text-xl font-medium text-gray-800 dark:text-white">
-                {item.VIDEO_TITLE.slice(0, 30)}...
+                {item.VIDEO_TITLE.slice(0, 20)}...
               </p>
               <div className="flex items-center mt-4">
-                {/* <a href="#" className="relative block"> */}
                 <Image
                   alt="profil"
                   src="/assets/images/dp_large.png"
-                  className="object-cover rounded-full h-10 w-10 "
+                  className="object-cover rounded-full h-10 w-10"
+                  width="0"
+                  height="0"
+                  sizes="100vw"
                 />
-                {/* </a> */}
                 <div className="flex flex-col justify-between ml-2 text-sm">
                   <p className="text-gray-800 dark:text-white">
                     Delicious Pakwan
@@ -131,7 +135,6 @@ const Home = () => {
                 </div>
               </div>
             </div>
-            {/* </a> */}
           </div>
         ))}
       </div>

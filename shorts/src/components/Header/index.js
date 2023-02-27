@@ -11,6 +11,8 @@ const Header = () => {
               className="w-8 h-8"
               src="/assets/images/dp_large.png"
               alt="Workflow"
+              width={32}
+              height={32}
             />
           </Link>
           <div className="flex items-baseline ml-10 space-x-4">
