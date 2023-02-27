@@ -42,6 +42,7 @@
     <li class="logo"><a href="/">Delicious Pakwan</a></li>
     <li class="item"><a href="/">Home</a></li>
     <li class="item"><a href="/playlists">Top Playlists</a></li>
+    <li class="item"><a href="https://dpshorts.netlify.app" target="_blank">Shorts</a></li>
 	<li class="item"><a href="/sitemap.html">Sitemap</a></li>
     <!--li class="item has-submenu">
       <a tabindex="0">Services</a>
