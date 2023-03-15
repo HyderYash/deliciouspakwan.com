@@ -157,7 +157,7 @@ const Home = () => {
               />
               <div className="w-full p-2 bg-white dark:bg-gray-800">
                 <div style={{ height: "50px" }}>
-                  <p className="text-sm font-medium text-gray-800 dark:text-white">
+                  <p className="text-xs font-medium text-gray-800 dark:text-white">
                     {/* {item.VIDEO_TITLE.slice(0, 20)}... */}
                     {item.VIDEO_TITLE}
                   </p>
