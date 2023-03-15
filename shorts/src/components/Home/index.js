@@ -90,7 +90,7 @@ const Home = () => {
 
   if (!loading) {
     return (
-      <div className="w-full p-2 bg-gray-300">
+      <div className="w-full p-2">
         <div className="flex items-end justify-between mb-2 header">
           <div className="flex justify-between title w-full">
             <div>
@@ -157,7 +157,7 @@ const Home = () => {
               />
               <div className="w-full p-2 bg-white dark:bg-gray-800">
                 <div style={{ height: "50px" }}>
-                  <p className="text-base font-medium text-gray-800 dark:text-white">
+                  <p className="text-sm font-medium text-gray-800 dark:text-white">
                     {/* {item.VIDEO_TITLE.slice(0, 20)}... */}
                     {item.VIDEO_TITLE}
                   </p>
@@ -172,7 +172,7 @@ const Home = () => {
                     height="0"
                     sizes="100vw"
                   />
-                  <div className="flex flex-col justify-between ml-2 text-sm">
+                  <div className="flex flex-col justify-between ml-2 text-xs">
                     <p className="text-gray-800 dark:text-white">
                       Delicious Pakwan
                     </p>

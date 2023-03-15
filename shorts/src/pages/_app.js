@@ -6,7 +6,7 @@ export default function App({ Component, pageProps }) {
   return (
     <div className="flex flex-col h-screen">
       <Header />
-      <main className="mb-auto grow mt-14">
+      <main className="mb-auto grow mt-14 bg-gray-300">
         <Component {...pageProps} />
       </main>
       <Footer />
