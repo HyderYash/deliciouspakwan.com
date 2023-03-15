@@ -90,7 +90,7 @@ const Home = () => {
 
   if (!loading) {
     return (
-      <div className="w-full p-4 bg-white">
+      <div className="w-full p-2 bg-gray-300">
         <div className="flex items-end justify-between mb-2 header">
           <div className="flex justify-between title w-full">
             <div>
@@ -138,10 +138,11 @@ const Home = () => {
           </div> */}
           </div>
         </div>
-        <div className="grid grid-cols-1 gap-4 md:grid-cols-2 xl:grid-cols-4">
+        <div className="grid grid-cols-1 gap-2 md:grid-cols-2 xl:grid-cols-4">
           {visibleShortsList.map((item, key) => (
             <div
-              className="overflow-hidden rounded-lg shadow-lg cursor-pointer h-90"
+              className="overflow-hidden rounded-lg shadow-lg cursor-pointer"
+              style={{ minHeight: "315px" }}
               key={item.VIDEO_ID}
               onClick={() => sendUserToViewShorts(item.VIDEO_ID)}
             >
@@ -154,11 +155,15 @@ const Home = () => {
                 sizes="100vw"
                 className="object-cover w-full h-auto"
               />
-              <div className="w-full p-4 bg-white dark:bg-gray-800">
-                <p className="mb-2 text-xl font-medium text-gray-800 dark:text-white">
-                  {item.VIDEO_TITLE.slice(0, 20)}...
-                </p>
-                <div className="flex items-center mt-4">
+              <div className="w-full p-2 bg-white dark:bg-gray-800">
+                <div style={{ height: "50px" }}>
+                  <p className="text-base font-medium text-gray-800 dark:text-white">
+                    {/* {item.VIDEO_TITLE.slice(0, 20)}... */}
+                    {item.VIDEO_TITLE}
+                  </p>
+                </div>
+
+                <div className="flex items-center">
                   <Image
                     alt="profil"
                     src="/assets/images/dp_large.png"
@@ -172,7 +177,7 @@ const Home = () => {
                       Delicious Pakwan
                     </p>
                     <p className="text-gray-400 dark:text-gray-300">
-                      {moment(item.VIDEO_PUBLISH_DATE).format("MMMM Do YYYY")}
+                      {moment(item.VIDEO_PUBLISH_DATE).format("MMMM D, YYYY")}
                     </p>
                   </div>
                 </div>
@@ -181,7 +186,7 @@ const Home = () => {
           ))}
         </div>
 
-        <nav className="mt-5">
+        <nav className="mt-5 mb-2 flex justify-center items-center">
           <ul className="inline-flex -space-x-px">
             <li>
               <span
@@ -191,9 +196,9 @@ const Home = () => {
                     setCurrentPageNum(currentPageNum - 1);
                   }
                 }}
-                className="px-3 py-2 ml-0 leading-tight text-gray-500 bg-white border border-gray-300 rounded-l-lg hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white cursor-pointer"
+                className="px-3 py-2 ml-0 leading-tight border hover:text-white bg-gray-900 border-gray-700 text-gray-400 cursor-pointer font-bold"
               >
-                Previous
+                Prev
               </span>
             </li>
             {displayPageNumbers.map((x) => {
@@ -204,8 +209,10 @@ const Home = () => {
                       sessionStorage.setItem("currPageNum", x);
                       setCurrentPageNum(x);
                     }}
-                    className={`px-3 py-2 leading-tight border hover:text-white bg-gray-800 border-gray-700 text-gray-400 hover:bg-gray-700 cursor-pointer ${
-                      currentPageNum === x && "bg-gray-700"
+                    className={`px-3 py-2 leading-tight border border-gray-700  cursor-pointer font-bold ${
+                      currentPageNum === x
+                        ? "bg-gray-300 text-gray-900 text-lg"
+                        : "bg-gray-900 text-gray-400"
                     }`}
                   >
                     {x}
@@ -222,7 +229,7 @@ const Home = () => {
                     setCurrentPageNum(currentPageNum + 1);
                   }
                 }}
-                className="px-3 py-2 leading-tight text-gray-500 bg-white border border-gray-300 rounded-r-lg hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white  cursor-pointer"
+                className="px-3 py-2 ml-0 leading-tight border hover:text-white bg-gray-900 border-gray-700 text-gray-400 cursor-pointer font-bold"
               >
                 Next
               </span>
