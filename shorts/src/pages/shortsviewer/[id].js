@@ -1,9 +1,8 @@
 import React, { Component } from "react";
 import dynamic from "next/dynamic";
-const DesktopShortsViewer = dynamic(
-  () => import("@/components/DesktopShortsViewer"),
-  { ssr: false }
-);
+const DesktopShortsViewer = dynamic(() => import("@/components/VideoViewer"), {
+  ssr: false,
+});
 
 export default class ShortsViewer extends Component {
   constructor() {

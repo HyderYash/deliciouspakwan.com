@@ -1,2 +1,0 @@
-/* Redirect all HTTP requests to HTTPS */
-http://www.deliciouspakwan.com/* https://www.deliciouspakwan.com/:splat 301!

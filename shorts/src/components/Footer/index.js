@@ -8,6 +8,7 @@ const Footer = () => {
         <div className="flex max-w-xs mx-auto items-center justify-between">
           <Link
             href="/"
+            aria-label="Home"
             className="text-gray-400 transition-colors duration-200 hover:text-gray-800 dark:hover:text-white"
           >
             <svg
@@ -30,6 +31,7 @@ const Footer = () => {
           </Link>
           <Link
             href="https://www.facebook.com/deliciouspakwan"
+            aria-label="Facebook"
             className="text-gray-400 transition-colors duration-200 hover:text-gray-800 dark:hover:text-white"
           >
             <svg
@@ -45,6 +47,7 @@ const Footer = () => {
           </Link>
           <Link
             href="https://twitter.com/PakwanDelicious"
+            aria-label="Twitter"
             className="text-gray-400 transition-colors duration-200 hover:text-gray-800 dark:hover:text-white"
           >
             <svg
@@ -60,6 +63,7 @@ const Footer = () => {
           </Link>
           <Link
             href="https://bit.ly/3gJY3mQ"
+            aria-label="Youtube"
             className="text-gray-400 transition-colors duration-200 hover:text-gray-800 dark:hover:text-white"
           >
             <svg
@@ -75,6 +79,7 @@ const Footer = () => {
           </Link>
           <Link
             href="https://www.instagram.com/deliciouspakwan"
+            aria-label="Delicious Pakwan"
             className="text-gray-400 transition-colors duration-200 hover:text-gray-800 dark:hover:text-white"
           >
             <svg
@@ -90,6 +95,7 @@ const Footer = () => {
           </Link>
           <Link
             href="https://github.com/HyderYash"
+            aria-label="Github"
             className="text-gray-400 transition-colors duration-200 hover:text-gray-800 dark:hover:text-white"
           >
             <svg

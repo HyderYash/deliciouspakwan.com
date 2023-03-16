@@ -19,8 +19,7 @@
     "react-device-detect": "^2.2.3",
     "react-dom": "18.2.0",
     "react-player": "^2.11.2",
-    "react-swipeable": "^7.0.0",
-    "react-youtube": "^10.1.0"
+    "react-swipeable": "^7.0.0"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.13",

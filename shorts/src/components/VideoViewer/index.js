@@ -3,7 +3,7 @@ import ReactPlayer from "react-player/youtube";
 import { useSwipeable } from "react-swipeable";
 import { isMobile } from "react-device-detect";
 
-const DesktopShortsViewer = (props) => {
+const VideoViewer = (props) => {
   const handlers = useSwipeable({
     onSwipedUp: () => props.returnPrevShort(),
     onSwipedDown: () => props.returnNextShort(),
@@ -44,4 +44,4 @@ const DesktopShortsViewer = (props) => {
   );
 };
 
-export default DesktopShortsViewer;
+export default VideoViewer;
