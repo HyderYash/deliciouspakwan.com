@@ -28,7 +28,7 @@ function _getYtVideoImage($videoId,$hrefUrl,$title,$imgUrl ){
 	//$imgUrl = '/images/videothumbnails/' . trim($videoId) . '.jpg';
 	$tmp = '';
 	$tmp .= '<a href="' . $hrefUrl .'" title="' . $title .'">';
-	$tmp .= '<img src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-src="' . $imgUrl .'" class="img" alt="' . $title . '"></a>';
+	$tmp .= '<img fetchpriority="high" src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-src="' . $imgUrl .'" class="img" alt="' . $title . '"></a>';
 	//$tmp .= '<img src="' . $imgUrl .'" class="img" alt="' . $title . '"></a>';
 	return $tmp;
 }

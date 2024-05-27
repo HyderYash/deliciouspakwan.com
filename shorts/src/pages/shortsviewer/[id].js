@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import dynamic from "next/dynamic";
-const DesktopShortsViewer = dynamic(() => import("@/components/VideoViewer"), {
+const VideoViewer = dynamic(() => import("@/components/VideoViewer"), {
   ssr: false,
 });
 
@@ -65,55 +65,9 @@ export default class ShortsViewer extends Component {
   }
 
   render() {
-    // if (this.props.albumShorts.length > 0 && this.state.noShorts === false) {
-    //   return (
-    //     <>
-    //       <div>
-    //         <Container fluid style={{ height: "612px", padding: "0px" }}>
-    //           <Short
-    //             controls
-    //             loop
-    //             style={{
-    //               objectFit: "scale-down !important",
-    //               width: "100% !important",
-    //               height: "100%",
-    //               backgroundColor: "black",
-    //               zIndex: "-1",
-    //             }}
-    //             key={this.state.currentShort}
-    //             src={`${
-    //               this.props.API_ROOT_PATH
-    //             }/images/albums/${localStorage.getItem("ALBUM_FOLDER_TITLE")}/${
-    //               this.state.currentShort.IMAGE_THUMB_URL
-    //             }`}
-    //           />
-    //         </Container>
-    //       </div>
-    //       <Container
-    //         fluid
-    //         style={{
-    //           marginTop: "28px",
-    //           padding: "5px",
-    //           display: "flex",
-    //           justifyContent: "space-evenly",
-    //           backgroundColor: "black",
-    //         }}
-    //       >
-    //         <Button onClick={this.returnPrevShort} variant="primary">
-    //           {"👈 Prev"}
-    //         </Button>
-    //         <Button onClick={this.returnNextShort} variant="primary">
-    //           {"Next 👉"}
-    //         </Button>
-    //       </Container>
-    //     </>
-    //   );
-    // } else {
-    //   return <NoPhotoShortInCarousel type="Short" />;
-    // }
     return (
       <div className="flex justify-center items-center h-full">
-        <DesktopShortsViewer
+        <VideoViewer
           returnPrevShort={this.returnPrevShort}
           returnNextShort={this.returnNextShort}
           handleEnded={this.handleEnded}

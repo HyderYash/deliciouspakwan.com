@@ -70,6 +70,8 @@ const Home = () => {
                 height="0"
                 sizes="100vw"
                 className="object-cover w-full h-auto"
+                loading="eager"
+                priority={true}
               />
               <div className="h-full p-2 bg-white dark:bg-gray-800">
                 <div
@@ -92,6 +94,8 @@ const Home = () => {
                     width="0"
                     height="0"
                     sizes="100vw"
+                    loading="eager"
+                    priority={true}
                   />
                   <div className="flex flex-col justify-between ml-2 text-xs">
                     <p className="text-gray-800 dark:text-white">
